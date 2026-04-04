@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Lawyer Marketing Blog | SEO & Digital Marketing Tips for Law Firms"
+  description="Expert insights on marketing for Malaysian law firms. SEO, Google Ads, content marketing, and lead generation strategies."
+>
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h1 class="text-4xl font-bold text-center mb-4">Lawyer Marketing Blog</h1>
+      <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+        Practical marketing insights for Malaysian law firms. Updated hourly with fresh content.
+      </p>
+      
+      <div class="bg-yellow-50 border border-yellow-200 p-6 rounded-lg text-center">
+        <p class="text-lg">📝 New articles coming soon! We're publishing hourly content across 20 legal practice areas.</p>
+        <p class="text-gray-600 mt-2">Check back regularly for the latest marketing strategies.</p>
+      </div>
+
+      <div class="mt-12">
+        <h2 class="text-2xl font-bold mb-6">Browse by Practice Area</h2>
+        <div class="flex flex-wrap gap-3">
+          {[
+            'Divorce', 'Criminal Defense', 'Personal Injury', 'Corporate', 'Property',
+            'Immigration', 'Employment', 'Estate', 'IP', 'Medical', 'Bankruptcy', 'Tax'
+          ].map(tag => (
+            <span class="bg-gray-100 px-4 py-2 rounded-full text-sm">{tag}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

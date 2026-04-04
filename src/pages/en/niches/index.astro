@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const niches = [
+  { name: 'Divorce Lawyer', slug: 'divorce-lawyer', desc: 'Family law, divorce proceedings, child custody' },
+  { name: 'Criminal Defense', slug: 'criminal-defense', desc: 'Criminal cases, DUI, drug offenses' },
+  { name: 'Personal Injury', slug: 'personal-injury', desc: 'Accident claims, medical negligence' },
+  { name: 'Corporate Law', slug: 'corporate-law', desc: 'Business formation, M&A, contracts' },
+  { name: 'Property & Conveyancing', slug: 'property-conveyancing', desc: 'Real estate, property disputes' },
+  { name: 'Immigration Lawyer', slug: 'immigration-lawyer', desc: 'Visas, work permits, citizenship' },
+  { name: 'Employment Lawyer', slug: 'employment-lawyer', desc: 'Wrongful dismissal, labor disputes' },
+  { name: 'Estate Planning', slug: 'estate-planning', desc: 'Wills, trusts, inheritance' },
+  { name: 'Intellectual Property', slug: 'intellectual-property', desc: 'Patents, trademarks, copyright' },
+  { name: 'Medical Malpractice', slug: 'medical-malpractice', desc: 'Medical negligence, hospital errors' },
+  { name: 'Bankruptcy Lawyer', slug: 'bankruptcy-lawyer', desc: 'Debt restructuring, insolvency' },
+  { name: 'Tax Lawyer', slug: 'tax-lawyer', desc: 'Tax disputes, LHDN matters' },
+  { name: 'Real Estate Lawyer', slug: 'real-estate-lawyer', desc: 'Property transactions, disputes' },
+  { name: 'Civil Litigation', slug: 'civil-litigation', desc: 'Commercial disputes, court cases' },
+  { name: 'Insurance Claims', slug: 'insurance-claims', desc: 'Claim disputes, policy issues' },
+  { name: 'Construction Law', slug: 'construction-law', desc: 'Construction disputes, contracts' },
+  { name: 'Maritime Law', slug: 'maritime-lawyer', desc: 'Shipping, admiralty, cargo claims' },
+  { name: 'Environmental Law', slug: 'environmental-lawyer', desc: 'Compliance, environmental disputes' },
+  { name: 'Entertainment Law', slug: 'entertainment-lawyer', desc: 'Media, music, sports contracts' },
+  { name: 'Cybercrime Law', slug: 'cybercrime-lawyer', desc: 'Online fraud, data breaches, tech law' },
+];
+---
+
+<BaseLayout 
+  title="Marketing by Practice Area | Lawyer Marketing Malaysia"
+  description="Specialized marketing strategies for 20 different legal practice areas in Malaysia. Find your niche and start attracting clients."
+>
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h1 class="text-4xl font-bold text-center mb-4">Marketing by Practice Area</h1>
+      <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+        Every practice area has unique client behaviors, search patterns, and marketing opportunities. 
+        Find your specialty below.
+      </p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {niches.map(niche => (
+          <a href={`/en/niches/${niche.slug}/`} class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition border border-gray-100">
+            <h2 class="font-bold text-xl mb-2">{niche.name}</h2>
+            <p class="text-gray-600 text-sm">{niche.desc}</p>
+            <p class="text-primary font-semibold mt-4 text-sm">Read marketing guide →</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

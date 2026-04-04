@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Lawyer Marketing Malaysia | SEO & Digital Marketing for Law Firms"
+  description="Specialized marketing strategies for Malaysian law firms. SEO, content marketing, and lead generation for divorce lawyers, criminal defense, personal injury, and more."
+>
+  <section class="bg-gradient-to-r from-primary to-blue-800 text-white py-20">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        Marketing That Brings Clients to Your Law Firm
+      </h1>
+      <p class="text-xl mb-8 max-w-3xl mx-auto">
+        Stop chasing referrals. Build a marketing system that delivers ready-to-hire clients directly to your practice.
+      </p>
+      <a href="/en/niches/" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+        Find Your Practice Area
+      </a>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Marketing by Practice Area</h2>
+      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {[
+          { name: 'Divorce Lawyers', slug: 'divorce-lawyer' },
+          { name: 'Criminal Defense', slug: 'criminal-defense' },
+          { name: 'Personal Injury', slug: 'personal-injury' },
+          { name: 'Corporate Law', slug: 'corporate-law' },
+          { name: 'Property Law', slug: 'property-conveyancing' },
+          { name: 'Immigration', slug: 'immigration-lawyer' },
+          { name: 'Employment Law', slug: 'employment-lawyer' },
+          { name: 'Estate Planning', slug: 'estate-planning' },
+        ].map(niche => (
+          <a href={`/en/niches/${niche.slug}/`} class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition border border-gray-200">
+            <h3 class="font-semibold text-lg">{niche.name}</h3>
+            <p class="text-sm text-gray-600 mt-2">Marketing guide →</p>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/en/niches/" class="text-primary font-semibold hover:underline">View all 20 practice areas →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Why Law Firms Choose Us</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="text-4xl mb-4">🎯</div>
+          <h3 class="font-semibold text-xl mb-2">Practice-Specific</h3>
+          <p class="text-gray-600">Marketing strategies tailored to your exact practice area, not generic legal marketing.</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-4">📈</div>
+          <h3 class="font-semibold text-xl mb-2">Results-Driven</h3>
+          <p class="text-gray-600">We measure success by clients booked, not vanity metrics like impressions.</p>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl mb-4">🔒</div>
+          <h3 class="font-semibold text-xl mb-2">Ethical Marketing</h3>
+          <p class="text-gray-600">Compliant with Bar Council advertising rules. No false promises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
