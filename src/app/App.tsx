@@ -124,33 +124,34 @@ export default function App() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border"
       >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between gap-4">
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-3"
+            className="flex items-center gap-2 md:gap-3 shrink-0"
           >
-            <img src={logoImage} alt="LawyerMarketing.my" className="h-12 w-12" />
-            <div className="text-2xl tracking-tight text-accent">LawyerMarketing.my</div>
+            <img src={logoImage} alt="LawyerMarketing.my" className="h-8 w-8 md:h-12 md:w-12" />
+            <div className="text-sm md:text-xl lg:text-2xl font-light tracking-widest text-accent uppercase">LawyerMarketing.my</div>
           </motion.div>
           <a
             href="https://cal.com/zen-pdcnlc/lawyer-marketing"
             target="_blank"
             rel="noopener noreferrer"
+            className="shrink-0"
           >
             <motion.button
               whileHover={{ scale: 1.05, backgroundColor: "rgba(201, 169, 97, 0.9)" }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group"
+              className="px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group text-xs md:text-base"
             >
               Get Started
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
             </motion.button>
           </a>
         </div>
       </motion.nav>
 
-      {/* Hero Section */}
-      <section ref={heroRef} className="relative h-screen overflow-hidden">
+      {/* Hero Section - Hidden on Mobile */}
+      <section ref={heroRef} className="relative h-screen overflow-hidden hidden md:block">
         <motion.div style={{ y: imageY }} className="absolute inset-0">
           <img
             src={heroImage}
@@ -281,32 +282,10 @@ export default function App() {
                 </motion.button>
               </motion.div>
 
-              {/* Floating stats */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 }}
-                className="flex gap-6 md:gap-8 pt-6 md:pt-8"
-              >
-                {[
-                  { value: "45+", label: "Law Firms" },
-                  { value: "250+", label: "Clients" },
-                  { value: "98%", label: "Success Rate" },
-                ].map((stat, i) => (
-                  <motion.div
-                    key={stat.label}
-                    whileHover={{ y: -5 }}
-                    className="flex flex-col"
-                  >
-                    <span className="text-2xl md:text-3xl text-accent">{stat.value}</span>
-                    <span className="text-xs md:text-sm text-foreground/60">{stat.label}</span>
-                  </motion.div>
-                ))}
               </motion.div>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
+            </div>
+          </motion.div>
+        </section>
 
       {/* AI Search Demo Section */}
       <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
@@ -654,173 +633,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Results Section */}
-      <section className="py-32 bg-secondary/20 relative overflow-hidden">
-        {/* Animated circles background */}
-        {[...Array(3)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full border border-accent/20"
-            style={{
-              width: 300 + i * 200,
-              height: 300 + i * 200,
-              left: "50%",
-              top: "50%",
-              x: "-50%",
-              y: "-50%",
-            }}
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.1, 0.3, 0.1],
-            }}
-            transition={{
-              duration: 4 + i,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        ))}
 
-        <div className="max-w-7xl mx-auto px-6 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-5xl mb-4">
-              Measurable <span className="text-accent">Impact</span>
-            </h2>
-            <p className="text-xl text-foreground/70">
-              Results that matter to your practice
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { end: 250, suffix: "+", label: "Client Inquiries Generated" },
-              { end: 45, suffix: "+", label: "Law Firms Partnered" },
-              { end: 98, suffix: "%", label: "Regulatory Compliance" },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 20px 60px rgba(201, 169, 97, 0.3)",
-                }}
-                className="text-center p-12 bg-card border border-border rounded-sm hover:border-accent transition-all relative overflow-hidden group"
-              >
-                {/* Glow effect */}
-                <motion.div
-                  className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity"
-                  animate={{
-                    background: [
-                      "radial-gradient(circle at 50% 50%, rgba(201, 169, 97, 0.1) 0%, transparent 70%)",
-                      "radial-gradient(circle at 50% 50%, rgba(201, 169, 97, 0.2) 0%, transparent 70%)",
-                      "radial-gradient(circle at 50% 50%, rgba(201, 169, 97, 0.1) 0%, transparent 70%)",
-                    ],
-                  }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                />
-
-                <div className="text-6xl text-accent mb-4 relative z-10">
-                  <AnimatedCounter end={stat.end} />
-                  {stat.suffix}
-                </div>
-                <div className="text-xl text-foreground/80 relative z-10">{stat.label}</div>
-
-                {/* Decorative corner */}
-                <motion.div
-                  className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-accent/30"
-                  whileHover={{ scale: 1.2 }}
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-32 bg-gradient-to-b from-background to-secondary/30 relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-5xl mb-4">
-              Client <span className="text-accent">Success Stories</span>
-            </h2>
-            <p className="text-xl text-foreground/70">
-              Hear from Malaysia's leading legal professionals
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                whileHover={{
-                  y: -10,
-                  boxShadow: "0 30px 60px rgba(0, 0, 0, 0.3)",
-                }}
-                className="bg-card border border-border rounded-sm p-8 relative group"
-              >
-                {/* Quote icon */}
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
-                  className="absolute -top-4 -left-4 w-12 h-12 bg-accent rounded-full flex items-center justify-center"
-                >
-                  <span className="text-2xl text-accent-foreground">"</span>
-                </motion.div>
-
-                <div className="mt-4">
-                  <p className="text-foreground/80 mb-6 leading-relaxed italic">
-                    {testimonial.text}
-                  </p>
-
-                  <div className="border-t border-accent/20 pt-4">
-                    <div className="text-lg text-accent">{testimonial.name}</div>
-                    <div className="text-sm text-foreground/60">{testimonial.firm}</div>
-                    <div className="inline-block mt-2 px-3 py-1 bg-accent/10 text-accent text-xs rounded-sm">
-                      {testimonial.practice}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Animated stars */}
-                <div className="flex gap-1 mt-4">
-                  {[...Array(5)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, scale: 0 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: index * 0.2 + 0.5 + i * 0.1 }}
-                    >
-                      <Star className="w-4 h-4 text-accent fill-accent" />
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-32 relative overflow-hidden">
@@ -919,27 +732,6 @@ export default function App() {
             </motion.button>
           </a>
 
-          {/* Trust badges */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex items-center justify-center gap-8 mt-12 text-sm text-foreground/60"
-          >
-            <div className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-accent" />
-              <span>Bar Council Compliant</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="w-5 h-5 text-accent" />
-              <span>45+ Law Firms</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-accent" />
-              <span>Proven Results</span>
-            </div>
-          </motion.div>
         </motion.div>
       </section>
 
