@@ -1,9 +1,9 @@
 import { motion, useScroll, useTransform, useInView } from "motion/react";
 import { Scale, Target, Users, TrendingUp, Award, Briefcase, ArrowRight, Sparkles, Star, Check } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
-import heroImage from "../imports/ChatGPT_Image_Apr_13,_2026,_04_26_52_PM.png";
+import heroImage from "../imports/hero_optimized.png";
 import logoImage from "../imports/new_logo.png";
-import strategicPresenceImage from "../imports/strategic_presence.jpg";
+import strategicPresenceImage from "../imports/presence_optimized.png";
 import { AISearchDemo } from "./components/AISearchDemo";
 import { WhatWeDo } from "./components/WhatWeDo";
 
@@ -114,8 +114,10 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Floating Particles Background */}
-      <FloatingParticles />
+      {/* Floating Particles Background - Desktop Only for Performance */}
+      <div className="hidden md:block">
+        <FloatingParticles />
+      </div>
 
       {/* Navigation */}
       <motion.nav
@@ -149,6 +151,8 @@ export default function App() {
           </a>
         </div>
       </motion.nav>
+      
+      <main>
 
       {/* Hero Section - Hidden on Mobile */}
       <section ref={heroRef} className="relative h-screen overflow-hidden hidden md:block">
@@ -157,6 +161,7 @@ export default function App() {
             src={heroImage}
             alt="Professional legal team"
             className="w-full h-full object-cover"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/80" />
         </motion.div>
@@ -449,7 +454,9 @@ export default function App() {
               <img
                 src={strategicPresenceImage}
                 alt="Strategic legal digital presence"
-                className="w-full h-[600px] object-cover rounded-sm"
+                className="w-full h-[400px] md:h-[600px] object-cover rounded-sm shadow-2xl"
+                loading="lazy"
+                decoding="async"
               />
             </motion.div>
 
@@ -734,6 +741,7 @@ export default function App() {
 
         </motion.div>
       </section>
+      </main>
 
       {/* Footer */}
       <footer className="bg-background border-t border-border py-12 relative overflow-hidden">
@@ -778,7 +786,7 @@ export default function App() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <h4 className="mb-4">Services</h4>
+              <h3 className="text-xl font-medium mb-4">Services</h3>
               <ul className="space-y-2 text-foreground/70">
                 {["Social Media Management", "Content Marketing", "Brand Development", "Compliance Consulting"].map((service, i) => (
                   <motion.li
@@ -797,7 +805,7 @@ export default function App() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h4 className="mb-4">Contact</h4>
+              <h3 className="text-xl font-medium mb-4">Contact</h3>
               <ul className="space-y-2 text-foreground/70">
                 <motion.li whileHover={{ x: 5, color: "rgba(201, 169, 97, 1)" }} className="cursor-pointer transition-colors">
                   jacob@lawyermarketing.my

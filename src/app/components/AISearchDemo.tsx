@@ -279,7 +279,7 @@ export function AISearchDemo() {
                     <Check className="w-4 md:w-5 h-4 md:h-5 text-accent-foreground" />
                   </div>
                   <div>
-                    <h4 className="text-lg md:text-xl text-accent mb-2">Get Ranked on Page 1</h4>
+                    <h3 className="text-lg md:text-xl text-accent mb-2">Get Ranked on Page 1</h3>
                     <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
                       When AI search engines cite your firm, you appear as the trusted recommendation
                       before potential clients even scroll. We optimize your digital presence to be the
