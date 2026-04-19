@@ -1,9 +1,9 @@
 import { motion, useScroll, useTransform, useInView } from "motion/react";
 import { Scale, Target, Users, TrendingUp, Award, Briefcase, ArrowRight, Sparkles, Star, Check } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
-import heroImage from "../imports/hero_optimized.png";
-import logoImage from "../imports/new_logo.png";
-import strategicPresenceImage from "../imports/presence_optimized.png";
+import heroImage from "../imports/hero.webp";
+import logoImage from "../imports/logo.webp";
+import strategicPresenceImage from "../imports/presence.webp";
 import { AISearchDemo } from "./components/AISearchDemo";
 import { WhatWeDo } from "./components/WhatWeDo";
 
@@ -131,7 +131,13 @@ export default function App() {
             whileHover={{ scale: 1.05 }}
             className="flex items-center gap-2 md:gap-3 shrink-0"
           >
-            <img src={logoImage} alt="LawyerMarketing.my" className="h-8 w-8 md:h-12 md:w-12" />
+            <img 
+              src={logoImage} 
+              alt="LawyerMarketing.my" 
+              className="h-8 w-auto md:h-12 md:w-auto" 
+              width="1024"
+              height="682"
+            />
             <div className="text-sm md:text-xl lg:text-2xl font-light tracking-widest text-accent uppercase">LawyerMarketing.my</div>
           </motion.div>
           <a
@@ -162,6 +168,8 @@ export default function App() {
             alt="Professional legal team"
             className="w-full h-full object-cover"
             fetchPriority="high"
+            width="1536"
+            height="1024"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/80" />
         </motion.div>
@@ -361,8 +369,8 @@ export default function App() {
 
         <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
             className="text-center mb-10 md:mb-16"
@@ -454,9 +462,11 @@ export default function App() {
               <img
                 src={strategicPresenceImage}
                 alt="Strategic legal digital presence"
-                className="w-full h-[400px] md:h-[600px] object-cover rounded-sm shadow-2xl"
+                className="w-full h-auto md:h-[600px] object-cover rounded-sm shadow-2xl"
                 loading="lazy"
                 decoding="async"
+                width="1024"
+                height="1024"
               />
             </motion.div>
 
