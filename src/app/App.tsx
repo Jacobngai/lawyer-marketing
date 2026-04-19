@@ -1,8 +1,9 @@
 import { motion, useScroll, useTransform, useInView } from "motion/react";
-import { Scale, Target, Users, TrendingUp, Award, Briefcase, ArrowRight, Sparkles, Star, Check } from "lucide-react";
+import { Scale, Target, Users, TrendingUp, Award, Briefcase, ArrowRight, Sparkles, Star, Check, MessageCircle } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import heroImage from "../imports/hero.webp";
-import logoImage from "../imports/logo.webp";
+import heroMobileImage from "../imports/hero_mobile.webp";
+import logoImage from "../imports/logo_cropped.webp";
 import strategicPresenceImage from "../imports/presence.webp";
 import { AISearchDemo } from "./components/AISearchDemo";
 import { WhatWeDo } from "./components/WhatWeDo";
@@ -128,17 +129,17 @@ export default function App() {
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between gap-4">
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
             className="flex items-center gap-2 md:gap-3 shrink-0"
           >
             <img 
               src={logoImage} 
               alt="LawyerMarketing.my" 
-              className="h-8 w-auto md:h-12 md:w-auto" 
-              width="1024"
-              height="682"
+              className="h-8 md:h-12 w-auto block shrink-0" 
             />
-            <div className="text-sm md:text-xl lg:text-2xl font-light tracking-widest text-accent uppercase">LawyerMarketing.my</div>
+            <div className="text-[10px] md:text-sm lg:text-base font-light tracking-[0.1em] text-accent uppercase">
+              LawyerMarketing.my
+            </div>
           </motion.div>
           <a
             href="https://cal.com/zen-pdcnlc/lawyer-marketing"
@@ -160,18 +161,23 @@ export default function App() {
       
       <main>
 
-      {/* Hero Section - Hidden on Mobile */}
-      <section ref={heroRef} className="relative h-screen overflow-hidden hidden md:block">
-        <motion.div style={{ y: imageY }} className="absolute inset-0">
+      <section ref={heroRef} className="relative h-auto md:h-screen overflow-hidden bg-black pt-16 md:pt-0">
+        <motion.div style={{ y: imageY }} className="relative md:absolute md:inset-0">
           <img
             src={heroImage}
             alt="Professional legal team"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover hidden md:block"
             fetchPriority="high"
             width="1536"
             height="1024"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/80" />
+          <img
+            src={heroMobileImage}
+            alt="Lawyer at work"
+            className="w-full h-auto md:hidden"
+            fetchPriority="high"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/80 hidden md:block" />
         </motion.div>
 
         {/* Animated decorative elements - hidden on mobile */}
@@ -209,7 +215,7 @@ export default function App() {
             {/* Left side - keep empty for the people in image on desktop */}
             <div className="hidden md:block" />
 
-            {/* Right side - hero text - HIDDEN ON MOBILE */}
+            {/* Right side - hero text - HIDDEN ON MOBILE AS REQUESTED */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -352,100 +358,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Practice Areas Section */}
-      <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden">
-        {/* Animated background gradient - hidden on mobile for performance */}
-        <motion.div
-          className="absolute inset-0 opacity-30 hidden md:block"
-          animate={{
-            background: [
-              "radial-gradient(circle at 0% 0%, rgba(201, 169, 97, 0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 100% 100%, rgba(201, 169, 97, 0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 0% 0%, rgba(201, 169, 97, 0.1) 0%, transparent 50%)",
-            ],
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-        />
 
-        <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-10 md:mb-16"
-          >
-            <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, type: "spring" }}
-              className="inline-flex items-center gap-2 mb-4 md:mb-6"
-            >
-              <div className="h-px w-8 md:w-12 bg-accent" />
-              <Sparkles className="w-4 md:w-5 h-4 md:h-5 text-accent" />
-              <div className="h-px w-8 md:w-12 bg-accent" />
-            </motion.div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-3 md:mb-4 px-4">
-              Specialized <span className="text-accent">Expertise</span>
-            </h2>
-            <p className="text-base md:text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto px-4">
-              Tailored marketing strategies for every legal specialization
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {practiceAreas.map((area, index) => (
-              <motion.div
-                key={area.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                whileHover={{
-                  y: -8,
-                  scale: 1.02,
-                  boxShadow: "0 20px 40px rgba(201, 169, 97, 0.2)",
-                  transition: { duration: 0.3 }
-                }}
-                className="group relative bg-card border border-border rounded-sm p-8 hover:border-accent transition-all cursor-pointer overflow-hidden"
-              >
-                {/* Animated shimmer effect on hover */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent"
-                  initial={{ x: "-100%" }}
-                  whileHover={{ x: "100%" }}
-                  transition={{ duration: 0.6 }}
-                />
-
-                <div className="flex items-start gap-4 relative z-10">
-                  <motion.div
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
-                    className="p-3 bg-accent/10 rounded-sm group-hover:bg-accent/20 transition-colors"
-                  >
-                    <area.icon className="w-6 h-6 text-accent" />
-                  </motion.div>
-                  <div className="flex-1">
-                    <h3 className="text-lg mb-2">{area.name}</h3>
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileHover={{ width: "3rem" }}
-                      className="h-0.5 bg-accent"
-                      transition={{ duration: 0.3 }}
-                    />
-                  </div>
-                </div>
-
-                {/* Corner accent */}
-                <div className="absolute top-0 right-0 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-accent" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Services Overview */}
       <section className="py-32 relative overflow-hidden">
@@ -652,6 +565,101 @@ export default function App() {
 
 
 
+      {/* Practice Areas Section - MOVED TO BOTTOM & OPTIMIZED FOR MOBILE */}
+      <section className="py-12 md:py-24 lg:py-32 bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden">
+        {/* Animated background gradient - hidden on mobile for performance */}
+        <motion.div
+          className="absolute inset-0 opacity-30 hidden md:block"
+          animate={{
+            background: [
+              "radial-gradient(circle at 0% 0%, rgba(201, 169, 97, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 100% 100%, rgba(201, 169, 97, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 0% 0%, rgba(201, 169, 97, 0.1) 0%, transparent 50%)",
+            ],
+          }}
+          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+        />
+
+        <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-10 md:mb-16"
+          >
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, type: "spring" }}
+              className="inline-flex items-center gap-2 mb-4 md:mb-6"
+            >
+              <div className="h-px w-8 md:w-12 bg-accent" />
+              <Sparkles className="w-4 md:w-5 h-4 md:h-5 text-accent" />
+              <div className="h-px w-8 md:w-12 bg-accent" />
+            </motion.div>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl mb-3 md:mb-4 px-4">
+              Specialized <span className="text-accent">Expertise</span>
+            </h2>
+            <p className="text-sm md:text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto px-4">
+              Tailored marketing strategies for every legal specialization
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
+            {practiceAreas.map((area, index) => (
+              <motion.div
+                key={area.name}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.4, delay: index * 0.03 }}
+                whileHover={{
+                  y: -5,
+                  scale: 1.02,
+                  boxShadow: "0 10px 20px rgba(201, 169, 97, 0.2)",
+                  transition: { duration: 0.3 }
+                }}
+                className="group relative bg-card border border-border rounded-sm p-4 md:p-8 hover:border-accent transition-all cursor-pointer overflow-hidden"
+              >
+                {/* Animated shimmer effect on hover */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/10 to-transparent"
+                  initial={{ x: "-100%" }}
+                  whileHover={{ x: "100%" }}
+                  transition={{ duration: 0.6 }}
+                />
+
+                <div className="flex flex-col md:flex-row items-center md:items-start md:gap-4 relative z-10 text-center md:text-left">
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className="p-2 md:p-3 bg-accent/10 rounded-sm group-hover:bg-accent/20 transition-colors mb-2 md:mb-0"
+                  >
+                    <area.icon className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+                  </motion.div>
+                  <div className="flex-1">
+                    <h3 className="text-[10px] md:text-lg leading-tight md:mb-2">{area.name}</h3>
+                    <motion.div
+                      initial={{ width: 0 }}
+                      whileHover={{ width: "3rem" }}
+                      className="h-0.5 bg-accent hidden md:block"
+                      transition={{ duration: 0.3 }}
+                    />
+                  </div>
+                </div>
+
+                {/* Corner accent - hidden on mobile to save space */}
+                <div className="absolute top-0 right-0 w-10 h-10 opacity-0 group-hover:opacity-100 transition-opacity hidden md:block">
+                  <div className="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-accent" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0">
@@ -727,27 +735,51 @@ export default function App() {
           >
             Join Malaysia's leading law firms in establishing a commanding digital presence. Schedule your strategic consultation today.
           </motion.p>
-          <a
-            href="https://cal.com/zen-pdcnlc/lawyer-marketing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 60px rgba(201, 169, 97, 0.6)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="px-12 py-5 bg-accent text-accent-foreground rounded-sm text-lg flex items-center gap-3 mx-auto group"
-            >
-              Schedule Consultation
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-            </motion.button>
-          </a>
+            <div className="flex flex-col gap-4">
+              <a
+                href="https://cal.com/zen-pdcnlc/lawyer-marketing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <motion.button
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 0 60px rgba(201, 169, 97, 0.6)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full sm:w-auto px-12 py-5 bg-accent text-accent-foreground rounded-sm text-lg flex items-center justify-center gap-3 mx-auto group"
+                >
+                  Schedule Consultation
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                </motion.button>
+              </a>
+
+              <a
+                href={`https://wa.me/60175032281?text=${encodeURIComponent("Hello, I'd like to discuss marketing for my law firm.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <motion.button
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  whileHover={{
+                    scale: 1.05,
+                    backgroundColor: "rgba(34, 197, 94, 0.1)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full sm:w-auto px-12 py-5 border-2 border-green-500 text-green-500 rounded-sm text-lg flex items-center justify-center gap-3 mx-auto group transition-colors"
+                >
+                  <MessageCircle className="w-6 h-6" />
+                  Whatsup Us
+                </motion.button>
+              </a>
+            </div>
 
         </motion.div>
       </section>
@@ -776,18 +808,20 @@ export default function App() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-6">
                 <motion.img
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                   src={logoImage}
                   alt="LawyerMarketing.my"
-                  className="h-10 w-10"
+                  className="h-10 md:h-16 w-auto block shrink-0"
                 />
-                <div className="text-2xl text-accent">LawyerMarketing.my</div>
+                <div className="text-base md:text-lg font-light tracking-[0.1em] text-accent uppercase">
+                  LawyerMarketing.my
+                </div>
               </div>
-              <p className="text-foreground/70">
-                Malaysia's premier marketing agency for legal professionals.
+              <p className="text-foreground/70 max-w-xs">
+                Malaysia's premier marketing agency specializing in digital growth for the legal sector.
               </p>
             </motion.div>
             <motion.div

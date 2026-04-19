@@ -184,14 +184,21 @@ export function WhatWeDo() {
               </div>
 
               {/* CTA Button */}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full px-4 md:px-6 py-2.5 md:py-3 bg-accent/10 hover:bg-accent text-foreground hover:text-accent-foreground border border-accent rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn text-sm md:text-base"
+              <a
+                href={`https://wa.me/60175032281?text=${encodeURIComponent(`Hello, I'm interested in the ${service.title} for my law firm.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full"
               >
-                <span>Learn More</span>
-                <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 group-hover/btn:translate-x-1 transition-transform" />
-              </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full px-4 md:px-6 py-2.5 md:py-3 bg-accent/10 hover:bg-accent text-foreground hover:text-accent-foreground border border-accent rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn text-sm md:text-base font-medium"
+                >
+                  <span>Inquire on WhatsApp</span>
+                  <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 group-hover/btn:translate-x-1 transition-transform" />
+                </motion.button>
+              </a>
             </div>
 
             {/* Corner accent decorations - hidden on mobile for performance */}
