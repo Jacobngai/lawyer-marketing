@@ -160,8 +160,8 @@ export default function App() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/80" />
         </motion.div>
 
-        {/* Animated decorative elements */}
-        <div className="absolute inset-0 pointer-events-none">
+        {/* Animated decorative elements - hidden on mobile */}
+        <div className="absolute inset-0 pointer-events-none hidden md:block">
           {[...Array(5)].map((_, i) => (
             <motion.div
               key={i}
@@ -191,23 +191,23 @@ export default function App() {
           style={{ opacity }}
           className="relative h-full max-w-7xl mx-auto px-6 flex items-center"
         >
-          <div className="w-full grid grid-cols-2 gap-12 items-center">
-            {/* Left side - keep empty for the people in image */}
-            <div />
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Left side - keep empty for the people in image on desktop */}
+            <div className="hidden md:block" />
 
-            {/* Right side - hero text */}
+            {/* Right side - hero text - HIDDEN ON MOBILE */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="space-y-6 relative"
+              className="space-y-4 md:space-y-6 relative hidden md:block"
             >
-              {/* Decorative accent line */}
+              {/* Decorative accent line - desktop only */}
               <motion.div
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 1, delay: 0.5 }}
-                className="absolute -left-12 top-0 w-1 h-full bg-gradient-to-b from-accent via-accent/50 to-transparent origin-top"
+                className="absolute -left-12 top-0 w-1 h-full bg-gradient-to-b from-accent via-accent/50 to-transparent origin-top hidden lg:block"
               />
 
               <motion.div
@@ -224,7 +224,7 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-6xl tracking-tight leading-tight"
+                className="text-4xl md:text-5xl lg:text-6xl tracking-tight leading-tight"
               >
                 Elevate Your
                 <br />
@@ -247,7 +247,7 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}
-                className="text-xl text-foreground/80 leading-relaxed max-w-xl"
+                className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-xl"
               >
                 Malaysia's premier social media marketing agency exclusively for law firms. Navigate the new advertising landscape with sophistication and compliance.
               </motion.p>
@@ -256,7 +256,7 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="flex gap-4 pt-4"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4"
               >
                 <a
                   href="https://cal.com/zen-pdcnlc/lawyer-marketing"
@@ -266,7 +266,7 @@ export default function App() {
                   <motion.button
                     whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(201, 169, 97, 0.5)" }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 bg-accent text-accent-foreground rounded-sm hover:bg-accent/90 transition-colors flex items-center gap-2 group"
+                    className="px-6 md:px-8 py-3 md:py-4 bg-accent text-accent-foreground rounded-sm hover:bg-accent/90 transition-colors flex items-center justify-center gap-2 group"
                   >
                     Book Consultation
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -275,7 +275,7 @@ export default function App() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-accent text-accent rounded-sm hover:bg-accent/10 transition-colors"
+                  className="px-6 md:px-8 py-3 md:py-4 border border-accent text-accent rounded-sm hover:bg-accent/10 transition-colors"
                 >
                   View Portfolio
                 </motion.button>
@@ -286,7 +286,7 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1 }}
-                className="flex gap-8 pt-8"
+                className="flex gap-6 md:gap-8 pt-6 md:pt-8"
               >
                 {[
                   { value: "45+", label: "Law Firms" },
@@ -298,8 +298,8 @@ export default function App() {
                     whileHover={{ y: -5 }}
                     className="flex flex-col"
                   >
-                    <span className="text-3xl text-accent">{stat.value}</span>
-                    <span className="text-sm text-foreground/60">{stat.label}</span>
+                    <span className="text-2xl md:text-3xl text-accent">{stat.value}</span>
+                    <span className="text-xs md:text-sm text-foreground/60">{stat.label}</span>
                   </motion.div>
                 ))}
               </motion.div>
@@ -309,10 +309,10 @@ export default function App() {
       </section>
 
       {/* AI Search Demo Section */}
-      <section className="py-32 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
-        {/* Animated background elements */}
+      <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
+        {/* Animated background elements - hidden on mobile for performance */}
         <motion.div
-          className="absolute top-0 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl"
+          className="absolute top-0 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl hidden md:block"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -320,7 +320,7 @@ export default function App() {
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl"
+          className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl hidden md:block"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.5, 0.3, 0.5],
@@ -328,29 +328,29 @@ export default function App() {
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        <div className="max-w-7xl mx-auto px-6 relative">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-10 md:mb-16"
           >
             <motion.div
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, type: "spring" }}
-              className="inline-flex items-center gap-2 mb-6"
+              className="inline-flex items-center gap-2 mb-4 md:mb-6"
             >
-              <div className="h-px w-12 bg-accent" />
-              <Sparkles className="w-5 h-5 text-accent" />
-              <div className="h-px w-12 bg-accent" />
+              <div className="h-px w-8 md:w-12 bg-accent" />
+              <Sparkles className="w-4 md:w-5 h-4 md:h-5 text-accent" />
+              <div className="h-px w-8 md:w-12 bg-accent" />
             </motion.div>
-            <h2 className="text-5xl mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-3 md:mb-4 px-4">
               Get <span className="text-accent">AI-Cited</span> on Page 1
             </h2>
-            <p className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed px-4">
               When potential clients search for legal help, AI recommends firms with strong digital presence.
               Watch how your firm gets featured as the trusted choice.
             </p>
@@ -361,10 +361,10 @@ export default function App() {
       </section>
 
       {/* Practice Areas Section */}
-      <section className="py-32 bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden">
-        {/* Animated background gradient */}
+      <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden">
+        {/* Animated background gradient - hidden on mobile for performance */}
         <motion.div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-30 hidden md:block"
           animate={{
             background: [
               "radial-gradient(circle at 0% 0%, rgba(201, 169, 97, 0.1) 0%, transparent 50%)",
@@ -375,29 +375,29 @@ export default function App() {
           transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
         />
 
-        <div className="max-w-7xl mx-auto px-6 relative">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-10 md:mb-16"
           >
             <motion.div
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, type: "spring" }}
-              className="inline-flex items-center gap-2 mb-6"
+              className="inline-flex items-center gap-2 mb-4 md:mb-6"
             >
-              <div className="h-px w-12 bg-accent" />
-              <Sparkles className="w-5 h-5 text-accent" />
-              <div className="h-px w-12 bg-accent" />
+              <div className="h-px w-8 md:w-12 bg-accent" />
+              <Sparkles className="w-4 md:w-5 h-4 md:h-5 text-accent" />
+              <div className="h-px w-8 md:w-12 bg-accent" />
             </motion.div>
-            <h2 className="text-5xl mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl mb-3 md:mb-4 px-4">
               Specialized <span className="text-accent">Expertise</span>
             </h2>
-            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto px-4">
               Tailored marketing strategies for every legal specialization
             </p>
           </motion.div>
@@ -532,9 +532,9 @@ export default function App() {
       </section>
 
       {/* What We Do Section */}
-      <section className="py-32 bg-gradient-to-b from-background via-secondary/30 to-background relative overflow-hidden">
-        {/* Animated background grid */}
-        <div className="absolute inset-0 opacity-10">
+      <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background via-secondary/30 to-background relative overflow-hidden">
+        {/* Animated background grid - hidden on mobile */}
+        <div className="absolute inset-0 opacity-10 hidden md:block">
           <div
             className="absolute inset-0"
             style={{
@@ -545,9 +545,9 @@ export default function App() {
           />
         </div>
 
-        {/* Floating orbs */}
+        {/* Floating orbs - hidden on mobile for performance */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl hidden md:block"
           animate={{
             x: [0, 100, 0],
             y: [0, -100, 0],
@@ -556,7 +556,7 @@ export default function App() {
           transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl hidden md:block"
           animate={{
             x: [0, -100, 0],
             y: [0, 100, 0],
@@ -565,27 +565,27 @@ export default function App() {
           transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        <div className="max-w-7xl mx-auto px-6 relative">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
           {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-20"
+            className="text-center mb-12 md:mb-16 lg:mb-20"
           >
             <motion.div
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, type: "spring" }}
-              className="inline-flex items-center gap-2 mb-6"
+              className="inline-flex items-center gap-2 mb-4 md:mb-6 flex-wrap justify-center"
             >
-              <div className="h-px w-12 bg-accent" />
-              <Sparkles className="w-5 h-5 text-accent" />
-              <span className="text-sm text-accent tracking-widest uppercase">Our Services</span>
-              <Sparkles className="w-5 h-5 text-accent" />
-              <div className="h-px w-12 bg-accent" />
+              <div className="h-px w-8 md:w-12 bg-accent" />
+              <Sparkles className="w-4 md:w-5 h-4 md:h-5 text-accent" />
+              <span className="text-xs md:text-sm text-accent tracking-widest uppercase">Our Services</span>
+              <Sparkles className="w-4 md:w-5 h-4 md:h-5 text-accent" />
+              <div className="h-px w-8 md:w-12 bg-accent" />
             </motion.div>
 
             <motion.h2
@@ -593,7 +593,7 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-6xl mb-6"
+              className="text-3xl md:text-5xl lg:text-6xl mb-4 md:mb-6 px-4"
             >
               What We <span className="text-accent">Deliver</span>
             </motion.h2>
@@ -603,14 +603,14 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed"
+              className="text-base md:text-lg lg:text-xl text-foreground/70 max-w-3xl mx-auto leading-relaxed px-4"
             >
               A complete digital marketing ecosystem engineered to position your law firm as the undisputed
               authority in your practice area. Every service is designed for maximum impact and ROI.
             </motion.p>
 
-            {/* Decorative elements */}
-            <div className="relative mt-8">
+            {/* Decorative elements - hidden on mobile */}
+            <div className="relative mt-8 hidden md:block">
               <motion.div
                 animate={{
                   rotate: 360,
@@ -637,7 +637,7 @@ export default function App() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mt-16"
+            className="text-center mt-12 md:mt-16"
           >
             <motion.button
               whileHover={{
@@ -645,10 +645,10 @@ export default function App() {
                 boxShadow: "0 0 40px rgba(201, 169, 97, 0.5)",
               }}
               whileTap={{ scale: 0.95 }}
-              className="px-10 py-4 bg-accent text-accent-foreground rounded-lg text-lg flex items-center gap-3 mx-auto group"
+              className="px-8 md:px-10 py-3 md:py-4 bg-accent text-accent-foreground rounded-lg text-base md:text-lg flex items-center gap-2 md:gap-3 mx-auto group"
             >
               <span>View Full Service Packages</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+              <ArrowRight className="w-4 md:w-5 h-4 md:h-5 group-hover:translate-x-2 transition-transform" />
             </motion.button>
           </motion.div>
         </div>
@@ -1007,7 +1007,7 @@ export default function App() {
             >
               <h4 className="mb-4">Contact</h4>
               <ul className="space-y-2 text-foreground/70">
-                <motion.li whileHover={{ x: 5, color: "rgba(201, 169, 97, 1)" }} className="cursor-pointer">
+                <motion.li whileHover={{ x: 5, color: "rgba(201, 169, 97, 1)" }} className="cursor-pointer transition-colors">
                   jacob@lawyermarketing.my
                 </motion.li>
                 <motion.li whileHover={{ x: 5, color: "rgba(201, 169, 97, 1)" }} className="cursor-pointer">

@@ -83,7 +83,7 @@ export function WhatWeDo() {
               y: -12,
               transition: { duration: 0.4, ease: "easeOut" },
             }}
-            className="relative h-full bg-card border border-border rounded-lg p-8 overflow-hidden"
+            className="relative h-full bg-card border border-border rounded-lg p-5 md:p-8 overflow-hidden"
           >
             {/* Animated gradient background */}
             <motion.div
@@ -98,9 +98,9 @@ export function WhatWeDo() {
               transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
             />
 
-            {/* Floating particles on hover */}
+            {/* Floating particles on hover - hidden on mobile for performance */}
             {hoveredIndex === index && (
-              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute inset-0 overflow-hidden pointer-events-none hidden md:block">
                 {[...Array(8)].map((_, i) => (
                   <motion.div
                     key={i}
@@ -129,12 +129,12 @@ export function WhatWeDo() {
               <motion.div
                 whileHover={{ rotate: 360, scale: 1.1 }}
                 transition={{ duration: 0.6 }}
-                className="mb-6 inline-block"
+                className="mb-4 md:mb-6 inline-block"
               >
-                <div className={`${service.iconBg} w-16 h-16 rounded-lg flex items-center justify-center shadow-lg relative`}>
-                  {/* Glow effect */}
+                <div className={`${service.iconBg} w-12 h-12 md:w-16 md:h-16 rounded-lg flex items-center justify-center shadow-lg relative`}>
+                  {/* Glow effect - hidden on mobile for performance */}
                   <motion.div
-                    className="absolute inset-0 rounded-lg blur-xl opacity-50"
+                    className="absolute inset-0 rounded-lg blur-xl opacity-50 hidden md:block"
                     animate={
                       hoveredIndex === index
                         ? {
@@ -146,22 +146,22 @@ export function WhatWeDo() {
                     transition={{ duration: 2, repeat: Infinity }}
                     style={{ background: "inherit" }}
                   />
-                  <service.icon className="w-8 h-8 text-white relative z-10" />
+                  <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white relative z-10" />
                 </div>
               </motion.div>
 
               {/* Title */}
-              <h3 className="text-2xl mb-3 group-hover:text-accent transition-colors duration-300">
+              <h3 className="text-xl md:text-2xl mb-2 md:mb-3 group-hover:text-accent transition-colors duration-300">
                 {service.title}
               </h3>
 
               {/* Description */}
-              <p className="text-foreground/70 leading-relaxed mb-6">
+              <p className="text-sm md:text-base text-foreground/70 leading-relaxed mb-4 md:mb-6">
                 {service.description}
               </p>
 
               {/* Features List */}
-              <div className="space-y-3 mb-6">
+              <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
                 {service.features.map((feature, featureIndex) => (
                   <motion.div
                     key={feature}
@@ -169,16 +169,16 @@ export function WhatWeDo() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.15 + featureIndex * 0.1 }}
-                    className="flex items-start gap-3"
+                    className="flex items-start gap-2 md:gap-3"
                   >
                     <motion.div
                       whileHover={{ scale: 1.2, rotate: 360 }}
                       transition={{ duration: 0.4 }}
-                      className="mt-1 p-1 bg-accent/20 rounded-full flex-shrink-0"
+                      className="mt-0.5 md:mt-1 p-1 bg-accent/20 rounded-full flex-shrink-0"
                     >
-                      <Check className="w-3 h-3 text-accent" />
+                      <Check className="w-2.5 h-2.5 md:w-3 md:h-3 text-accent" />
                     </motion.div>
-                    <span className="text-sm text-foreground/80">{feature}</span>
+                    <span className="text-xs md:text-sm text-foreground/80">{feature}</span>
                   </motion.div>
                 ))}
               </div>
@@ -187,16 +187,16 @@ export function WhatWeDo() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full px-6 py-3 bg-accent/10 hover:bg-accent text-foreground hover:text-accent-foreground border border-accent rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn"
+                className="w-full px-4 md:px-6 py-2.5 md:py-3 bg-accent/10 hover:bg-accent text-foreground hover:text-accent-foreground border border-accent rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn text-sm md:text-base"
               >
                 <span>Learn More</span>
-                <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 group-hover/btn:translate-x-1 transition-transform" />
               </motion.button>
             </div>
 
-            {/* Corner accent decorations */}
+            {/* Corner accent decorations - hidden on mobile for performance */}
             <motion.div
-              className="absolute top-0 right-0 w-32 h-32 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              className="absolute top-0 right-0 w-32 h-32 opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden md:block"
               animate={
                 hoveredIndex === index
                   ? {
@@ -210,7 +210,7 @@ export function WhatWeDo() {
             </motion.div>
 
             <motion.div
-              className="absolute bottom-0 left-0 w-32 h-32 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              className="absolute bottom-0 left-0 w-32 h-32 opacity-0 group-hover:opacity-100 transition-opacity duration-500 hidden md:block"
               animate={
                 hoveredIndex === index
                   ? {
@@ -223,9 +223,9 @@ export function WhatWeDo() {
               <div className="absolute bottom-4 left-4 w-16 h-16 border-b-2 border-l-2 border-accent/30 rounded-bl-lg" />
             </motion.div>
 
-            {/* Shimmer effect */}
+            {/* Shimmer effect - hidden on mobile for performance */}
             <motion.div
-              className="absolute inset-0 opacity-0 group-hover:opacity-100"
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 hidden md:block"
               initial={false}
               animate={
                 hoveredIndex === index

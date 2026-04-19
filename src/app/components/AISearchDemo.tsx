@@ -68,26 +68,26 @@ export function AISearchDemo() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="max-w-3xl mx-auto mb-12"
+        className="max-w-3xl mx-auto mb-8 md:mb-12"
       >
         <div className="relative">
-          <div className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
-            <Search className="w-5 h-5 text-accent" />
-            <Sparkles className="w-4 h-4 text-accent animate-pulse" />
+          <div className="absolute left-3 md:left-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
+            <Search className="w-4 md:w-5 h-4 md:h-5 text-accent" />
+            <Sparkles className="w-3 md:w-4 h-3 md:h-4 text-accent animate-pulse" />
           </div>
           <input
             type="text"
             value={typedText}
             readOnly
-            className="w-full pl-16 pr-6 py-5 bg-card border-2 border-accent/50 rounded-lg text-lg text-foreground focus:outline-none focus:border-accent"
+            className="w-full pl-12 md:pl-16 pr-4 md:pr-6 py-4 md:py-5 bg-card border-2 border-accent/50 rounded-lg text-base md:text-lg text-foreground focus:outline-none focus:border-accent"
             placeholder="Ask AI anything..."
           />
           <motion.div
-            className="absolute right-4 top-1/2 -translate-y-1/2"
+            className="absolute right-3 md:right-4 top-1/2 -translate-y-1/2"
             animate={{ opacity: [1, 0, 1] }}
             transition={{ duration: 1, repeat: Infinity }}
           >
-            <div className="w-0.5 h-6 bg-accent" />
+            <div className="w-0.5 h-5 md:h-6 bg-accent" />
           </motion.div>
         </div>
       </motion.div>
@@ -115,9 +115,9 @@ export function AISearchDemo() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-8 p-6 bg-card/50 border border-border rounded-lg"
+              className="mb-6 md:mb-8 p-4 md:p-6 bg-card/50 border border-border rounded-lg"
             >
-              <p className="text-lg text-foreground/90 leading-relaxed mb-4">
+              <p className="text-sm md:text-lg text-foreground/90 leading-relaxed mb-4">
                 Based on your search for {currentData.specialty.toLowerCase()} services in your area, I recommend the following highly-rated law firm:
               </p>
             </motion.div>
@@ -126,22 +126,22 @@ export function AISearchDemo() {
             <motion.div
               initial={{ scale: 1 }}
               animate={{
-                scale: zoomIn ? 1.05 : 1,
+                scale: zoomIn ? 1.02 : 1,
                 boxShadow: highlightFirm
-                  ? "0 0 0 4px rgba(201, 169, 97, 0.3), 0 20px 60px rgba(201, 169, 97, 0.4)"
+                  ? "0 0 0 2px rgba(201, 169, 97, 0.3), 0 10px 30px rgba(201, 169, 97, 0.4)"
                   : "0 4px 6px rgba(0, 0, 0, 0.1)",
               }}
               transition={{ duration: 0.5 }}
-              className={`relative p-8 rounded-lg border-2 transition-all ${
+              className={`relative p-4 md:p-8 rounded-lg border-2 transition-all ${
                 highlightFirm
                   ? "bg-gradient-to-br from-accent/20 to-card border-accent"
                   : "bg-card border-border"
               }`}
             >
-              {/* Glowing border animation */}
+              {/* Glowing border animation - reduced on mobile */}
               {highlightFirm && (
                 <motion.div
-                  className="absolute inset-0 rounded-lg"
+                  className="absolute inset-0 rounded-lg hidden md:block"
                   animate={{
                     boxShadow: [
                       "0 0 20px rgba(201, 169, 97, 0.5)",
@@ -159,20 +159,20 @@ export function AISearchDemo() {
                   initial={{ scale: 0, rotate: -180 }}
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{ duration: 0.5, type: "spring" }}
-                  className="absolute -top-4 -right-4 z-10"
+                  className="absolute -top-3 -right-3 md:-top-4 md:-right-4 z-10"
                 >
                   <div className="relative">
                     <div className="absolute inset-0 bg-accent rounded-full blur-xl opacity-50 animate-pulse" />
-                    <div className="relative bg-accent text-accent-foreground px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
-                      <Sparkles className="w-4 h-4" />
-                      <span className="font-medium">AI Cited</span>
+                    <div className="relative bg-accent text-accent-foreground px-3 md:px-4 py-1.5 md:py-2 rounded-full flex items-center gap-1.5 md:gap-2 shadow-lg">
+                      <Sparkles className="w-3 md:w-4 h-3 md:h-4" />
+                      <span className="text-xs md:text-sm font-medium">AI Cited</span>
                       {showCheckmark && (
                         <motion.div
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ type: "spring", stiffness: 500 }}
                         >
-                          <Check className="w-4 h-4" />
+                          <Check className="w-3 md:w-4 h-3 md:h-4" />
                         </motion.div>
                       )}
                     </div>
@@ -180,28 +180,28 @@ export function AISearchDemo() {
                 </motion.div>
               )}
 
-              <div className="flex items-start gap-6 relative z-10">
+              <div className="flex items-start gap-3 md:gap-6 relative z-10">
                 {/* Firm Logo */}
-                <div className="w-20 h-20 bg-accent/10 rounded-lg flex items-center justify-center border-2 border-accent">
-                  <span className="text-2xl text-accent">⚖️</span>
+                <div className="w-14 h-14 md:w-20 md:h-20 bg-accent/10 rounded-lg flex items-center justify-center border-2 border-accent flex-shrink-0">
+                  <span className="text-xl md:text-2xl text-accent">⚖️</span>
                 </div>
 
                 {/* Firm Details */}
-                <div className="flex-1">
+                <div className="flex-1 min-w-0">
                   <motion.h3
                     key={`firm-${currentQueryIndex}`}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="text-2xl text-accent mb-2"
+                    className="text-lg md:text-2xl text-accent mb-2"
                   >
                     {currentData.firm}
                   </motion.h3>
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-center gap-1 md:gap-2 mb-3 flex-wrap">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-accent fill-accent" />
+                      <Star key={i} className="w-3 md:w-4 h-3 md:h-4 text-accent fill-accent" />
                     ))}
-                    <span className="text-sm text-foreground/70 ml-2">(4.9 • 120+ reviews)</span>
+                    <span className="text-xs md:text-sm text-foreground/70 ml-1 md:ml-2">(4.9 • 120+ reviews)</span>
                   </div>
 
                   <motion.p
@@ -209,19 +209,19 @@ export function AISearchDemo() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.4, delay: 0.1 }}
-                    className="text-foreground/80 mb-4 leading-relaxed"
+                    className="text-sm md:text-base text-foreground/80 mb-3 md:mb-4 leading-relaxed"
                   >
                     Specializing in {currentData.specialty.toLowerCase()} with over {currentData.years} years of experience.
                     Known for professional representation and favorable outcomes for clients in Kuala Lumpur.
                   </motion.p>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5 md:gap-2">
                     <motion.span
                       key={`badge1-${currentQueryIndex}`}
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.3, delay: 0.2 }}
-                      className="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full border border-accent/30"
+                      className="px-2 md:px-3 py-0.5 md:py-1 bg-accent/10 text-accent text-xs md:text-sm rounded-full border border-accent/30"
                     >
                       {currentData.area} Expert
                     </motion.span>
@@ -230,7 +230,7 @@ export function AISearchDemo() {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.3, delay: 0.3 }}
-                      className="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full border border-accent/30"
+                      className="px-2 md:px-3 py-0.5 md:py-1 bg-accent/10 text-accent text-xs md:text-sm rounded-full border border-accent/30"
                     >
                       {currentData.years} Years
                     </motion.span>
@@ -239,7 +239,7 @@ export function AISearchDemo() {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.3, delay: 0.4 }}
-                      className="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full border border-accent/30"
+                      className="px-2 md:px-3 py-0.5 md:py-1 bg-accent/10 text-accent text-xs md:text-sm rounded-full border border-accent/30"
                     >
                       Kuala Lumpur
                     </motion.span>
@@ -272,15 +272,15 @@ export function AISearchDemo() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="mt-8 p-6 bg-gradient-to-r from-accent/10 to-transparent border-l-4 border-accent rounded-lg"
+                className="mt-6 md:mt-8 p-4 md:p-6 bg-gradient-to-r from-accent/10 to-transparent border-l-4 border-accent rounded-lg"
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-2 bg-accent rounded-full">
-                    <Check className="w-5 h-5 text-accent-foreground" />
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="p-1.5 md:p-2 bg-accent rounded-full flex-shrink-0">
+                    <Check className="w-4 md:w-5 h-4 md:h-5 text-accent-foreground" />
                   </div>
                   <div>
-                    <h4 className="text-xl text-accent mb-2">Get Ranked on Page 1</h4>
-                    <p className="text-foreground/80 leading-relaxed">
+                    <h4 className="text-lg md:text-xl text-accent mb-2">Get Ranked on Page 1</h4>
+                    <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
                       When AI search engines cite your firm, you appear as the trusted recommendation
                       before potential clients even scroll. We optimize your digital presence to be the
                       first choice AI recommends.
@@ -294,14 +294,14 @@ export function AISearchDemo() {
       </AnimatePresence>
 
       {/* Progress Indicators */}
-      <div className="flex justify-center gap-2 mt-8">
+      <div className="flex justify-center gap-1.5 md:gap-2 mt-6 md:mt-8">
         {practiceAreaQueries.map((_, index) => (
           <motion.div
             key={index}
-            className={`h-1.5 rounded-full transition-all ${
+            className={`h-1 md:h-1.5 rounded-full transition-all ${
               index === currentQueryIndex
-                ? "w-8 bg-accent"
-                : "w-1.5 bg-accent/30"
+                ? "w-6 md:w-8 bg-accent"
+                : "w-1 md:w-1.5 bg-accent/30"
             }`}
             animate={{
               opacity: index === currentQueryIndex ? 1 : 0.5,
