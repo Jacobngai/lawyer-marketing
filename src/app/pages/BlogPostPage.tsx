@@ -34,7 +34,7 @@ export function BlogPostPage() {
               JN
             </div>
             <div>
-              <div className="text-sm">Jacob Ngai</div>
+              <div className="text-sm">Jacob Ng</div>
               <div className="text-xs text-foreground/50 italic">Strategic Director</div>
             </div>
           </div>

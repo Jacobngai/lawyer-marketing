@@ -9,7 +9,7 @@ const blogPosts = [
     excerpt: "Everything you need to know about the Bar Council's landmark decision on digital advertising and social media presence.",
     category: "Compliance",
     date: "Jan 15, 2026",
-    author: "Jacob Ngai",
+    author: "Jacob Ng",
     image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800",
   },
   {
@@ -18,7 +18,7 @@ const blogPosts = [
     excerpt: "Why the classic SEO playbook is dead, and how to optimize your firm for Perplexity, ChatGPT, and AI Search Engines.",
     category: "AI Marketing",
     date: "Jan 12, 2026",
-    author: "Jacob Ngai",
+    author: "Jacob Ng",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
   },
   {
@@ -27,7 +27,7 @@ const blogPosts = [
     excerpt: "From professional photography to LinkedIn thought leadership—how to build a name that commands premium fees.",
     category: "Branding",
     date: "Jan 10, 2026",
-    author: "Jacob Ngai",
+    author: "Jacob Ng",
     image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800",
   }
 ];
