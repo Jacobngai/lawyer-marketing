@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { blogPosts } from '../../../data/blog-posts';
+
+const sortedPosts = [...blogPosts].sort((a, b) =>
+  new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+---
+
+<BaseLayout
+  title="Insights | LawyerMarketing.my"
+  description="Practical marketing insights for Malaysian law firms. SEO, GEO, advertising rules, and strategies for every practice area."
+>
+
+  <section class="py-16 sm:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <span class="section-label">Insights</span>
+        <h1 class="font-heading text-4xl sm:text-5xl font-bold text-teal-deep mb-5">
+          Marketing intelligence for Malaysian law firms.
+        </h1>
+        <p class="text-lg text-charcoal/60 max-w-2xl mx-auto">
+          Practical strategies, industry analysis, and actionable advice — written specifically
+          for lawyers navigating the new era of legal advertising in Malaysia.
+        </p>
+      </div>
+
+      <div class="space-y-6">
+        {sortedPosts.map(post => (
+          <a href={`/en/blog/${post.slug}/`}
+             class="group block bg-white rounded-xl p-6 sm:p-8 border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200">
+            <div class="flex items-center gap-3 mb-3">
+              <time class="text-xs text-charcoal/40 font-medium">
+                {new Date(post.date).toLocaleDateString('en-MY', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+              <span class="text-xs text-charcoal/30">&middot;</span>
+              <span class="text-xs text-charcoal/40">{post.readTime}</span>
+            </div>
+            <h2 class="font-heading text-xl sm:text-2xl font-bold text-teal-deep group-hover:text-teal transition mb-3 leading-snug">
+              {post.title}
+            </h2>
+            <p class="text-charcoal/55 text-sm leading-relaxed">
+              {post.excerpt}
+            </p>
+            <span class="inline-block mt-4 text-copper text-sm font-semibold">Read article &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

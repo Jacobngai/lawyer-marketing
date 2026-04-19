@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { niches } from '../../../data/niches';
+---
+
+<BaseLayout
+  title="Marketing by Practice Area | LawyerMarketing.my"
+  description="Every practice area has different clients, different search patterns, and different marketing strategies. Find yours."
+>
+
+  <section class="py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-14">
+        <span class="section-label">20 Practice Areas</span>
+        <h1 class="font-heading text-4xl sm:text-5xl font-bold text-teal-deep mb-5 leading-tight">
+          Every practice area has different clients.<br class="hidden sm:block">
+          Your marketing should, too.
+        </h1>
+        <p class="text-lg text-charcoal/60 max-w-2xl mx-auto">
+          A divorce client Googling at midnight is nothing like a CEO looking for M&A counsel
+          over lunch. Below are the 20 practice areas we specialise in — each with its own
+          strategy, because each has its own kind of client.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {niches.map(niche => (
+          <a href={`/en/niches/${niche.slug}/`}
+             class="group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200">
+            <h2 class="font-heading font-bold text-lg text-teal-deep group-hover:text-teal transition mb-2">
+              {niche.name}
+            </h2>
+            <p class="text-sm text-charcoal/55 leading-relaxed mb-3">{niche.shortDesc}</p>
+            <span class="text-copper text-sm font-semibold">See the strategy &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

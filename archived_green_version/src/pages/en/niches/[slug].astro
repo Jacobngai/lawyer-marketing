@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { niches } from '../../../data/niches';
+import type { Niche } from '../../../data/niches';
+
+export function getStaticPaths() {
+  return niches.map(niche => ({
+    params: { slug: niche.slug },
+    props: { niche },
+  }));
+}
+
+interface Props {
+  niche: Niche;
+}
+
+const { niche } = Astro.props;
+const whatsappUrl = `https://wa.me/60175032281?text=${encodeURIComponent(`Hi, I'm interested in marketing for my ${niche.name.toLowerCase()} practice.`)}`;
+---
+
+<BaseLayout title={niche.metaTitle} description={niche.metaDesc}>
+
+  <!-- Hero -->
+  <section class="bg-cream py-16 sm:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <a href="/en/niches/" class="text-copper text-sm font-semibold hover:text-copper-dark transition mb-4 inline-block">
+        &larr; All Practice Areas
+      </a>
+      <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-teal-deep mb-6 leading-tight">
+        {niche.heroHeadline}
+      </h1>
+      <p class="text-lg text-charcoal/60 max-w-2xl mx-auto">
+        {niche.heroSub}
+      </p>
+    </div>
+  </section>
+
+  <!-- Client Psychology -->
+  <section class="py-14 sm:py-18">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <span class="section-label">Understanding Your Client</span>
+      <h2 class="font-heading text-2xl sm:text-3xl font-bold text-teal-deep mb-5">
+        {niche.clientPsychTitle}
+      </h2>
+      <p class="text-charcoal/75 text-base sm:text-lg leading-relaxed mb-8">
+        {niche.clientPsychBody}
+      </p>
+
+      <!-- Search Terms Table -->
+      <div class="bg-white rounded-xl border border-cream-dark overflow-hidden">
+        <div class="bg-teal-deep px-5 py-3">
+          <h3 class="text-white text-sm font-semibold tracking-wide">What your future clients are searching</h3>
+        </div>
+        <div class="divide-y divide-cream-dark">
+          {niche.searchTerms.map(term => (
+            <div class="flex flex-col sm:flex-row sm:items-start px-5 py-4 gap-1 sm:gap-4">
+              <code class="text-teal-deep font-semibold text-sm whitespace-nowrap shrink-0">
+                "{term.term}"
+              </code>
+              <p class="text-charcoal/60 text-sm">{term.intent}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Build -->
+  <section class="bg-cream-dark py-14 sm:py-18">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <span class="section-label">What We'd Build For You</span>
+      <h2 class="font-heading text-2xl sm:text-3xl font-bold text-teal-deep mb-3">
+        A marketing system, not a marketing campaign.
+      </h2>
+      <p class="text-charcoal/60 mb-10">
+        {niche.whatWeBuildIntro}
+      </p>
+
+      <div class="space-y-6">
+        {niche.whatWeBuild.map((item, i) => (
+          <div class="bg-white rounded-xl p-6 sm:p-8 border border-cream-dark">
+            <div class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-teal-deep/10 text-teal-deep rounded-lg flex items-center justify-center font-bold text-sm">
+                {i + 1}
+              </span>
+              <div>
+                <h3 class="font-heading font-bold text-lg text-teal-deep mb-2">{item.title}</h3>
+                <p class="text-charcoal/70 text-sm leading-relaxed">{item.body}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Now -->
+  <section class="bg-teal-deep text-white py-14 sm:py-18">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <span class="section-label !text-copper">Why Now</span>
+      <h2 class="font-heading text-2xl sm:text-3xl font-bold mb-5">
+        The first-mover advantage is real.
+      </h2>
+      <p class="text-white/65 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
+        {niche.whyNowBody}
+      </p>
+    </div>
+  </section>
+
+  <!-- Compliance -->
+  <section class="py-14 sm:py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="bg-cream rounded-xl p-6 sm:p-8 border border-cream-dark">
+        <h3 class="font-heading font-bold text-lg text-teal-deep mb-3">
+          Everything we do is Bar Council compliant.
+        </h3>
+        <p class="text-charcoal/65 text-sm leading-relaxed">
+          The Publicity Rules are clear: no sensationalism, no guarantees of outcomes, no
+          testimonials that imply guaranteed results, no disparagement of other lawyers.
+          We design every campaign within these boundaries — because your reputation matters
+          more than any single lead. If you're unsure what's allowed, that's fine. Part of
+          our job is knowing the rules so you don't have to worry about them.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-14 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="font-heading text-2xl sm:text-3xl font-bold text-teal-deep mb-4">
+        {niche.ctaHeadline}
+      </h2>
+      <p class="text-charcoal/50 text-sm mb-8 max-w-lg mx-auto">
+        We'll audit your current online presence, show you exactly where the opportunities
+        are in your area, and give you a clear plan — whether you work with us or not.
+      </p>
+      <a href={whatsappUrl} target="_blank" rel="noopener" class="btn-copper text-base px-10 py-4">
+        {niche.ctaButton}
+      </a>
+      <p class="text-xs text-charcoal/35 mt-4">Takes 15 minutes. No obligation.</p>
+    </div>
+  </section>
+
+</BaseLayout>

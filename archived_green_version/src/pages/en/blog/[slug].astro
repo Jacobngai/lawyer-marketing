@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { blogPosts } from '../../../data/blog-posts';
+import type { BlogPost } from '../../../data/blog-posts';
+
+export function getStaticPaths() {
+  return blogPosts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: BlogPost;
+}
+
+const { post } = Astro.props;
+const whatsappUrl = 'https://wa.me/60175032281?text=Hi%2C%20I%20read%20your%20article%20and%20would%20like%20to%20learn%20more.';
+const formattedDate = new Date(post.date).toLocaleDateString('en-MY', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={`${post.title} | LawyerMarketing.my`} description={post.excerpt}>
+
+  <article class="py-14 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <!-- Meta -->
+      <div class="mb-8">
+        <a href="/en/blog/" class="text-copper text-sm font-semibold hover:text-copper-dark transition mb-4 inline-block">
+          &larr; All Insights
+        </a>
+        <div class="flex items-center gap-3 mb-4">
+          <time class="text-xs text-charcoal/40 font-medium">{formattedDate}</time>
+          <span class="text-xs text-charcoal/30">&middot;</span>
+          <span class="text-xs text-charcoal/40">{post.readTime}</span>
+        </div>
+        <h1 class="font-heading text-3xl sm:text-4xl font-bold text-teal-deep leading-tight">
+          {post.title}
+        </h1>
+      </div>
+
+      <!-- Content -->
+      <div class="prose-custom text-base leading-relaxed" set:html={post.content} />
+
+      <!-- CTA -->
+      <div class="mt-14 bg-teal-deep rounded-xl p-6 sm:p-8 text-center">
+        <h3 class="font-heading text-xl font-bold text-white mb-3">
+          Want to apply this to your firm?
+        </h3>
+        <p class="text-white/55 text-sm mb-5 max-w-md mx-auto">
+          We'll review your practice area and show you exactly where the opportunities are — for free.
+        </p>
+        <a href={whatsappUrl} target="_blank" rel="noopener" class="btn-copper">
+          Get Your Free Audit
+        </a>
+      </div>
+    </div>
+  </article>
+
+</BaseLayout>

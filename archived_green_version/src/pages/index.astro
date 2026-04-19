@@ -1,0 +1,223 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const whatsappUrl = 'https://wa.me/60175032281?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20marketing%20for%20my%20law%20firm.';
+
+const practiceAreas = [
+  { name: 'Divorce & Family Law', slug: 'divorce-lawyer', desc: 'Clients in distress, searching privately. Empathy-first marketing.' },
+  { name: 'Criminal Defence', slug: 'criminal-defence', desc: 'High urgency, high emotion. Every hour matters.' },
+  { name: 'Personal Injury', slug: 'personal-injury', desc: "They're searching from a hospital bed. Meet them there." },
+  { name: 'Corporate Law', slug: 'corporate-law', desc: 'Longer sales cycle, higher value. Reputation is everything.' },
+  { name: 'Property & Conveyancing', slug: 'property-conveyancing', desc: 'Transactional, competitive, local. Win on trust and speed.' },
+  { name: 'Immigration', slug: 'immigration-lawyer', desc: 'Complex journeys, anxious clients. Clarity converts.' },
+  { name: 'Employment Law', slug: 'employment-lawyer', desc: 'Employees and employers both searching — different funnels.' },
+  { name: 'Estate Planning', slug: 'estate-planning', desc: "Nobody wants to think about this. Make it feel manageable." },
+];
+
+import { AISearchDemo } from '../components/react/AISearchDemo';
+import { WhatWeDo } from '../components/react/WhatWeDo';
+---
+
+<BaseLayout
+  title="Lawyer Marketing Malaysia — The Bar Council Just Changed the Rules"
+  description="Malaysian lawyers can now advertise. Most firms haven't moved yet. We help law firms build their client pipeline before the competition catches up."
+>
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-cream py-20 sm:py-28">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <span class="section-label">For Malaysian Law Firms</span>
+      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-teal-deep mb-6 leading-tight">
+        For the first time, Malaysian lawyers can advertise.
+        <span class="text-copper">Most firms are still waiting.</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-charcoal/60 max-w-2xl mx-auto mb-10 font-body">
+        The Bar Council's rule change created a window. The firms that build their online presence
+        now will own their practice area — before the market gets crowded.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#how-it-works" class="btn-primary">See How It Works</a>
+        <a href="/en/niches/" class="btn-secondary">Find Your Practice Area</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE SHIFT ===== -->
+  <section class="py-16 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <span class="section-label">The Shift</span>
+      <h2 class="font-heading text-3xl sm:text-4xl font-bold text-teal-deep mb-6">
+        Something just changed in Malaysian law.
+      </h2>
+      <div class="space-y-5 text-charcoal/75 text-base sm:text-lg leading-relaxed">
+        <p>
+          For decades, the Bar Council prohibited lawyers from advertising. Word of mouth,
+          referrals, personal reputation — that was all you had. And if you were good, that was enough.
+        </p>
+        <p>
+          But the rules have changed. Advertising is now permitted. And while most firms are still
+          debating whether it's "appropriate," a small number are already building their digital
+          presence — claiming the Google searches, the content authority, the online reputation —
+          in every practice area across Malaysia.
+        </p>
+        <p>
+          Here's what matters: <strong class="text-teal-deep">in digital marketing, the early mover
+          advantage is structural.</strong> The firm that ranks first for "divorce lawyer Kuala Lumpur"
+          today won't easily be displaced tomorrow. SEO compounds. Reputation compounds. Waiting doesn't.
+        </p>
+        <p>
+          That's why we exist. Not to turn lawyers into billboards. But to help serious firms build
+          something dignified, effective, and permanent — before the market gets noisy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AI SEARCH DEMO ===== -->
+  <section class="py-24 bg-cream-dark/50 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16">
+        <span class="section-label">AI Advantage</span>
+        <h2 class="font-heading text-3xl sm:text-5xl font-bold text-teal-deep mb-4">
+          Get <span class="text-copper">AI-Cited</span> on Page 1
+        </h2>
+        <p class="text-charcoal/60 text-lg max-w-2xl mx-auto">
+          When potential clients ask AI for legal help, it recommends firms with the strongest digital presence. 
+          We position you as the trusted choice.
+        </p>
+      </div>
+      <AISearchDemo client:visible />
+    </div>
+  </section>
+
+  <!-- ===== PRACTICE AREAS ===== -->
+  <section class="bg-cream-dark py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="section-label">Practice Areas</span>
+        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-teal-deep mb-4">
+          We don't do "general" legal marketing.<br class="hidden sm:block"> Neither should you.
+        </h2>
+        <p class="text-charcoal/60 text-lg max-w-2xl mx-auto">
+          A person searching for a criminal defence lawyer at 2am is nothing like a business owner
+          looking for corporate counsel over lunch. We build strategies around how <em>your</em>
+          specific clients think, search, and decide.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {practiceAreas.map(area => (
+          <a href={`/en/niches/${area.slug}/`}
+             class="group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200">
+            <h3 class="font-heading font-bold text-lg text-teal-deep group-hover:text-teal transition mb-2">
+              {area.name}
+            </h3>
+            <p class="text-sm text-charcoal/55 leading-relaxed mb-3">{area.desc}</p>
+            <span class="text-copper text-sm font-semibold">See the strategy &rarr;</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/en/niches/" class="text-teal-deep font-semibold hover:text-copper transition text-sm">
+          View all 20 practice areas &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT WE DO ===== -->
+  <section id="how-it-works" class="py-24 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-16">
+        <span class="section-label">Our Deliverables</span>
+        <h2 class="font-heading text-3xl sm:text-5xl font-bold text-teal-deep mb-4">
+          A Complete Digital <span class="text-copper">Ecosystem</span>
+        </h2>
+        <p class="text-charcoal/60 text-lg max-w-2xl mx-auto">
+          We don't just "run ads." We build a permanent, professional infrastructure that positions you as the authority in your practice area.
+        </p>
+      </div>
+
+      <WhatWeDo client:visible />
+    </div>
+  </section>
+
+      <!-- Services row -->
+      <div class="mt-12 bg-teal-deep rounded-xl p-8 sm:p-10 text-white">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div>
+            <h4 class="font-semibold text-sm text-copper mb-2">SEO & Local SEO</h4>
+            <p class="text-white/60 text-sm leading-relaxed">
+              Rank for the searches your clients actually make. Google Business Profile, location pages, content strategy.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-sm text-copper mb-2">Google Ads (SEM)</h4>
+            <p class="text-white/60 text-sm leading-relaxed">
+              Immediate leads from high-intent searchers while your SEO builds momentum.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-sm text-copper mb-2">GEO</h4>
+            <p class="text-white/60 text-sm leading-relaxed">
+              Generative Engine Optimisation — be the firm AI recommends when clients ask ChatGPT for a lawyer.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-sm text-copper mb-2">Landing Pages</h4>
+            <p class="text-white/60 text-sm leading-relaxed">
+              A complete, professional landing page for your firm from <strong class="text-copper">RM300/year</strong>. No hidden fees.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE STAKES ===== -->
+  <section class="bg-teal-deep text-white py-16 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <span class="section-label !text-copper">Why Now</span>
+      <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">
+        The firms that move first will be the hardest to displace.
+      </h2>
+      <div class="space-y-5 text-white/65 text-base sm:text-lg leading-relaxed text-left sm:text-center">
+        <p>
+          Think about how you choose a restaurant in a new city. You Google it. You look at the
+          first few results. You read the reviews. You pick one.
+        </p>
+        <p>
+          Your future clients do exactly the same thing when they need a lawyer. The only question
+          is whether they find you — or the firm down the road that started six months earlier.
+        </p>
+        <p>
+          SEO isn't a switch you flip. It's a garden you plant. The firms planting now will be the
+          ones clients find next year, and the year after that. The ones who wait will spend twice
+          as much to catch up — <strong class="text-white">if they can catch up at all.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="py-16 sm:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="font-heading text-3xl sm:text-4xl font-bold text-teal-deep mb-4">
+        You've spent years building your reputation in the courtroom.
+      </h2>
+      <p class="text-xl text-charcoal/60 mb-3">
+        Let's make sure the right clients can find you.
+      </p>
+      <p class="text-charcoal/45 text-sm mb-8 max-w-lg mx-auto">
+        We'll review your practice area, show you where the opportunities are, and give you
+        an honest assessment — even if the answer is "you don't need us."
+      </p>
+      <a href={whatsappUrl} target="_blank" rel="noopener" class="btn-copper text-base px-10 py-4">
+        Get a Free Practice Area Review
+      </a>
+      <p class="text-xs text-charcoal/35 mt-4">No obligation. No hard sell. Just clarity.</p>
+    </div>
+  </section>
+
+</BaseLayout>
