@@ -293,22 +293,6 @@ export function AISearchDemo() {
         )}
       </AnimatePresence>
 
-      {/* Progress Indicators */}
-      <div className="flex justify-center gap-1.5 md:gap-2 mt-6 md:mt-8">
-        {practiceAreaQueries.map((_, index) => (
-          <motion.div
-            key={index}
-            className={`h-1 md:h-1.5 rounded-full transition-all ${
-              index === currentQueryIndex
-                ? "w-6 md:w-8 bg-accent"
-                : "w-1 md:w-1.5 bg-accent/30"
-            }`}
-            animate={{
-              opacity: index === currentQueryIndex ? 1 : 0.5,
-            }}
-          />
-        ))}
-      </div>
     </div>
   );
 }
