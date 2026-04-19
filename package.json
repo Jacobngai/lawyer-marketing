@@ -1,5 +1,5 @@
 {
-  "name": "@figma/my-make-file",
+  "name": "lawyer-marketing",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -78,5 +78,8 @@
     "overrides": {
       "vite": "6.3.5"
     }
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
