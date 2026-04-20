@@ -1,36 +1,7 @@
 import { motion } from "motion/react";
-import { Sparkles, ArrowRight, Calendar, User, Tag, ChevronRight } from "lucide-react";
+import { Sparkles, ArrowRight, Calendar, Tag, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "The 2026 Malaysian Legal Publicity Rules: A Definitive Guide",
-    excerpt: "Everything you need to know about the Bar Council's landmark decision on digital advertising and social media presence.",
-    category: "Compliance",
-    date: "Jan 15, 2026",
-    author: "Jacob Ng",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 2,
-    title: "Becoming an AI-Cited Authority: The Rise of AIEO & GEO",
-    excerpt: "Why the classic SEO playbook is dead, and how to optimize your firm for Perplexity, ChatGPT, and AI Search Engines.",
-    category: "AI Marketing",
-    date: "Jan 12, 2026",
-    author: "Jacob Ng",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 3,
-    title: "High-Ticket Personal Branding for Litigation Partners",
-    excerpt: "From professional photography to LinkedIn thought leadership—how to build a name that commands premium fees.",
-    category: "Branding",
-    date: "Jan 10, 2026",
-    author: "Jacob Ng",
-    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800",
-  }
-];
+import { blogPosts } from "../data/posts";
 
 export function BlogPage() {
   return (
@@ -67,44 +38,46 @@ export function BlogPage() {
       </section>
 
       {/* Featured Post */}
-      <section className="max-w-7xl mx-auto px-6 mb-24">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.98 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="group relative bg-card/50 border border-border rounded-lg overflow-hidden flex flex-col lg:flex-row hover:border-accent transition-all"
-        >
-          <div className="lg:w-1/2 overflow-hidden h-64 lg:h-auto">
-            <motion.img
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.8 }}
-              src={blogPosts[0].image}
-              alt={blogPosts[0].title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="p-8 lg:p-12 lg:w-1/2 flex flex-col justify-center">
-            <div className="flex items-center gap-4 text-accent text-sm mb-6 uppercase tracking-widest">
-              <span className="px-3 py-1 bg-accent/10 border border-accent rounded-sm">{blogPosts[0].category}</span>
-              <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> {blogPosts[0].date}</span>
+      {blogPosts.length > 0 && (
+        <section className="max-w-7xl mx-auto px-6 mb-24">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="group relative bg-card/50 border border-border rounded-lg overflow-hidden flex flex-col lg:flex-row hover:border-accent transition-all"
+          >
+            <div className="lg:w-1/2 overflow-hidden h-64 lg:h-auto">
+              <motion.img
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.8 }}
+                src={blogPosts[0].image}
+                alt={blogPosts[0].title}
+                className="w-full h-full object-cover"
+              />
             </div>
-            <h2 className="text-3xl md:text-4xl mb-6 leading-tight group-hover:text-accent transition-colors">
-              {blogPosts[0].title}
-            </h2>
-            <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-              {blogPosts[0].excerpt}
-            </p>
-            <Link to={`/blog/${blogPosts[0].id}`}>
-              <motion.button
-                whileHover={{ x: 10 }}
-                className="flex items-center gap-2 text-accent font-medium uppercase tracking-[0.2em] text-sm"
-              >
-                Read Featured Article <ArrowRight className="w-4 h-4" />
-              </motion.button>
-            </Link>
-          </div>
-        </motion.div>
-      </section>
+            <div className="p-8 lg:p-12 lg:w-1/2 flex flex-col justify-center">
+              <div className="flex items-center gap-4 text-accent text-sm mb-6 uppercase tracking-widest">
+                <span className="px-3 py-1 bg-accent/10 border border-accent rounded-sm">{blogPosts[0].category}</span>
+                <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> {blogPosts[0].date}</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl mb-6 leading-tight group-hover:text-accent transition-colors">
+                {blogPosts[0].title}
+              </h2>
+              <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
+                {blogPosts[0].excerpt}
+              </p>
+              <Link to={`/blog/${blogPosts[0].id}`}>
+                <motion.button
+                  whileHover={{ x: 10 }}
+                  className="flex items-center gap-2 text-accent font-medium uppercase tracking-[0.2em] text-sm"
+                >
+                  Read Featured Article <ArrowRight className="w-4 h-4" />
+                </motion.button>
+              </Link>
+            </div>
+          </motion.div>
+        </section>
+      )}
 
       {/* Blog Grid */}
       <section className="max-w-7xl mx-auto px-6 pb-32">
@@ -116,7 +89,7 @@ export function BlogPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group bg-card/30 border border-border p-6 rounded-lg hover:border-accent transition-all cursor-pointer"
+              className="group bg-card/30 border border-border p-6 rounded-lg hover:border-accent transition-all cursor-pointer flex flex-col h-full"
             >
               <div className="aspect-video overflow-hidden rounded-sm mb-6">
                 <img
@@ -128,17 +101,19 @@ export function BlogPage() {
               <div className="flex items-center gap-3 text-accent text-xs mb-4 uppercase tracking-widest">
                 <Tag className="w-3 h-3" /> {post.category}
               </div>
-              <h3 className="text-xl mb-4 group-hover:text-accent transition-colors leading-snug">
+              <h3 className="text-xl mb-4 group-hover:text-accent transition-colors leading-snug flex-grow">
                 {post.title}
               </h3>
               <p className="text-foreground/60 text-sm mb-6 line-clamp-2">
                 {post.excerpt}
               </p>
-              <Link to={`/blog/${post.id}`}>
-                <div className="flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all">
-                  Read Article <ChevronRight className="w-4 h-4" />
-                </div>
-              </Link>
+              <div className="mt-auto pt-6">
+                <Link to={`/blog/${post.id}`}>
+                  <div className="flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all">
+                    Read Article <ChevronRight className="w-4 h-4" />
+                  </div>
+                </Link>
+              </div>
             </motion.div>
           ))}
         </div>

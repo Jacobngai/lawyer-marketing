@@ -1,108 +1,124 @@
 import { motion } from "motion/react";
 import { ArrowLeft, MessageCircle, Share2, Printer, ChevronRight, CheckCircle2 } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
+import { blogPosts } from "../data/posts";
 
 export function BlogPostPage() {
   const { id } = useParams();
+  const post = blogPosts.find(p => p.id === id);
+
+  if (!post) {
+    return (
+      <div className="pt-32 min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl mb-6">Article Not Found</h1>
+          <Link to="/blog" className="text-accent hover:underline">Return to Library</Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="pt-24 min-h-screen bg-background">
-      <section className="max-w-4xl mx-auto px-6 py-16">
+    <div className="pt-16 min-h-screen bg-background">
+      {/* Article Hero Image */}
+      <section className="relative h-[40vh] md:h-[60vh] min-h-[400px] w-full overflow-hidden bg-zinc-900">
+        <motion.div 
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.2 }}
+          className="absolute inset-0 w-full h-full"
+        >
+          <img 
+            src={post.image} 
+            alt={post.title} 
+            className="w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+        </motion.div>
+      </section>
+
+      <section className="max-w-4xl mx-auto px-6 pb-24 relative -mt-32 z-10">
         <Link to="/blog">
           <motion.button
             whileHover={{ x: -5 }}
-            className="flex items-center gap-2 text-foreground/50 hover:text-accent transition-colors mb-12 uppercase tracking-widest text-xs"
+            className="flex items-center gap-2 text-white bg-black/40 backdrop-blur-md px-4 py-2 rounded-full hover:text-accent transition-colors mb-8 uppercase tracking-widest text-[10px]"
           >
-            <ArrowLeft className="w-4 h-4" /> Back to library
+            <ArrowLeft className="w-3 h-3" /> Back to library
           </motion.button>
         </Link>
 
-        {/* Post Metadata */}
-        <div className="flex items-center gap-3 text-accent mb-6">
-          <span className="px-3 py-1 bg-accent/10 border border-accent rounded-sm text-xs uppercase tracking-widest">AOP Strategy</span>
-          <span className="text-foreground/30">•</span>
-          <span className="text-foreground/50 text-xs">8 MIN READ</span>
-        </div>
+        {/* Post Metadata Card */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="bg-card/80 backdrop-blur-xl border border-border p-8 md:p-12 rounded-lg shadow-2xl mb-12"
+        >
+          <div className="flex items-center gap-3 text-accent mb-6">
+            <span className="px-3 py-1 bg-accent/10 border border-accent rounded-sm text-xs uppercase tracking-widest font-medium">{post.category}</span>
+            <span className="text-foreground/30">•</span>
+            <span className="text-foreground/50 text-xs uppercase tracking-widest">{post.readingTime}</span>
+          </div>
 
-        <h1 className="text-4xl md:text-6xl mb-8 leading-tight font-light">
-          Becoming an <span className="text-accent">AI-Cited Authority</span>: The Future of Legal Marketing
-        </h1>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl mb-8 leading-tight font-light">
+            {post.title}
+          </h1>
 
-        <div className="flex items-center justify-between pb-8 border-b border-border mb-12">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-accent/20 border border-accent flex items-center justify-center font-serif text-accent italic">
-              JN
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 rounded-full bg-accent/20 border border-accent flex items-center justify-center font-serif text-accent italic text-sm">
+                JN
+              </div>
+              <div>
+                <div className="text-sm font-medium">{post.author}</div>
+                <div className="text-[10px] text-foreground/50 uppercase tracking-wider">{post.date}</div>
+              </div>
             </div>
-            <div>
-              <div className="text-sm">Jacob Ng</div>
-              <div className="text-xs text-foreground/50 italic">Strategic Director</div>
+            <div className="flex items-center gap-2">
+              <button className="p-2 hover:text-accent transition-colors text-foreground/50"><Share2 className="w-4 h-4" /></button>
+              <button className="p-2 hover:text-accent transition-colors text-foreground/50"><Printer className="w-4 h-4" /></button>
             </div>
           </div>
-          <div className="flex items-center gap-4">
-            <button className="p-2 hover:text-accent transition-colors"><Share2 className="w-5 h-5" /></button>
-            <button className="p-2 hover:text-accent transition-colors"><Printer className="w-5 h-5" /></button>
-          </div>
-        </div>
+        </motion.div>
 
         {/* Post Content */}
-        <article className="prose prose-invert prose-accent max-w-none">
-          <div className="bg-secondary/30 border-l-4 border-accent p-8 mb-12 italic text-lg leading-relaxed rounded-r-md">
-            "By 2026, over 40% of legal inquiries in Malaysia will start with an AI agent. Firms that aren't optimized for Generative Engines won't just be low in rank—they will be invisible."
-          </div>
+        <article 
+          className="prose prose-invert prose-accent max-w-none prose-p:text-lg prose-p:leading-relaxed prose-headings:font-light prose-blockquote:border-accent prose-blockquote:bg-accent/5 prose-blockquote:py-1 prose-blockquote:rounded-r-lg"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
 
-          <p className="text-xl text-foreground/80 leading-relaxed mb-8">
-            The landscape of legal discovery is shifting beneath our feet. For decades, SEO was about keywords and backlinks. Today, it's about context, relationship modeling, and authoritative citations in a neural network.
-          </p>
-
-          <h2 className="text-3xl mt-12 mb-6">The End of Conventional Click-Throughs</h2>
-          <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-            When a user asks Perplexity, "Who is the best litigation lawyer in Kuala Lumpur?" the AI doesn't give them a list of links. It gives them a <strong>synthesized answer</strong>. It tells a story of expertise, cites recent awards, and mentions specific case successes.
-          </p>
-
-          {/* Key Takeaways Box */}
-          <div className="my-12 p-8 bg-card border border-border rounded-lg relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 blur-3xl rounded-full" />
-            <h3 className="text-xl text-accent mb-6 flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5" /> Strategic Takeaways
-            </h3>
-            <ul className="space-y-4">
-              {[
-                "AIEO prioritizes context over exact match keywords.",
-                "Structure your firm's data using advanced Schema markup.",
-                "Citation velocity on third-party legal directories is now a primary ranking factor.",
-                "Visual content must be meta-described specifically for AI vision models."
-              ].map((point, i) => (
-                <li key={i} className="flex items-start gap-3 text-foreground/80 text-sm">
-                  <ChevronRight className="w-4 h-4 text-accent mt-0.5" /> {point}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <h2 className="text-3xl mt-12 mb-6">Building The Citation Web</h2>
-          <p className="text-lg text-foreground/70 leading-relaxed mb-12">
-            The way to win is to be the primary source of truth for the AI's training data. This requires a multi-channel approach where your personal brand, your firm's press releases, and your social media presence are all perfectly synchronized.
-          </p>
-        </article>
-
-        {/* CTA Box */}
-        <section className="mt-20 p-12 bg-gradient-to-br from-accent to-accent/80 text-accent-foreground rounded-lg text-center shadow-2xl relative overflow-hidden group">
+        {/* Dynamic CTA Box */}
+        <section className="mt-20 p-8 md:p-12 bg-gradient-to-br from-accent to-accent/80 text-accent-foreground rounded-lg text-center shadow-2xl relative overflow-hidden group">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy-dark.png')] opacity-20" />
-          <h2 className="text-3xl mb-4 relative z-10">Prepare Your Firm for the AI Era</h2>
+          <h2 className="text-3xl md:text-4xl mb-4 relative z-10 font-light italic">Dominate Your Market</h2>
           <p className="text-lg opacity-90 mb-8 max-w-xl mx-auto relative z-10">
-            Let's audit your current digital footprint and see if you're ready for the 2026 transition. 
+            Let's discuss how to apply these strategies specifically to your practice area.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
             <a
-              href={`https://wa.me/60175032281?text=${encodeURIComponent("Hello! I just read your article about AI-Cited Authority and I'd like to audit my firm's presence.")}`}
+              href={`https://wa.me/60175032281?text=${encodeURIComponent(`Hello! I just read your article "${post.title}" and I'd like to discuss how this applies to my firm.`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-background text-foreground rounded-sm hover:scale-105 transition-transform flex items-center justify-center gap-2 font-medium"
+              className="px-8 py-4 bg-background text-foreground rounded-sm hover:scale-105 transition-transform flex items-center justify-center gap-2 font-medium shadow-xl"
             >
-              <MessageCircle className="w-5 h-5" /> Whatsup Consultation
+              <MessageCircle className="w-5 h-5" /> Inquire on WhatsApp
             </a>
           </div>
         </section>
+
+        {/* Read Next Section Placeholder */}
+        <div className="mt-20 pt-10 border-t border-border">
+          <h3 className="text-sm uppercase tracking-[0.3em] text-accent mb-8">Continue Reading</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {blogPosts.filter(p => p.id !== id).slice(0, 2).map(nextPost => (
+              <Link key={nextPost.id} to={`/blog/${nextPost.id}`} className="group block">
+                <div className="text-xs text-accent mb-2 uppercase tracking-widest">{nextPost.category}</div>
+                <h4 className="text-xl group-hover:text-accent transition-colors leading-snug">{nextPost.title}</h4>
+              </Link>
+            ))}
+          </div>
+        </div>
       </section>
     </div>
   );
