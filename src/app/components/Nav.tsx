@@ -1,11 +1,12 @@
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import logo from "../../imports/logo_full_final.png";
 import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { services } from "../data/services";
 import { pillars } from "../data/pillars";
 import { cn } from "./ui/utils";
+
+const logo = "/images/logo-full-360.webp";
 
 // Global styles for mega menu images to achieve specific grayscale effect
 const megaMenuStyles = `
@@ -55,6 +56,9 @@ export function Nav() {
               <img 
                 src={logo} 
                 alt="LawyerMarketing.my" 
+                width={360}
+                height={100}
+                decoding="async"
                 className="h-8 md:h-12 w-auto block shrink-0" 
               />
             </motion.div>

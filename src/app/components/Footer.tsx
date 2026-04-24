@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
-import logoImage from "../../imports/logo_full_final.png";
 import { Link } from "react-router-dom";
+
+const logoImage = "/images/logo-full-360.webp";
 
 export function Footer() {
   return (
@@ -30,6 +31,10 @@ export function Footer() {
               <img
                 src={logoImage}
                 alt="LawyerMarketing.my"
+                width={360}
+                height={100}
+                loading="lazy"
+                decoding="async"
                 className="h-10 md:h-16 w-auto block shrink-0"
               />
             </div>

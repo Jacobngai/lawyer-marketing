@@ -5,12 +5,14 @@ import { Link } from "react-router-dom";
 import heroImage from "../../imports/hero.webp";
 import heroMobileImage from "../../imports/hero_mobile.webp";
 import strategicPresenceImage from "../../imports/presence.webp";
-import jacobHero from "../../imports/jacob_hero.png";
-import strategicPartnershipImg from "../../imports/strategic_partnership_new.png";
-import courtroomDominanceImg from "../../imports/courtroom_dominance.png";
 import { AISearchDemo } from "../components/AISearchDemo";
 import { WhatWeDo } from "../components/WhatWeDo";
 import { SuccessFramework } from "../components/SuccessFramework";
+
+const jacobHero640 = "/images/jacob_hero-640.webp";
+const jacobHero960 = "/images/jacob_hero-960.webp";
+const courtroomDominanceImg = "/images/courtroom_dominance-768.webp";
+const strategicPartnershipImg = "/images/strategic_partnership-768.webp";
 
 const practiceAreas = [
   { name: "Corporate & Commercial Law", icon: Briefcase },
@@ -93,8 +95,14 @@ export function HomePage() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-accent/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <img 
-                  src={jacobHero} 
+                  src={jacobHero640}
+                  srcSet={`${jacobHero640} 640w, ${jacobHero960} 960w`}
+                  sizes="(min-width: 1024px) 576px, 90vw"
                   alt="Jacob - Law Firm Growth Strategist" 
+                  width={640}
+                  height={640}
+                  fetchPriority="high"
+                  decoding="async"
                   className="relative w-full max-w-lg mx-auto lg:mx-0 object-contain h-[40vh] lg:h-[80vh] drop-shadow-[0_0_50px_rgba(201,169,97,0.3)]"
                 />
               </div>
@@ -181,7 +189,7 @@ export function HomePage() {
       {/* AI Search Demo Section - Section 2 (Contrast: Dark) */}
       <section className="py-16 md:py-24 lg:py-32 bg-[#050505] relative overflow-hidden border-b border-white/5">
         {/* Subtle decorative grain/pattern */}
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/graphy.png')]" />
+        <div className="absolute inset-0 opacity-[0.04] pointer-events-none bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.55)_1px,transparent_0)] [background-size:24px_24px]" />
         
         <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
           <motion.div
@@ -229,6 +237,10 @@ export function HomePage() {
               <img
                 src={courtroomDominanceImg}
                 alt="Strategic legal digital presence"
+                width={768}
+                height={768}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto md:h-[600px] object-cover rounded-sm shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-1000"
               />
               <div className="absolute -top-10 -left-10 w-64 h-64 border border-white/5 rounded-full hidden md:block" />
@@ -350,6 +362,10 @@ export function HomePage() {
           <img
             src={strategicPartnershipImg}
             alt="Strategic Partnership"
+            width={768}
+            height={768}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover grayscale opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-black/80" />

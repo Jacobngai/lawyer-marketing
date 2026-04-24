@@ -97,7 +97,7 @@ export function BlogPostPage() {
 
         {/* Dynamic CTA Box */}
         <section className="mt-20 p-8 md:p-12 bg-gradient-to-br from-accent to-accent/80 text-accent-foreground rounded-lg text-center shadow-2xl relative overflow-hidden group">
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy-dark.png')] opacity-20" />
+          <div className="absolute inset-0 opacity-15 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.45)_1px,transparent_0)] [background-size:20px_20px]" />
           <h2 className="text-3xl md:text-4xl mb-4 relative z-10 font-light italic">Dominate Your Market</h2>
           <p className="text-lg opacity-90 mb-8 max-w-xl mx-auto relative z-10">
             Let's discuss how to apply these strategies specifically to your practice area.
