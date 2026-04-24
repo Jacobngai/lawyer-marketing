@@ -1,0 +1,14 @@
+LawyerMarketing.my
+[0] (781,42)<button class='px-6 py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group'>Get Started />
+Since January 2026
+Elevate Your
+Legal Practice
+Malaysia's premier social media marketing agency exclusively for law firms. Navigate the new advertising landscape with sophistication and compliance.
+[1] (571,636)<button class='px-8 py-4 bg-accent text-accent-foreground rounded-sm hover:bg-accent/90 transition-colors flex items-center gap-2 group'>Book Consultation />
+[2] (682,636)<button class='px-8 py-4 border border-accent text-accent rounded-sm hover:bg-accent/10 transition-colors'>View Portfolio />
+45+
+Law Firms
+250+
+Clients
+98%
+Success Rate

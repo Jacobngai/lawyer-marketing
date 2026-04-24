@@ -1,0 +1,28 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Get Ranked on Page 1
+When AI search engines cite your firm, you appear as the trusted recommendation before potential clients even scroll. We optimize your digital presence to be the first choice AI recommends.
+Practice Areas
+We don't do "general" legal marketing.
+Neither should you.
+A person searching for a criminal defence lawyer at 2am is nothing like a business owner
+          looking for corporate counsel over lunch. We build strategies around how
+your
+specific clients think, search, and decide.
+[0] (259,818)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/divorce-lawyer/' />
+	[1] (259,768)<h3 >Divorce & Family Law />
+	[2] (259,816)<p >Clients in distress, searching privately. Empathy-first marketing. />
+	[3] (116,870)<span >See the strategy → />
+[4] (741,818)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/criminal-defence/' />
+	[5] (741,768)<h3 >Criminal Defence />
+	[6] (741,804)<p >High urgency, high emotion. Every hour matters. />
+	[7] (599,845)<span >See the strategy → />
+[8] (259,971)<h3 >Personal Injury />
+They're searching from a hospital bed. Meet them there.
+[9] (741,971)<h3 >Corporate Law />
+Longer sales cycle, higher value. Reputation is everything.
+[10] (944,943)<a aria-label='Chat on WhatsApp' class='whatsapp-float' href='https://wa.me/60175032281?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20marketing%20for%20my%20law%20firm.' />
+
+</current_dom>

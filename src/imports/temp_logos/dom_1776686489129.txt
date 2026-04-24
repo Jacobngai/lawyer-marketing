@@ -1,0 +1,213 @@
+[0] (50,37)<a aria-label='Google Apps Script' class='gb_ee gb_Wc' href='/home' id='sdgBod' />
+	[1] (20,37)<img class='gb_1c' role='presentation' />
+	[2] (59,36)<span >Apps Script />
+[3] (168,35)<div aria-label='Rename' class='UGZzee KOiXb' role='button'>LawyerMarketing CRM />
+cloud_done
+[4] (847,35)<div class='U26fgb c7fp5b JvtX2e rGMe1e Gn5yxe' role='button' />
+	[5] (847,35)<span  />
+		[6] (847,35)<span  />
+			[7] (849,35)<div >Deploy />
+				[8] (863,35)<span > />
+[9] (908,35)<button aria-label='Share this project with others' class='VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ mN1ivc MNz5Rc' />
+	[10] (908,35)<i >person_add />
+[11] (932,35)<div aria-label='Support' class='U26fgb JRtysb WzwrXb lmSKjb' role='button' />
+	[12] (932,44)<span  />
+		[13] (932,44)<span  />
+			[14] (932,36)<i >help_outline />
+[15] (957,35)<a aria-label='Google apps' class='gb_C' href='https://www.google.com.my/intl/en/about/products' role='button' />
+[16] (982,35)<a aria-label='Google Account: Zen  
+(ngsanzen@gmail.com)' class='gb_C gb_1a gb_2' href='https://accounts.google.com/SignOutOptions?hl=en&continue=https://script.google.com/home&ec=GBRAiwM' role='button' />
+[17] (16,102)<div aria-label='Overview' class='kcW8jf' role='link' />
+	[18] (16,102)<div  />
+		[19] (16,98)<i >info_outline />
+[20] (16,146)<div aria-label='Editor' class='kcW8jf hcgnWc' role='link' />
+	[21] (16,146)<div  />
+		[22] (16,142)<i >code />
+[23] (16,190)<div aria-label='Project History' class='kcW8jf' role='link' />
+	[24] (16,190)<div  />
+		[25] (16,186)<i >history />
+[26] (16,234)<div aria-label='Triggers' class='kcW8jf' role='link' />
+	[27] (16,234)<div  />
+		[28] (16,229)<i >alarm />
+[29] (16,278)<div aria-label='Executions' class='kcW8jf' role='link' />
+	[30] (16,278)<div  />
+		[31] (16,273)<i >playlist_play />
+[32] (16,322)<div aria-label='Project Settings' class='kcW8jf' role='link' />
+	[33] (16,322)<div  />
+		[34] (16,317)<i >settings />
+Files
+[35] (122,92)<div aria-label='Sort files alphabetically' class='U26fgb mUbCce fKz7Od pLZ8ve M9Bg4d RDPZE' role='button' />
+	sort_by_alpha
+[36] (139,92)<div aria-label='Add a file' class='U26fgb JRtysb WzwrXb rgrYqe' role='button' />
+	[37] (139,100)<span  />
+		[38] (139,99)<span  />
+			[39] (139,92)<i >add />
+[40] (90,141)<li aria-label='Code.gs' class='StrnGf-VfPpkd-rymPhb-ibnC6b lMUT6c Ftje6d UeVsd' role='option' />
+	[41] (85,141)<div >Code.gs />
+	[42] (139,141)<div role='button' />
+		[43] (139,141)<div aria-label='File operations menu for Code.gs.' class='U26fgb JRtysb WzwrXb ohpN7c OcWJn' role='button' />
+			[44] (139,141)<span  />
+				[45] (139,151)<span  />
+					[46] (139,141)<span  />
+Libraries
+[47] (139,188)<div aria-label='Add a library' class='U26fgb mUbCce fKz7Od wIlPPc M9Bg4d' role='button' />
+	[48] (139,190)<span  />
+		[49] (139,188)<i >add />
+Services
+[50] (139,231)<div aria-label='Add a service' class='U26fgb mUbCce fKz7Od wIlPPc M9Bg4d' role='button' />
+	[51] (139,232)<span  />
+		[52] (139,231)<i >add />
+[53] (149,536)<div  />
+undo
+redo
+[54] (229,92)<button aria-label='Run the selected function' class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf LjDxcd XhPA0b HDnnrf LQeN7 IVKqHd DOZNHf kQidhf'>play_arrow
+Run />
+	play_arrow
+	Run
+[55] (268,92)<button aria-label='Debug the selected function' class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf LjDxcd XhPA0b HDnnrf LQeN7 IVKqHd DOZNHf C9y3Me'>Debug />
+	Debug
+[56] (317,92)<div aria-label='Select function to run' class='jgvuAb VsRsme' role='listbox' />
+	[57] (317,93)<div role='presentation' />
+		[58] (317,93)<div class='ry3kXd' role='presentation' />
+			[59] (317,93)<div class='MocG8c epDKCb LMgvRb KKjvXb' role='option' />
+				[60] (307,93)<span >doPost />
+		[61] (337,93)<div class='e2CuFe eU809d' role='presentation' />
+[62] (379,92)<button aria-label='Close the execution log panel' class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf LjDxcd XhPA0b LQeN7 IVKqHd DOZNHf VieVBd kPlv1' />
+	[63] (379,92)<span >Execution log />
+[64] (175,150)<div  />
+1
+[65] (175,170)<div  />
+2
+[66] (175,190)<div  />
+3
+[67] (175,210)<div  />
+4
+5
+6
+7
+[68] (590,376)<div class='view-lines monaco-mouse-cursor-text' role='presentation' />
+	[69] (590,150)<div  />
+		[70] (221,150)<span  />
+			[71] (197,150)<span >function />
+			[72] (215,150)<span  />
+			[73] (229,150)<span >doPost />
+			[74] (244,150)<span >( />
+			[75] (248,150)<span >e />
+			[76] (252,150)<span >) />
+			[77] (256,150)<span  />
+			[78] (260,150)<span >{ />
+	[79] (590,170)<div  />
+		[80] (325,170)<span  />
+			[81] (189,170)<span  />
+			[82] (203,170)<span >var />
+			[83] (211,170)<span  />
+			[84] (223,170)<span >sheet />
+			[85] (240,170)<span >= />
+			[86] (274,170)<span >SpreadsheetApp />
+			[87] (305,170)<span >. />
+			[88] (347,170)<span >getActiveSpreadsheet />
+			[89] (390,170)<span >( />
+			[90] (394,170)<span >) />
+			[91] (398,170)<span >. />
+			[92] (429,170)<span >getActiveSheet />
+			[93] (459,170)<span >( />
+			[94] (463,170)<span >) />
+			[95] (467,170)<span >; />
+	[96] (590,190)<div  />
+		[97] (280,190)<span  />
+			[98] (193,190)<span  />
+			[99] (211,190)<span >var />
+			[100] (219,190)<span  />
+			[101] (229,190)<span >data />
+			[102] (244,190)<span >= />
+			[103] (258,190)<span >JSON />
+			[104] (268,190)<span >. />
+			[105] (280,190)<span >parse />
+			[106] (292,190)<span >( />
+			[107] (297,190)<span >e />
+			[108] (301,190)<span >. />
+			[109] (319,190)<span >postData />
+			[110] (337,190)<span >. />
+			[111] (355,190)<span >contents />
+			[112] (374,190)<span >) />
+			[113] (378,190)<span >; />
+	[114] (590,210)<div  />
+		[115] (479,210)<span  />
+			[116] (197,210)<span  />
+			[117] (223,210)<span >sheet />
+			[118] (236,210)<span >. />
+			[119] (256,210)<span >appendRow />
+			[120] (276,210)<span >( />
+			[121] (280,210)<span >[ />
+			[122] (290,210)<span >data />
+			[123] (301,210)<span >. />
+			[124] (311,210)<span >name />
+			[125] (323,210)<span >, />
+			[126] (335,210)<span >data />
+			[127] (345,210)<span >. />
+			[128] (358,210)<span >email />
+			[129] (372,210)<span >, />
+			[130] (384,210)<span >data />
+			[131] (394,210)<span >. />
+			[132] (412,210)<span >firmName />
+			[133] (433,210)<span >, />
+			[134] (445,210)<span >data />
+			[135] (455,210)<span >. />
+			[136] (471,210)<span >website />
+			[137] (490,210)<span >, />
+			[138] (502,210)<span >data />
+			[139] (512,210)<span >. />
+			[140] (534,210)<span >caseVolume />
+			[141] (559,210)<span >, />
+			[142] (571,210)<span >data />
+			[143] (581,210)<span >. />
+			[144] (609,210)<span >contactMethod />
+			[145] (640,210)<span >, />
+			[146] (652,210)<span >data />
+			[147] (662,210)<span >. />
+			[148] (679,210)<span >message />
+			[149] (701,210)<span >|| />
+			[150] (713,210)<span >"" />
+			[151] (721,210)<span >, />
+			[152] (731,210)<span >new />
+			[153] (740,210)<span  />
+			[154] (750,210)<span >Date />
+			[155] (760,210)<span >( />
+			[156] (764,210)<span >) />
+			[157] (768,210)<span >] />
+			[158] (772,210)<span >) />
+			[159] (776,210)<span >; />
+	[160] (590,229)<div  />
+		[161] (388,229)<span  />
+			[162] (201,229)<span  />
+			[163] (234,229)<span >return />
+			[164] (248,229)<span  />
+			[165] (278,229)<span >ContentService />
+			[166] (309,229)<span >. />
+			[167] (343,229)<span >createTextOutput />
+			[168] (378,229)<span >( />
+			[169] (398,229)<span >"Success" />
+			[170] (418,229)<span >) />
+			[171] (423,229)<span >. />
+			[172] (447,229)<span >setMimeType />
+			[173] (471,229)<span >( />
+			[174] (502,229)<span >ContentService />
+			[175] (532,229)<span >. />
+			[176] (551,229)<span >MimeType />
+			[177] (569,229)<span >. />
+			[178] (579,229)<span >TEXT />
+			[179] (589,229)<span >) />
+			[180] (593,229)<span >; />
+	[181] (590,249)<div  />
+		[182] (201,249)<span  />
+			[183] (201,249)<span  />
+	[184] (590,269)<div  />
+		[185] (183,269)<span  />
+			[186] (183,269)<span >} />
+[187] (575,638)<div  />
+Execution log
+To view logs, select a function and click the "Run" button in the toolbar.
+[188] (988,665)<button aria-label='Close execution logs pane' class='VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ mN1ivc QDwDD yTcaUe' />
+	[189] (988,665)<i >close />
+Sorted by: Last modified, Descending. Reverse sort.
+Show or hide the execution log

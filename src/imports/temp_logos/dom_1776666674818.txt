@@ -1,0 +1,54 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (183,408)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0' />
+	[1] (183,270)<div  />
+	[2] (183,391)<div  />
+		[3] (93,378)<div  />
+			[4] (93,378)<span >SEO />
+		[5] (229,378)<div >October 14, 2025 />
+	[6] (183,498)<div >Crawling, Indexing & Site Architecture for Law Firms [Guide & Pro Tips] />
+	[7] (183,610)<div  />
+		[8] (120,610)<a href='https://rankings.io/blog/crawling-indexing-for-law-firms/'>Read More />
+[9] (500,408)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0' />
+	[10] (500,270)<div  />
+	[11] (500,391)<div  />
+		[12] (410,378)<div  />
+			[13] (410,378)<span >SEO />
+		[14] (551,378)<div >October 7, 2025 />
+	[15] (500,498)<div >Google Analytics for Lawyers: How to Track, Improve, and Win More Cases />
+	[16] (500,610)<div  />
+		[17] (437,610)<a href='https://rankings.io/blog/google-analytics-for-lawyers/'>Read More />
+[18] (817,408)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0' />
+	[19] (817,270)<div  />
+	[20] (817,391)<div  />
+		[21] (726,378)<div  />
+			[22] (726,378)<span >SEO />
+		[23] (851,378)<div >September 26, 2025 />
+	[24] (817,498)<div >Long Tail Keywords for Lawyers: The Ultimate Guide to Legal SEO Domination />
+	[25] (817,610)<div  />
+		[26] (754,610)<a href='https://rankings.io/blog/long-tail-keywords-for-lawyers/'>Read More />
+[27] (183,908)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0' />
+	[28] (183,770)<div  />
+	[29] (183,890)<div  />
+		[30] (93,878)<div  />
+			[31] (93,878)<span >SEO />
+		[32] (220,878)<div >September 17, 2025 />
+	[33] (183,998)<div >Keyword Optimization for Lawyers: Complete Guide to Tools, Steps & Tactics in 2026 />
+[34] (500,908)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0'>SEO Keywords for Lawyers: Complete Guide [250+ Keyword Ideas by Area] />
+	[35] (500,770)<div  />
+	[36] (500,890)<div  />
+		[37] (410,878)<div  />
+			[38] (410,878)<span >SEO />
+		[39] (537,878)<div >September 11, 2025 />
+	SEO Keywords for Lawyers: Complete Guide [250+ Keyword Ideas by Area]
+[40] (817,908)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0' />
+	[41] (817,770)<div  />
+	[42] (817,890)<div  />
+		[43] (718,878)<div  />
+			[44] (718,878)<span >AI />
+		[45] (868,878)<div >August 27, 2025 />
+	[46] (817,998)<div >AIO for Law Firms: What It Is, How It Works, and How to Get Featured />
+
+</current_dom>

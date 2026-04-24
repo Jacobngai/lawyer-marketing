@@ -1,0 +1,34 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Practice Areas
+We don't do "general" legal marketing.
+Neither should you.
+A person searching for a criminal defence lawyer at 2am is nothing like a business owner
+          looking for corporate counsel over lunch. We build strategies around how
+your
+specific clients think, search, and decide.
+[0] (259,632)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/divorce-lawyer/' />
+	[1] (259,582)<h3 >Divorce & Family Law />
+	[2] (259,630)<p >Clients in distress, searching privately. Empathy-first marketing. />
+	[3] (116,684)<span >See the strategy → />
+[4] (741,632)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/criminal-defence/' />
+	[5] (741,582)<h3 >Criminal Defence />
+	[6] (741,618)<p >High urgency, high emotion. Every hour matters. />
+	[7] (599,659)<span >See the strategy → />
+[8] (259,823)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/personal-injury/' />
+	[9] (259,785)<h3 >Personal Injury />
+	[10] (259,821)<p >They're searching from a hospital bed. Meet them there. />
+	[11] (116,862)<span >See the strategy → />
+[12] (741,823)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/corporate-law/' />
+	[13] (741,785)<h3 >Corporate Law />
+	[14] (741,821)<p >Longer sales cycle, higher value. Reputation is everything. />
+	[15] (599,862)<span >See the strategy → />
+[16] (259,963)<h3 >Property & Conveyancing />
+Transactional, competitive, local. Win on trust and speed.
+[17] (741,963)<h3 >Immigration />
+Complex journeys, anxious clients. Clarity converts.
+[18] (944,943)<a aria-label='Chat on WhatsApp' class='whatsapp-float' href='https://wa.me/60175032281?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20marketing%20for%20my%20law%20firm.' />
+
+</current_dom>

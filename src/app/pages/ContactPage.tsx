@@ -1,84 +1,132 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Send, 
-  CheckCircle2, 
-  AlertCircle, 
-  Sparkles, 
-  Building2, 
-  Globe, 
-  Mail, 
-  User, 
+import {
+  AlertCircle,
   BarChart3,
+  Building2,
+  CheckCircle2,
+  ChevronRight,
+  Globe,
+  Mail,
   MessageSquare,
+  Phone,
+  Send,
   ShieldCheck,
-  ChevronRight
+  Sparkles,
+  User,
 } from "lucide-react";
+import { SEO } from "../components/SEO";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbygNzxMYfx9eVbalSW69GxLZMPZ-Xbd3FtBDaqC9wW15V6sYtCA9TFHa5VJ_hm6Y8eU/exec";
+const CONTACT_API_URL = import.meta.env.VITE_CONTACT_API_URL || "/api/contact/submit";
+
+type Goal = "landing-page" | "audit";
+
+type SubmissionState = {
+  followUpQueued: boolean;
+  message: string;
+};
+
+const defaultSubmissionState: SubmissionState = {
+  followUpQueued: false,
+  message: "Application received. We will text the WhatsApp number you shared after reviewing your submission.",
+};
+
+const normalizeWhatsAppPhone = (value: string) => {
+  let digits = value.replace(/\D/g, "");
+
+  if (digits.startsWith("00")) {
+    digits = digits.slice(2);
+  }
+
+  if (digits.startsWith("60")) {
+    return digits;
+  }
+
+  if (digits.startsWith("0")) {
+    return `60${digits.slice(1)}`;
+  }
+
+  if (digits.startsWith("1") && digits.length >= 9 && digits.length <= 10) {
+    return `60${digits}`;
+  }
+
+  return digits;
+};
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     firmName: "",
     website: "",
     message: "",
-    caseVolume: "1-10",
-    contactMethod: "meeting" as "meeting" | "whatsapp"
+    caseVolume: "1",
+    goal: "landing-page" as Goal,
   });
 
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [submissionState, setSubmissionState] = useState<SubmissionState>(defaultSubmissionState);
+  const normalizedPhone = normalizeWhatsAppPhone(formData.phone);
+  const showPhonePreview = normalizedPhone.length >= 10 && normalizedPhone !== formData.phone.replace(/\D/g, "");
+
+  const resetForm = () => {
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      firmName: "",
+      website: "",
+      message: "",
+      caseVolume: "1",
+      goal: "landing-page",
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
+    setErrorMessage("");
 
     try {
-      // 1. Sync to Google Sheets CRM (Simulated/POST)
-      await fetch(GOOGLE_SCRIPT_URL, {
+      if (normalizedPhone.length < 10 || normalizedPhone.length > 15) {
+        throw new Error("Please enter a valid WhatsApp number. Example: 0175032281 or +60 17-503 2281.");
+      }
+
+      const response = await fetch(CONTACT_API_URL, {
         method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          phone: normalizedPhone,
+          rawPhone: formData.phone,
+        }),
       });
 
-      // 2. Conditional Redirect
-      if (formData.contactMethod === "meeting") {
-        window.open("https://cal.com/zen-pdcnlc/lawyer-marketing", "_blank");
-      } else {
-        const waText = encodeURIComponent(
-          `Hi LawyerMarketing.my, I'm ${formData.name} from ${formData.firmName}. I'm interested in the 2026 Founder's Beta Program. My website is ${formData.website}.`
-        );
-        window.open(`https://wa.me/60175032281?text=${waText}`, "_blank");
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok || !result?.ok) {
+        throw new Error(result?.message || "We could not process your request right now. Please try again shortly.");
       }
+
+      setSubmissionState({
+        followUpQueued: Boolean(result.followUpQueued),
+        message: result.message || defaultSubmissionState.message,
+      });
 
       setStatus("success");
-      setFormData({
-        name: "",
-        email: "",
-        firmName: "",
-        website: "",
-        message: "",
-        caseVolume: "1-10",
-        contactMethod: "meeting"
-      });
+      resetForm();
     } catch (error) {
       console.error("Submission error:", error);
-      if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL === "YOUR_GOOGLE_SCRIPT_URL_HERE") {
-        // Fallback for demo
-        if (formData.contactMethod === "meeting") {
-          window.open("https://cal.com/zen-pdcnlc/lawyer-marketing", "_blank");
-        } else {
-          const waText = encodeURIComponent(`Hi, I'm ${formData.name} from ${formData.firmName}. I'd like to discuss the Founder's Beta Program.`);
-          window.open(`https://wa.me/60175032281?text=${waText}`, "_blank");
-        }
-        setTimeout(() => setStatus("success"), 1000);
-      } else {
-        setStatus("error");
-        setErrorMessage("Connection failed. Please try again or WhatsApp us directly.");
-      }
+      setStatus("error");
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : "We could not process your request right now. Please try again shortly.",
+      );
     }
   };
 
@@ -89,13 +137,21 @@ export const ContactPage: React.FC = () => {
     }));
   };
 
-  const setMethod = (method: "meeting" | "whatsapp") => {
-    setFormData(prev => ({ ...prev, contactMethod: method }));
+  const setGoal = (goal: Goal) => {
+    setFormData((prev) => ({
+      ...prev,
+      goal,
+      website: goal === "audit" ? prev.website : "",
+    }));
   };
 
   return (
     <main className="pt-24 min-h-screen bg-background relative overflow-hidden">
-      {/* Decorative Background Elements */}
+      <SEO
+        title="Apply for Founding Partner Program | Legal Marketing Consultation"
+        description="Connect with Malaysia's leading law firm marketing experts. Apply for our exclusive Founding Partner program and claim your RM 3,500 strategic growth audit."
+      />
+
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px]" />
@@ -103,8 +159,6 @@ export const ContactPage: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 py-12 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          
-          {/* Left Column: Value Prop & Trust */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -114,13 +168,13 @@ export const ContactPage: React.FC = () => {
               <ShieldCheck className="w-4 h-4 text-accent" />
               <span className="text-xs font-medium uppercase tracking-widest text-accent">Complies with Bar Council Rules</span>
             </div>
-            
+
             <h1 className="text-5xl lg:text-7xl font-extralight leading-tight mb-8">
-              Secure Your <span className="text-accent italic">2026</span> <br /> Competitive Advantage
+              Apply for Your <span className="text-accent italic">Founding Partner</span> <br /> Landing Page
             </h1>
-            
+
             <p className="text-xl text-foreground/60 leading-relaxed mb-12 max-w-xl">
-              We are selecting 5 expansion-focused law firms in Malaysia to join our <span className="text-foreground">Exclusive Founder's Beta Program</span>. Get a complete technical audit and conversion-focused digital architecture.
+              We are waiving the <span className="text-foreground">RM 3,500 build fee</span> for Malaysia's next 5 high-authority firms. You receive a custom, engineered landing page at <span className="text-foreground">ZERO BUILD COST</span>. You just pay for the hosting.
             </p>
 
             <div className="space-y-8">
@@ -130,7 +184,7 @@ export const ContactPage: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium mb-2">Technical Gap Analysis</h3>
-                  <p className="text-sm text-foreground/50 leading-relaxed">Discover where your firm is losing high-intent search traffic to competitors. (Valued at $3,500)</p>
+                  <p className="text-sm text-foreground/50 leading-relaxed">We identify where your firm is losing high-intent search traffic. You receive the specific data needed to capture it.</p>
                 </div>
               </div>
 
@@ -139,7 +193,7 @@ export const ContactPage: React.FC = () => {
                   <Globe className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium mb-2">2026 Regulatory Audit</h3>
+                  <h3 className="text-lg font-medium mb-1">2026 Regulatory Audit</h3>
                   <p className="text-sm text-foreground/50 leading-relaxed">Ensure your digital assets are fully compliant with the latest Bar Council publicity standards.</p>
                 </div>
               </div>
@@ -149,55 +203,61 @@ export const ContactPage: React.FC = () => {
                   <Sparkles className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium mb-2">Conversion Blueprints</h3>
-                  <p className="text-sm text-foreground/50 leading-relaxed">Receive a custom architectural plan to transform your website into a high-performance intake engine.</p>
+                  <h3 className="text-lg font-medium mb-1">WhatsApp Follow-Up Queue</h3>
+                  <p className="text-sm text-foreground/50 leading-relaxed">Once approved, your application enters a backend follow-up flow so your team can text the lead instead of asking them to message you first.</p>
                 </div>
               </div>
             </div>
-
-            {/* Social Proof Badges */}
-            <div className="mt-16 pt-16 border-t border-border flex flex-wrap gap-8 opacity-40">
-              <div className="grayscale contrast-125">
-                <img src="https://ranking.io/wp-content/themes/rankings/assets/img/inc-5000.svg" alt="Inc 5000" className="h-8" />
-              </div>
-              <div className="grayscale contrast-125">
-                <img src="https://ranking.io/wp-content/themes/rankings/assets/img/google-partner.svg" alt="Google Partner" className="h-8" />
-              </div>
-              <div className="text-xs font-bold uppercase tracking-widest self-center">Rated 4.9 across 200+ Reviews</div>
-            </div>
           </motion.div>
 
-          {/* Right Column: High-End Contact Form */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-card/50 backdrop-blur-xl border border-border p-8 lg:p-12 relative"
           >
-            <h2 className="text-2xl font-light mb-8 flex items-center gap-3">
-              <MessageSquare className="w-6 h-6 text-accent" />
-              Request Strategic Audit
-            </h2>
+            <div className="mb-10">
+              <h2 className="text-3xl font-light flex items-center gap-4 mb-4">
+                <MessageSquare className="w-8 h-8 text-accent" />
+                Application for Founding Partner Beta (Strictly for Lawyers Only)
+              </h2>
+              <div className="ml-12 border-l-2 border-accent/30 pl-6">
+                <div className="inline-block bg-accent text-accent-foreground px-4 py-1.5 font-black tracking-[0.2em] text-sm uppercase rounded-sm shadow-xl">
+                  Build Fee Waived: RM 3,500
+                </div>
+                <p className="text-xs text-foreground/40 mt-3 uppercase tracking-widest font-bold">
+                  Share your WhatsApp number. We will text you after review.
+                </p>
+              </div>
+            </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Contact Method Selection */}
               <div className="grid grid-cols-2 gap-4 mb-8">
-                <button
+                <motion.button
                   type="button"
-                  onClick={() => setMethod("meeting")}
-                  className={`p-4 border transition-all flex flex-col items-center gap-2 ${formData.contactMethod === "meeting" ? "border-accent bg-accent/5" : "border-border hover:border-accent/50"}`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  animate={{ scale: [1, 1.03, 1] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  onClick={() => setGoal("landing-page")}
+                  className={`p-4 border transition-all flex flex-col items-center text-center gap-2 ${formData.goal === "landing-page" ? "border-accent bg-accent/5" : "border-border hover:border-accent/50"}`}
                 >
-                  <BarChart3 className={`w-6 h-6 ${formData.contactMethod === "meeting" ? "text-accent" : "text-foreground/40"}`} />
-                  <span className="text-[10px] uppercase font-bold tracking-widest">Book Digital Audit</span>
-                </button>
-                <button
+                  <Sparkles className={`w-6 h-6 ${formData.goal === "landing-page" ? "text-accent" : "text-foreground/40"}`} />
+                  <span className="text-[9px] uppercase font-bold tracking-widest leading-tight">Free Landing Page<br />(I do not have a website)</span>
+                </motion.button>
+
+                <motion.button
                   type="button"
-                  onClick={() => setMethod("whatsapp")}
-                  className={`p-4 border transition-all flex flex-col items-center gap-2 ${formData.contactMethod === "whatsapp" ? "border-green-500 bg-green-500/5" : "border-border hover:border-green-500/50"}`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  animate={{ scale: [1, 1.03, 1] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                  onClick={() => setGoal("audit")}
+                  className={`p-4 border transition-all flex flex-col items-center text-center gap-2 ${formData.goal === "audit" ? "border-accent bg-accent/5" : "border-border hover:border-accent/50"}`}
                 >
-                  <MessageSquare className={`w-6 h-6 ${formData.contactMethod === "whatsapp" ? "text-green-500" : "text-foreground/40"}`} />
-                  <span className="text-[10px] uppercase font-bold tracking-widest">WhatsApp Strategy</span>
-                </button>
+                  <BarChart3 className={`w-6 h-6 ${formData.goal === "audit" ? "text-accent" : "text-foreground/40"}`} />
+                  <span className="text-[9px] uppercase font-bold tracking-widest leading-tight">Request Growth Audit<br />(I already have a website)</span>
+                </motion.button>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
@@ -215,6 +275,7 @@ export const ContactPage: React.FC = () => {
                     className="w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors"
                   />
                 </div>
+
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-xs font-bold uppercase tracking-widest text-foreground/40 flex items-center gap-2">
                     <Mail className="w-3 h-3" /> Work Email
@@ -225,13 +286,33 @@ export const ContactPage: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="jacob@firm.my"
+                    placeholder={formData.goal === "landing-page" ? "legal.expert@gmail.com" : "partner@firm.my"}
                     className="w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors"
                   />
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label htmlFor="phone" className="text-xs font-bold uppercase tracking-widest text-foreground/40 flex items-center gap-2">
+                    <Phone className="w-3 h-3" /> Best WhatsApp Number
+                  </label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    inputMode="tel"
+                    required
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="0175032281 or +60 17-503 2281"
+                    className="w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors"
+                  />
+                  <p className="text-[11px] text-foreground/40 leading-relaxed">
+                    We will format Malaysian numbers automatically for WhatsApp.
+                    {showPhonePreview ? ` Sending as ${normalizedPhone}.` : " Example: 0175032281 becomes 60175032281."}
+                  </p>
+                </div>
+
                 <div className="space-y-2">
                   <label htmlFor="firmName" className="text-xs font-bold uppercase tracking-widest text-foreground/40 flex items-center gap-2">
                     <Building2 className="w-3 h-3" /> Law Firm Name
@@ -246,63 +327,95 @@ export const ContactPage: React.FC = () => {
                     className="w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors"
                   />
                 </div>
-                <div className="space-y-2">
-                  <label htmlFor="website" className="text-xs font-bold uppercase tracking-widest text-foreground/40 flex items-center gap-2">
-                    <Globe className="w-3 h-3" /> Website URL
-                  </label>
-                  <input
-                    id="website"
-                    type="url"
-                    required
-                    value={formData.website}
-                    onChange={handleChange}
-                    placeholder="https://firm.my"
-                    className="w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors"
-                  />
-                </div>
+              </div>
+
+              <div className={`grid ${formData.goal === "audit" ? "md:grid-cols-2" : "grid-cols-1"} gap-6`}>
+                {formData.goal === "audit" ? (
+                  <div className="space-y-2 md:col-span-2">
+                    <label htmlFor="website" className="text-xs font-bold uppercase tracking-widest text-foreground/40 flex items-center gap-2">
+                      <Globe className="w-3 h-3" /> Website URL
+                    </label>
+                    <input
+                      id="website"
+                      type="text"
+                      required
+                      value={formData.website}
+                      onChange={handleChange}
+                      placeholder="https://firm.my"
+                      className="w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors"
+                    />
+                  </div>
+                ) : null}
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="caseVolume" className="text-xs font-bold uppercase tracking-widest text-foreground/40 flex items-center gap-2">
-                   Monthly Case Volume
+                  Total Firm Headcount
                 </label>
                 <select
                   id="caseVolume"
                   value={formData.caseVolume}
                   onChange={handleChange}
-                  className="w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors appearance-none"
+                  className="w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors appearance-none text-sm"
                 >
-                  <option value="1-10">1-10 New Cases/Month</option>
-                  <option value="11-50">11-50 New Cases/Month</option>
-                  <option value="51-100">51-100 New Cases/Month</option>
-                  <option value="100+">100+ New Cases/Month</option>
+                  <option value="1">Solo (1 Employee)</option>
+                  <option value="2-5">Small (2-5 Employees)</option>
+                  <option value="6-20">Mid-Size (6-20 Employees)</option>
+                  <option value="20+">Large (20+ Employees)</option>
                 </select>
               </div>
 
-              <button
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-foreground/40 flex items-center gap-2">
+                  <Send className="w-3 h-3" /> Notes for Our Team (Optional)
+                </label>
+                <textarea
+                  id="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Practice area, preferred follow-up timing, or anything we should know before we text you."
+                  rows={4}
+                  className="w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors resize-y"
+                />
+              </div>
+
+              <motion.button
                 type="submit"
                 disabled={status === "loading"}
-                className={`w-full py-5 font-bold uppercase tracking-[0.2em] transition-all disabled:opacity-50 group flex items-center justify-center gap-3 overflow-hidden relative ${formData.contactMethod === "meeting" ? "bg-accent text-accent-foreground" : "bg-green-600 text-white"}`}
+                animate={{
+                  scale: [1, 1.02, 1],
+                  boxShadow: [
+                    "0 0 0 0px rgba(201, 169, 97, 0)",
+                    "0 0 20px 2px rgba(201, 169, 97, 0.3)",
+                    "0 0 0 0px rgba(201, 169, 97, 0)",
+                  ],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="w-full py-5 font-bold uppercase tracking-[0.2em] transition-all disabled:opacity-50 group flex items-center justify-center gap-3 overflow-hidden relative bg-accent text-accent-foreground shadow-2xl shadow-accent/20"
               >
                 <span className="relative z-10 flex items-center gap-3">
-                  {status === "loading" ? "Processing..." : (formData.contactMethod === "meeting" ? "Initiate Audit" : "WhatsApp Strategist")}
-                  {status !== "loading" && <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
+                  {status === "loading" ? "Submitting To Our Follow-Up Queue..." : formData.goal === "landing-page" ? "Claim Free Landing Page" : "Request Growth Audit"}
+                  {status !== "loading" ? <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /> : null}
                 </span>
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 bg-white/20"
                   initial={{ x: "-100%" }}
                   whileHover={{ x: "100%" }}
                   transition={{ duration: 0.4 }}
                 />
-              </button>
+              </motion.button>
 
-              <p className="text-[10px] text-foreground/30 text-center uppercase tracking-widest">
-                Confidentiality Guaranteed. Data managed in compliance with Legal Profession Publicity Rules.
+              <p className="text-[10px] text-foreground/30 text-center uppercase tracking-widest leading-relaxed">
+                Confidentiality guaranteed. Data managed in compliance with Legal Profession Publicity Rules.
               </p>
             </form>
 
             <AnimatePresence>
-              {status === "success" && (
+              {status === "success" ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -312,9 +425,11 @@ export const ContactPage: React.FC = () => {
                   <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mb-6">
                     <CheckCircle2 className="w-10 h-10 text-green-500" />
                   </div>
-                  <h3 className="text-3xl font-light mb-4">Strategic Request Logged</h3>
+                  <h3 className="text-3xl font-light mb-4">
+                    {submissionState.followUpQueued ? "Request Queued For WhatsApp Follow-Up" : "Request Logged"}
+                  </h3>
                   <p className="text-foreground/60 mb-8 max-w-sm">
-                    Your firm's data has been added to our 2026 audit queue. A senior strategist will review your profile and reach out within 12 business hours.
+                    {submissionState.message}
                   </p>
                   <button
                     onClick={() => setStatus("idle")}
@@ -323,9 +438,9 @@ export const ContactPage: React.FC = () => {
                     Close
                   </button>
                 </motion.div>
-              )}
+              ) : null}
 
-              {status === "error" && (
+              {status === "error" ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -336,25 +451,15 @@ export const ContactPage: React.FC = () => {
                     <AlertCircle className="w-10 h-10 text-red-500" />
                   </div>
                   <h3 className="text-3xl font-light mb-4">Submission Paused</h3>
-                  <p className="text-foreground/60 mb-8 max-w-sm">
-                    {errorMessage}
-                  </p>
-                  <div className="flex gap-4">
-                    <button
-                      onClick={() => setStatus("idle")}
-                      className="px-8 py-3 border border-border hover:border-accent transition-colors uppercase tracking-widest text-xs"
-                    >
-                      Try Again
-                    </button>
-                    <a 
-                      href="https://wa.me/60175032281" 
-                      className="px-8 py-3 bg-green-500 text-white uppercase tracking-widest text-xs flex items-center gap-2"
-                    >
-                      WhatsApp Us
-                    </a>
-                  </div>
+                  <p className="text-foreground/60 mb-8 max-w-sm">{errorMessage}</p>
+                  <button
+                    onClick={() => setStatus("idle")}
+                    className="px-8 py-3 border border-border hover:border-accent transition-colors uppercase tracking-widest text-xs"
+                  >
+                    Try Again
+                  </button>
                 </motion.div>
-              )}
+              ) : null}
             </AnimatePresence>
           </motion.div>
         </div>

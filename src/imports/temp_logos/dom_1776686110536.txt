@@ -1,0 +1,41 @@
+[0] (500,620)<div  />
+	[1] (332,29)<a href='/' />
+		[2] (332,29)<div  />
+			[3] (296,29)<img  />
+			[4] (344,29)<div >LawyerMarketing.my />
+	[5] (601,29)<a class='uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/blog'>Insights />
+	[6] (637,29)<a class='uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/contact'>Contact />
+	[7] (687,29)<a class='shrink-0' href='/contact' />
+		[8] (687,29)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group'>Get Started />
+	Complies with Bar Council Rules
+	Secure Your
+	2026
+	Competitive Advantage
+	We are selecting 5 expansion-focused law firms in Malaysia to join our
+	Exclusive Founder's Beta Program
+	. Get a complete technical audit and conversion-focused digital architecture.
+	Technical Gap Analysis
+	Discover where your firm is losing high-intent search traffic to competitors. (Valued at $3,500)
+	2026 Regulatory Audit
+	Ensure your digital assets are fully compliant with the latest Bar Council publicity standards.
+	Conversion Blueprints
+	Receive a custom architectural plan to transform your website into a high-performance intake engine.
+	Rated 4.9 across 200+ Reviews
+	Request Strategic Audit
+	[9] (569,253)<button class='p-4 border transition-all flex flex-col items-center gap-2 border-accent bg-accent/5'>Book Digital Audit />
+		Book Digital Audit
+	[10] (656,253)<button class='p-4 border transition-all flex flex-col items-center gap-2 border-border hover:border-green-500/50'>WhatsApp Strategy />
+		WhatsApp Strategy
+	[11] (568,311)<label class='text-xs font-bold uppercase tracking-widest text-foreground/40 flex items-center gap-2'>Full Name />
+	[12] (568,344)<input class='w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors' id='name' placeholder='Jacob Ng' />
+	[13] (657,311)<label class='text-xs font-bold uppercase tracking-widest text-foreground/40 flex items-center gap-2'>Work Email />
+	[14] (657,344)<input class='w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors' id='email' placeholder='jacob@firm.my' />
+	[15] (568,388)<label class='text-xs font-bold uppercase tracking-widest text-foreground/40 flex items-center gap-2'>Law Firm Name />
+	[16] (568,421)<input class='w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors' id='firmName' placeholder='Advocates & Solicitors' />
+	[17] (657,388)<label class='text-xs font-bold uppercase tracking-widest text-foreground/40 flex items-center gap-2'>Website URL />
+	[18] (657,421)<input class='w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors' id='website' placeholder='https://firm.my' />
+	[19] (612,466)<label class='text-xs font-bold uppercase tracking-widest text-foreground/40 flex items-center gap-2'>Monthly Case Volume />
+	[20] (612,498)<select class='w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors appearance-none' id='caseVolume' />
+	[21] (612,560)<button class='w-full py-5 font-bold uppercase tracking-[0.2em] transition-all disabled:opacity-50 group flex items-center justify-center gap-3 overflow-hidden relative bg-accent text-accent-foreground'>Initiate Audit />
+		Initiate Audit
+	Confidentiality Guaranteed. Data managed in compliance with Legal Profession Publicity Rules.

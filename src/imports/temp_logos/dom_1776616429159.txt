@@ -1,0 +1,23 @@
+[0] (494,135)<div  />
+	[1] (122,68)<a href='/' />
+		[2] (122,68)<div  />
+			[3] (41,68)<img  />
+			[4] (149,68)<div >LawyerMarketing.my />
+	[5] (796,68)<a class='text-xs md:text-sm uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/blog'>Insights />
+	[6] (909,68)<a class='shrink-0' href='https://cal.com/zen-pdcnlc/lawyer-marketing' />
+		[7] (909,68)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group text-xs md:text-base'>Get Started />
+	Precision Paid Advertising
+	Reach high-value clients instantly with data-driven campaigns on Google Ads and Meta platforms. Every dollar invested is tracked, optimized, and designed to deliver qualified leads to your practice.
+	Google Ads search & display campaigns
+	Facebook & Instagram targeting
+	A/B testing for optimal performance
+	Conversion tracking & analytics
+	Premium
+	Personal Brand Building
+	Establish yourself as the authority in your practice area. We craft compelling personal brands that position you as the go-to expert, building trust before prospects even contact you.
+	Thought leadership content strategy
+	Professional brand photography
+	LinkedIn authority building
+	Video content production
+	Media & PR opportunities
+	Premium

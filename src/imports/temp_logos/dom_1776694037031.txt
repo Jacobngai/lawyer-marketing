@@ -1,0 +1,64 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (332,32)<a href='/' />
+	[1] (332,32)<div  />
+		[2] (296,32)<img  />
+		[3] (344,32)<div >LawyerMarketing.my />
+[4] (590,32)<button class='uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors flex items-center gap-1'>What We Do />
+[5] (480,213)<a class='group/item flex gap-4 items-start hover:bg-white/5 p-3 rounded-md transition-all duration-300' href='/services/seo' />
+	[6] (452,196)<div  />
+		[7] (452,196)<img  />
+	[8] (499,213)<div  />
+		[9] (499,186)<h3  />
+		[10] (499,227)<p  />
+[11] (590,213)<a class='group/item flex gap-4 items-start hover:bg-white/5 p-3 rounded-md transition-all duration-300' href='/services/aio' />
+	[12] (562,196)<div  />
+		[13] (562,196)<img  />
+	[14] (609,213)<div  />
+		[15] (609,180)<h3  />
+		[16] (609,221)<p  />
+[17] (700,213)<a class='group/item flex gap-4 items-start hover:bg-white/5 p-3 rounded-md transition-all duration-300' href='/services/google-ads' />
+	[18] (672,196)<div  />
+		[19] (672,196)<img  />
+	[20] (719,213)<div  />
+		[21] (719,180)<h3  />
+		[22] (719,221)<p  />
+[23] (480,336)<a class='group/item flex gap-4 items-start hover:bg-white/5 p-3 rounded-md transition-all duration-300' href='/services/lsa' />
+	[24] (452,313)<div  />
+		[25] (452,313)<img  />
+	[26] (499,330)<div  />
+		[27] (499,303)<h3  />
+		[28] (499,344)<p  />
+[29] (590,336)<a class='group/item flex gap-4 items-start hover:bg-white/5 p-3 rounded-md transition-all duration-300' href='/services/meta-ads' />
+	[30] (562,313)<div  />
+		[31] (562,313)<img  />
+	[32] (611,336)<div  />
+		[33] (611,309)<h3  />
+		[34] (611,356)<p  />
+[35] (700,336)<a class='group/item flex gap-4 items-start hover:bg-white/5 p-3 rounded-md transition-all duration-300' href='/services/social-media' />
+	[36] (672,313)<div  />
+		[37] (672,313)<img  />
+	[38] (719,336)<div  />
+		[39] (719,303)<h3  />
+		[40] (719,350)<p  />
+[41] (480,454)<a class='group/item flex gap-4 items-start hover:bg-white/5 p-3 rounded-md transition-all duration-300' href='/services/web-design' />
+	[42] (452,443)<div  />
+		[43] (452,443)<img  />
+	[44] (499,454)<div  />
+		[45] (499,427)<h3  />
+		[46] (499,462)<p  />
+[47] (637,32)<a class='uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/blog'>Insights />
+[48] (687,32)<a class='shrink-0' href='/contact' />
+	[49] (687,32)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group'>Get Started />
+Since January 2026
+Elevate Your
+Legal Practice
+Malaysia's premier social media marketing agency exclusively for law firms. Navigate the new advertising landscape with sophistication and compliance.
+[50] (548,635)<a href='https://cal.com/zen-pdcnlc/lawyer-marketing' />
+	[51] (548,635)<button class='px-6 md:px-8 py-3 md:py-4 bg-accent text-accent-foreground rounded-sm hover:bg-accent/90 transition-colors flex items-center justify-center gap-2 group'>Book Consultation />
+[52] (630,635)<a href='/blog' />
+	[53] (630,635)<button class='px-6 md:px-8 py-3 md:py-4 border border-accent text-accent rounded-sm hover:bg-accent/10 transition-colors'>View Strategy Library />
+
+</current_dom>

@@ -1,0 +1,38 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (500,748)<div  />
+	[1] (248,46)<a href='/' />
+		[2] (248,46)<div  />
+			[3] (194,46)<img  />
+			[4] (266,46)<div >LawyerMarketing.my />
+	[5] (705,46)<a class='uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/blog'>Insights />
+	[6] (781,46)<a class='shrink-0' href='https://cal.com/zen-pdcnlc/lawyer-marketing' />
+		[7] (781,46)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group'>Get Started />
+	Dominate search results with a cutting-edge website engineered for maximum visibility. Our SEO and geolocation optimization ensures your firm appears exactly when and where potential clients are searching.
+	Advanced technical SEO implementation
+	Geolocation targeting for local dominance
+	Mobile-first responsive design
+	Lightning-fast page load speeds
+	Schema markup for rich snippets
+	[8] (589,484)<a class='block w-full' href='https://wa.me/60175032281?text=Hello%2C%20I'm%20interested%20in%20the%20SEO%20%26%20GEO%20Optimized%20Website%20for%20my%20law%20firm.' />
+		[9] (589,484)<button class='w-full px-4 md:px-6 py-2.5 md:py-3 bg-accent/10 hover:bg-accent text-foreground hover:text-accent-foreground border border-accent rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn text-sm md:text-base font-medium'>Inquire on WhatsApp />
+			Inquire on WhatsApp
+	Claim your territory on Google Maps and local search. We transform your Google Business Profile into a client-generating powerhouse with strategic optimization and reputation management.
+	Complete profile setup & verification
+	Strategic keyword optimization
+	Review generation & management
+	Regular posts & updates
+	Local citation building
+	[10] (749,454)<a class='block w-full' href='https://wa.me/60175032281?text=Hello%2C%20I'm%20interested%20in%20the%20Google%20Business%20Profile%20Optimization%20for%20my%20law%20firm.' />
+		[11] (749,454)<button class='w-full px-4 md:px-6 py-2.5 md:py-3 bg-accent/10 hover:bg-accent text-foreground hover:text-accent-foreground border border-accent rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn text-sm md:text-base font-medium'>Inquire on WhatsApp />
+			Inquire on WhatsApp
+	Precision Paid Advertising
+	Reach high-value clients instantly with data-driven campaigns on Google Ads and Meta platforms. Every dollar invested is tracked, optimized, and designed to deliver qualified leads to your practice.
+	Premium
+	Personal Brand Building
+	Establish yourself as the authority in your practice area. We craft compelling personal brands that position you as the go-to expert, building trust before prospects even contact you.
+	Premium
+
+</current_dom>

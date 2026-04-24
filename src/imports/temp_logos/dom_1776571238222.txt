@@ -1,0 +1,39 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+LawyerMarketing.my
+[0] (854,39)<a class='shrink-0' href='https://cal.com/zen-pdcnlc/lawyer-marketing' />
+	[1] (854,39)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group text-xs md:text-base'>Get Started />
+[2] (500,168)<div  />
+	[3] (500,168)<div  />
+		[4] (146,168)<div  />
+		[5] (564,161)<div  />
+			[6] (564,154)<h3 >Criminal Law />
+	[7] (938,110)<div  />
+[8] (500,360)<div  />
+	[9] (500,360)<div  />
+		[10] (146,360)<div  />
+		[11] (564,353)<div  />
+			[12] (564,346)<h3 >Family & Matrimonial />
+	[13] (938,302)<div  />
+[14] (500,552)<div  />
+	[15] (500,552)<div  />
+		[16] (146,552)<div  />
+		[17] (564,545)<div  />
+			[18] (564,538)<h3 >Property & Conveyancing />
+	[19] (938,494)<div  />
+[20] (500,744)<div  />
+	[21] (500,744)<div  />
+		[22] (146,744)<div  />
+		[23] (564,737)<div  />
+			[24] (564,730)<h3 >Immigration Law />
+	[25] (938,686)<div  />
+[26] (500,936)<div  />
+	[27] (500,936)<div  />
+		[28] (146,936)<div  />
+		[29] (564,929)<div  />
+			[30] (564,922)<h3 >Intellectual Property />
+	[31] (938,878)<div  />
+
+</current_dom>

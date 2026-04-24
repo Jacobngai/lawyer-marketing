@@ -1,0 +1,43 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (259,56)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/divorce-lawyer/' />
+	[1] (259,5)<h3 >Divorce & Family Law />
+	[2] (259,54)<p >Clients in distress, searching privately. Empathy-first marketing. />
+	[3] (116,107)<span >See the strategy → />
+[4] (741,56)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/criminal-defence/' />
+	[5] (741,5)<h3 >Criminal Defence />
+	[6] (741,42)<p >High urgency, high emotion. Every hour matters. />
+	[7] (599,83)<span >See the strategy → />
+[8] (259,247)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/personal-injury/' />
+	[9] (259,209)<h3 >Personal Injury />
+	[10] (259,245)<p >They're searching from a hospital bed. Meet them there. />
+	[11] (116,286)<span >See the strategy → />
+[12] (741,247)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/corporate-law/' />
+	[13] (741,209)<h3 >Corporate Law />
+	[14] (741,245)<p >Longer sales cycle, higher value. Reputation is everything. />
+	[15] (599,286)<span >See the strategy → />
+[16] (259,425)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/property-conveyancing/' />
+	[17] (259,387)<h3 >Property & Conveyancing />
+	[18] (259,423)<p >Transactional, competitive, local. Win on trust and speed. />
+	[19] (116,464)<span >See the strategy → />
+[20] (741,425)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/immigration-lawyer/' />
+	[21] (741,387)<h3 >Immigration />
+	[22] (741,423)<p >Complex journeys, anxious clients. Clarity converts. />
+	[23] (599,464)<span >See the strategy → />
+[24] (259,603)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/employment-lawyer/' />
+	[25] (259,565)<h3 >Employment Law />
+	[26] (259,602)<p >Employees and employers both searching — different funnels. />
+	[27] (116,643)<span >See the strategy → />
+[28] (741,603)<a class='group bg-white p-6 rounded-xl border border-cream-dark hover:border-teal/30 hover:shadow-lg transition-all duration-200' href='/en/niches/estate-planning/' />
+	[29] (741,565)<h3 >Estate Planning />
+	[30] (741,602)<p >Nobody wants to think about this. Make it feel manageable. />
+	[31] (599,643)<span >See the strategy → />
+[32] (500,734)<a class='text-teal-deep font-semibold hover:text-copper transition text-sm' href='/en/niches/'>View all 20 practice areas → />
+Our Deliverables
+A Complete Digital
+Ecosystem
+[33] (944,943)<a aria-label='Chat on WhatsApp' class='whatsapp-float' href='https://wa.me/60175032281?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20marketing%20for%20my%20law%20firm.' />
+
+</current_dom>

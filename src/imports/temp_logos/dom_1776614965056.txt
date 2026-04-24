@@ -1,0 +1,34 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (500,426)<div  />
+	[1] (248,46)<a href='/' />
+		[2] (248,46)<div  />
+			[3] (194,46)<img  />
+			[4] (266,46)<div >LawyerMarketing.my />
+	[5] (705,46)<a class='text-xs md:text-sm uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/blog'>Insights />
+	[6] (781,46)<a class='shrink-0' href='https://cal.com/zen-pdcnlc/lawyer-marketing' />
+		[7] (781,46)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group text-xs md:text-base'>Get Started />
+	The 2026 Malaysian Legal Publicity Rules: A Definitive Guide
+	Everything you need to know about the Bar Council's landmark decision on digital advertising and social media presence.
+	[8] (660,291)<a href='/blog/legal-publicity-rules-2026' />
+		[9] (589,291)<button class='flex items-center gap-2 text-accent font-medium uppercase tracking-[0.2em] text-sm'>Read Featured Article />
+	[10] (281,739)<div  />
+		[11] (281,605)<div  />
+			[12] (281,605)<img  />
+		[13] (281,750)<div >AI Marketing />
+		[14] (281,808)<h3 >Becoming an AI-Cited Authority: The Rise of AIEO & GEO />
+		[15] (281,881)<p >Why the classic SEO playbook is dead, and how to optimize your firm for Perplexity, ChatGPT, and AI Search Engines. />
+		[16] (281,956)<div  />
+			[17] (281,970)<a href='/blog/ai-cited-authority-aieo-geo' />
+				[18] (281,970)<div >Read Article />
+	[19] (500,739)<div >From professional photography to LinkedIn thought leadership—how to build a name that commands premium fees. />
+		[20] (500,605)<div  />
+			[21] (500,605)<img  />
+		[22] (500,750)<div >Branding />
+		[23] (500,808)<h3 >High-Ticket Personal Branding for Litigation Partners />
+		From professional photography to LinkedIn thought leadership—how to build a name that commands premium fees.
+		Read Article
+
+</current_dom>

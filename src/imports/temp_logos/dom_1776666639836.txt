@@ -1,0 +1,48 @@
+[0] (183,408)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0' />
+	[1] (183,270)<div  />
+	[2] (183,391)<div  />
+		[3] (84,378)<div  />
+			[4] (84,378)<span >AI />
+		[5] (233,378)<div >January 8, 2026 />
+	[6] (183,498)<div >AI Prompts for Lawyers: How to Create + High-Impact Examples in 2026 />
+	[7] (183,610)<div  />
+		[8] (120,610)<a href='https://rankings.io/blog/ai-prompts-for-lawyers/'>Read More />
+[9] (500,408)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0' />
+	[10] (500,270)<div  />
+	[11] (500,391)<div  />
+		[12] (401,378)<div  />
+			[13] (401,378)<span >AI />
+		[14] (550,378)<div >January 5, 2026 />
+	[15] (500,479)<div >7 Best AI Tools for Client Intake in 2026: Turn Leads Into Signed Cases />
+	[16] (500,610)<div  />
+		[17] (437,610)<a href='https://rankings.io/blog/best-ai-tools-for-client-intake/'>Read More />
+[18] (817,408)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0' />
+	[19] (817,270)<div  />
+	[20] (817,391)<div  />
+		[21] (718,378)<div  />
+			[22] (718,378)<span >AI />
+		[23] (854,378)<div >December 10, 2025 />
+	[24] (817,479)<div >11 Best AI Tools for Contract Review: Top Legal Software for 2026 />
+	[25] (817,610)<div  />
+		[26] (754,610)<a href='https://rankings.io/blog/best-ai-tools-for-contract-review/'>Read More />
+[27] (183,919)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0' />
+	[28] (183,770)<div  />
+	[29] (183,890)<div  />
+		[30] (84,878)<div  />
+			[31] (84,878)<span >AI />
+		[32] (224,878)<div >December 4, 2025 />
+	[33] (183,978)<div >11 Best AI Tools for Legal Writing: Top Picks for 2026 />
+[34] (500,919)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0'>8 Best Law Firm Coaching Companies in 2026 (Ranked) />
+	[35] (500,770)<div  />
+	[36] (500,921)<div  />
+		[37] (443,878)<div  />
+			[38] (443,878)<span >Marketing />
+		[39] (459,938)<div >December 2, 2025 />
+	8 Best Law Firm Coaching Companies in 2026 (Ranked)
+[40] (817,919)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0' />
+	[41] (817,770)<div  />
+	[42] (817,890)<div  />
+		[43] (718,878)<div  />
+			[44] (718,878)<span >AI />
+		[45] (853,878)<div >November 26, 2025 />
+	[46] (817,978)<div >Best AI Tools for Legal Research: Complete Guide in 2026 />

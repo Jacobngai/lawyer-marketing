@@ -1,0 +1,65 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Skip to content
+[0] (347,75)<a class='navbar-brand d-block position-relative p-0 m-0' href='/' />
+[1] (696,75)<a class='btn blue-btn no-btn-min-width me-2' href='/contact/'>Let's Talk />
+[2] (838,75)<button aria-label='Toggle navigation' class='navbar-toggler btn btn-alt no-btn-min-width no-btn-deco' />
+	[3] (838,75)<span  />
+More qualified cases start here.
+See where your law firm is leaving high-value cases on the table.
+Book a five-minute call
+to start the process for your complimentary digital audit.
+(Typical value: $3,500)
+[4] (500,704)<label id='label-email-badac3f4-119c-48aa-bece-eff953d0d78e'>Work Email
+* />
+	Work Email
+	*
+[5] (500,725)<legend >Please enter your business email. />
+[6] (500,759)<input class='hs-input' id='email-badac3f4-119c-48aa-bece-eff953d0d78e' />
+[7] (500,810)<label id='label-firstname-badac3f4-119c-48aa-bece-eff953d0d78e'>First Name
+* />
+	First Name
+	*
+[8] (500,846)<input class='hs-input' id='firstname-badac3f4-119c-48aa-bece-eff953d0d78e' />
+[9] (500,897)<label id='label-lastname-badac3f4-119c-48aa-bece-eff953d0d78e'>Last Name
+* />
+	Last Name
+	*
+[10] (500,933)<input class='hs-input' id='lastname-badac3f4-119c-48aa-bece-eff953d0d78e' />
+[11] (500,983)<label id='label-phone-badac3f4-119c-48aa-bece-eff953d0d78e'>Phone number
+* />
+	Phone number
+	*
+[12] (500,1020)<input class='hs-input' id='phone-badac3f4-119c-48aa-bece-eff953d0d78e' />
+[13] (500,1070)<label id='label-0-2/name-badac3f4-119c-48aa-bece-eff953d0d78e'>Law Firm Name
+* />
+	Law Firm Name
+	*
+[14] (500,1106)<input class='hs-input' id='0-2/name-badac3f4-119c-48aa-bece-eff953d0d78e' />
+[15] (500,1157)<label id='label-website-badac3f4-119c-48aa-bece-eff953d0d78e'>Law Firm's Website URL (the firm you represent)
+* />
+	Law Firm's Website URL (the firm you represent)
+	*
+[16] (500,1193)<input class='hs-input' id='website-badac3f4-119c-48aa-bece-eff953d0d78e' />
+[17] (500,1244)<label id='label-0-2/country__forms_-badac3f4-119c-48aa-bece-eff953d0d78e'>Select your country
+* />
+	Select your country
+	*
+[18] (500,1280)<select class='hs-input is-placeholder' id='0-2/country__forms_-badac3f4-119c-48aa-bece-eff953d0d78e' />
+[19] (500,1331)<label id='label-contact_preference-badac3f4-119c-48aa-bece-eff953d0d78e'>Contact preference
+* />
+	Contact preference
+	*
+[20] (500,1374)<ul class='inputs-list multi-container' role='checkbox' />
+	[21] (504,1363)<li class='hs-form-radio' role='radio' />
+		[22] (504,1363)<label class='hs-form-radio-display'>Book a meeting />
+			[23] (219,1362)<input class='hs-input' id='contact_preference0-badac3f4-119c-48aa-bece-eff953d0d78e' />
+			Book a meeting
+	[24] (504,1391)<li class='hs-form-radio' role='radio' />
+		[25] (504,1392)<label class='hs-form-radio-display'>Call me now />
+			[26] (219,1391)<input class='hs-input' id='contact_preference1-badac3f4-119c-48aa-bece-eff953d0d78e' />
+			Call me now
+
+</current_dom>

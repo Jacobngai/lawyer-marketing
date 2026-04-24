@@ -1,0 +1,51 @@
+[0] (43,41)<a href='https://developers.google.com/workspace' />
+	[1] (41,41)<div  />
+		[2] (41,41)<picture  />
+			[3] (41,41)<img  />
+[4] (156,41)<a class='devsite-breadcrumb-link gc-analytics-event' href='https://developers.google.com/workspace' />
+	[5] (156,41)<h1 >Workspace />
+[6] (351,41)<a aria-label='Apps Script, selected' class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/apps-script'>Apps Script />
+[7] (443,41)<button aria-label='Dropdown menu for Extended Navigation' class='devsite-tabs-overflow-button devsite-icon devsite-icon-arrow-drop-down' id='tab-overflow-button-ajf0'>More />
+[8] (645,41)<input aria-label='Search' class='devsite-search-field devsite-search-query' placeholder='Search' role='combobox' />
+/
+[9] (828,41)<button  />
+	[10] (833,41)<span >Language />
+[11] (941,41)<a class='devsite-user-signin button devsite-top-button' href='https://developers.google.com/_d/signin?continue=https%3A%2F%2Fdevelopers.google.com%2Fapps-script%2F&prompt=select_account' id='devsite-signin-btn'>Sign in />
+[12] (75,149)<a class='devsite-breadcrumb-link gc-analytics-event' href='https://developers.google.com/apps-script'>Apps Script />
+[13] (54,221)<a aria-label='Overview, selected' class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/apps-script'>Overview />
+[14] (143,221)<a class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/apps-script/overview'>Guides />
+[15] (234,221)<a class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/apps-script/reference'>Reference />
+[16] (329,221)<a class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/apps-script/samples'>Samples />
+[17] (417,221)<a class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/apps-script/support'>Support />
+[18] (132,628)<devsite-book-nav scrollable='true' />
+	[19] (128,331)<input aria-label='Type to filter' placeholder='Filter' role='searchbox' />
+	[20] (124,443)<a class='devsite-nav-title' href='/workspace' />
+		[21] (41,443)<span >Home />
+	[22] (124,484)<a class='devsite-nav-title' href='/workspace/products' />
+		[23] (79,484)<span >Developer products />
+	[24] (124,525)<a class='devsite-nav-title' href='/workspace/guides/get-started' />
+		[25] (55,525)<span >Get started />
+	[26] (124,566)<a class='devsite-nav-title' href='/workspace/guides/ai-overview' />
+		[27] (59,566)<span >Build with AI />
+	[28] (124,607)<a class='devsite-nav-title' href='/workspace/explore' />
+		[29] (51,607)<span >Try it now />
+	Google Workspace apps
+	[30] (124,731)<a class='devsite-nav-title' href='/workspace/admin' />
+		[31] (66,731)<span >Admin console />
+	[32] (124,772)<a class='devsite-nav-title' href='/workspace/cloud-search' />
+		[33] (61,772)<span >Cloud Search />
+	[34] (124,813)<a class='devsite-nav-title' href='/workspace/gmail' />
+		[35] (40,813)<span >Gmail />
+	[36] (124,854)<a class='devsite-nav-title' href='/workspace/calendar' />
+		[37] (71,854)<span >Google Calendar />
+	[38] (124,895)<a class='devsite-nav-title' href='/workspace/chat' />
+		[39] (59,895)<span >Google Chat />
+	[40] (124,937)<a class='devsite-nav-title' href='/workspace/classroom' />
+		[41] (76,937)<span >Google Classroom />
+	[42] (124,978)<a class='devsite-nav-title' href='/workspace/docs' />
+		[43] (60,978)<span >Google Docs />
+[44] (237,938)<button aria-label='Hide side navigation' class='devsite-book-nav-toggle' />
+	[45] (237,938)<span  />
+Automate & extend Google Workspace with simple code
+.
+Apps Script is a cloud-based JavaScript platform powered by Google Drive that lets you integrate with and automate tasks across Google products.

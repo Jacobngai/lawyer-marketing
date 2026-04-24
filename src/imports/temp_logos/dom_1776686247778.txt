@@ -1,0 +1,242 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (18,36)<a aria-label='Sheets home' href='https://docs.google.com/spreadsheets/u/0/?pli=1&authuser=0&usp=sheets_web' id='docs-branding-logo-link' />
+	[1] (18,36)<div  />
+		[2] (18,36)<div  />
+Untitled spreadsheet
+[3] (77,24)<input aria-label='Rename' class='docs-title-input' />
+[4] (134,26)<div aria-label='Star' class='docs-titlebar-badge goog-inline-block goog-control' id='docs-star' role='checkbox' />
+	[5] (134,26)<div  />
+[6] (822,33)<div aria-label='Show all comments' class='goog-inline-block jfk-button jfk-button-standard docs-appbar-circle-button docs-titlebar-button docos-comments-pe' id='docs-docos-commentsbutton' role='button' />
+	[7] (822,33)<div  />
+[8] (855,33)<div aria-label='Join a call here or present this tab to the call' class='goog-flat-menu-button goog-inline-block' id='docs-meet-in-editors-entrypointbutton' role='button' />
+	[9] (850,32)<div  />
+		[10] (850,33)<div  />
+	[11] (863,33)<div  />
+[12] (901,33)<div aria-label='Share. Private to only me. ' class='goog-inline-block jfk-button jfk-button-action scb-split-button docs-titlebar-button' role='button'>Share />
+	[13] (890,32)<span  />
+[14] (933,33)<div aria-label='Quick sharing actions' class='docs-titlebar-button scb-quick-actions-menu-button goog-flat-menu-button goog-flat-menu-button-collapse-left goog-inline-block' id='scb-quick-actions-menu-button' role='button' />
+	[15] (933,49)<div  />
+[16] (956,33)<button aria-label='Ask Gemini' class='javascriptMaterialdesignGm3WizIconButtonFilled-icon-button javascriptMaterialdesignGm3WizIconButtonFilled-icon-button--with-tooltip appsElementsSidekickEntryPointButton appsElementsSidekickEntryPointButtonPressed' />
+	[17] (956,33)<div  />
+[18] (981,33)<a aria-label='Google Account: Zen  
+(ngsanzen@gmail.com)' class='gb_C gb_1a' href='https://accounts.google.com/SignOutOptions?hl=en&continue=https://docs.google.com/spreadsheets/u/0/d/1shtuUg4ZlE_FoNBzwAT3TDOueZT1VIMU1L6lMfbzfjg/edit%3Fusp%3Ddot_new%26pli%3D1&ec=GBRAmwI' role='button' />
+[19] (38,50)<div class='menu-button goog-control goog-inline-block' id='docs-file-menu' role='menuitem'>File />
+[20] (59,50)<div class='menu-button goog-control goog-inline-block' id='docs-edit-menu' role='menuitem'>Edit />
+[21] (82,50)<div class='menu-button goog-control goog-inline-block' id='docs-view-menu' role='menuitem'>View />
+[22] (108,50)<div class='menu-button goog-control goog-inline-block' id='docs-insert-menu' role='menuitem'>Insert />
+[23] (138,50)<div class='menu-button goog-control goog-inline-block' id='docs-format-menu' role='menuitem'>Format />
+[24] (167,50)<div class='menu-button goog-control goog-inline-block' id='w183' role='menuitem'>Data />
+[25] (192,50)<div class='menu-button goog-control goog-inline-block' id='docs-tools-menu' role='menuitem'>Tools />
+[26] (221,50)<div class='menu-button goog-control goog-inline-block' id='docs-gemini-menu' role='menuitem'>Gemini />
+[27] (259,50)<div class='menu-button goog-control goog-inline-block goog-control-open docs-menu-button-open-below goog-control-hover' id='docs-extensions-menu' role='menuitem'>Extensions />
+[28] (294,50)<div class='menu-button goog-control goog-inline-block' id='docs-help-menu' role='menuitem'>Help />
+[29] (39,93)<input aria-label='Menus' class='docs-omnibox-input jfk-textinput assisted-actions-toolbar-omnibox label-input-label' placeholder='Menus' role='combobox' />
+[30] (74,93)<div aria-label='Undo (Ctrl+Z)' class='goog-toolbar-button goog-inline-block' id='t-undo' role='button' />
+	[31] (74,93)<div  />
+		[32] (74,93)<div  />
+			[33] (74,94)<div  />
+[34] (91,93)<div aria-label='Redo (Ctrl+Y)' class='goog-toolbar-button goog-inline-block' id='t-redo' role='button' />
+	[35] (91,93)<div  />
+		[36] (91,93)<div  />
+			[37] (91,94)<div  />
+[38] (107,93)<div aria-label='Print (Ctrl+P)' class='goog-toolbar-button goog-inline-block' id='t-print' role='button' />
+	[39] (107,93)<div  />
+		[40] (107,93)<div  />
+			[41] (107,94)<div  />
+[42] (124,93)<div aria-label='Paint format' class='goog-toolbar-toggle-button goog-toolbar-button goog-inline-block' id='t-paintformat' role='button' />
+	[43] (124,93)<div  />
+		[44] (124,93)<div  />
+			[45] (124,94)<div  />
+[46] (152,93)<div aria-label='Zoom' class='docs-toolbar-zoom-combobox goog-toolbar-combo-button goog-inline-block' id='t-zoom' role='combobox' />
+	[47] (152,95)<div  />
+		[48] (152,95)<div  />
+			[49] (148,95)<div aria-label='Zoom list. 100% selected.' class='goog-inline-block goog-toolbar-combo-button-caption' id=':1w' role='option' />
+				[50] (147,94)<input aria-label='Zoom' class='goog-toolbar-combo-button-input jfk-textinput' />
+			[51] (164,83)<div  />
+				[52] (165,94)<div  />
+[53] (184,93)<div aria-label='Format as currency' class='goog-toolbar-button goog-inline-block' id='t-num-fmt-currency' role='button' />
+	[54] (184,93)<div  />
+		[55] (184,93)<div >$ />
+[56] (201,93)<div aria-label='Format as percent' class='goog-toolbar-button goog-inline-block' id='t-num-fmt-percent' role='button' />
+	[57] (201,93)<div  />
+		[58] (201,93)<div >% />
+[59] (218,93)<div aria-label='Decrease decimal places' class='goog-toolbar-button goog-inline-block' id='t-num-fmt-decimal-decrease' role='button' />
+	[60] (218,93)<div  />
+		[61] (218,93)<div  />
+			[62] (218,94)<div  />
+[63] (234,93)<div aria-label='Increase decimal places' class='goog-toolbar-button goog-inline-block' id='t-num-fmt-decimal-increase' role='button' />
+	[64] (234,93)<div  />
+		[65] (234,93)<div  />
+			[66] (234,94)<div  />
+123
+Default (Arial)
+[67] (541,94)<div  />
+[68] (557,93)<div aria-label='Text wrapping' class='goog-toolbar-menu-button goog-inline-block' id='t-textwrap' role='button' />
+	[69] (557,93)<div  />
+		[70] (556,93)<div  />
+			[71] (553,93)<div  />
+				[72] (553,94)<div  />
+			[73] (561,83)<div  />
+				[74] (563,94)<div  />
+[75] (578,93)<div aria-label='Text rotation' class='goog-toolbar-menu-button goog-inline-block' id='t-text-rotation' role='button' />
+	[76] (578,93)<div  />
+		[77] (577,93)<div  />
+			[78] (575,93)<div  />
+				[79] (574,94)<div  />
+			[80] (583,83)<div  />
+				[81] (584,94)<div  />
+[82] (601,93)<div aria-label='Insert link (Ctrl+K)' class='goog-toolbar-button goog-inline-block' id='t-insert-link' role='button' />
+	[83] (601,93)<div  />
+		[84] (601,93)<div  />
+			[85] (601,94)<div  />
+[86] (617,93)<div aria-label='Insert comment (Ctrl+Alt+M)' class='goog-toolbar-button goog-inline-block' id='t-insert-doco' role='button' />
+	[87] (617,93)<div  />
+		[88] (617,93)<div  />
+			[89] (617,94)<div  />
+[90] (634,93)<div aria-label='Insert chart' class='goog-toolbar-button goog-inline-block' id='t-insert-chart' role='button' />
+	[91] (634,93)<div  />
+		[92] (634,93)<div  />
+			[93] (634,94)<div  />
+[94] (651,93)<div aria-label='Create a filter' class='goog-toolbar-toggle-button goog-toolbar-button goog-inline-block' id='t-autofilter-toggle' role='button' />
+	[95] (651,93)<div  />
+		[96] (651,93)<div  />
+			[97] (651,94)<div  />
+[98] (670,93)<div aria-label='Filter views' class='goog-toolbar-menu-button goog-inline-block' id='t-autofilter-menu' role='button' />
+	[99] (670,93)<div  />
+		[100] (669,93)<div  />
+			[101] (666,93)<div  />
+				[102] (666,94)<div  />
+			[103] (674,83)<div  />
+				[104] (676,94)<div  />
+[105] (689,93)<div aria-label='Functions' class='goog-toolbar-menu-button goog-inline-block' id='t-formula' role='button' />
+	[106] (689,93)<div  />
+		[107] (689,93)<div  />
+			[108] (689,93)<div  />
+				[109] (689,94)<div  />
+[110] (767,93)<div aria-label='Hide the menus (Ctrl+Shift+F)' class='goog-toolbar-button goog-inline-block' id='viewModeButton' role='button' />
+	[111] (767,93)<div  />
+		[112] (767,93)<div  />
+			[113] (767,94)<div  />
+[114] (985,95)<div aria-label='Calendar' class='agca-gab-button app-switcher-button agca-gab-blue' id='gsc-gab-6' role='tab' />
+	[115] (985,95)<div  />
+[116] (985,157)<div aria-label='Keep' class='agca-gab-button app-switcher-button agca-gab-yellow' id='gsc-gab-2' role='tab' />
+	[117] (985,157)<div  />
+[118] (985,218)<div aria-label='Tasks' class='agca-gab-button app-switcher-button agca-gab-blue' id='gsc-gab-4' role='tab' />
+	[119] (985,218)<div  />
+[120] (985,280)<div aria-label='Contacts' class='agca-gab-button app-switcher-button agca-gab-blue' id='gsc-gab-9' role='tab' />
+	[121] (985,280)<div  />
+[122] (985,341)<div aria-label='Maps' class='agca-gab-button app-switcher-button agca-gab-blue' id='gsc-gab-8' role='tab' />
+	[123] (985,341)<div  />
+[124] (985,439)<div aria-label='Canva' class='agca-gab-button app-switcher-button' id='e88ec0ac9b291183f5912d13bd637b7333d8090d4bc7f45e7c7554959b34c2af:1' role='tab' />
+	[125] (985,439)<div  />
+[126] (985,501)<div aria-label='Get Add-ons' class='agca-gab-button app-switcher-button' id='qJTzr' role='tab' />
+	[127] (985,501)<div  />
+[128] (985,969)<div aria-label='Hide side panel' class='app-switcher-button companion-collapser-button' role='button' />
+	[129] (985,969)<div  />
+[130] (23,139)<input class='jfk-textinput waffle-name-box' id='t-name-box' />
+[131] (47,140)<div aria-label='Name box menu button. Select one of the menu items to navigate to its corresponding named range.' class='name-box-dropdown docs-toolbar-button-split-right goog-toolbar-menu-button goog-inline-block goog-toolbar-menu-button-disabled' id='t-name-box-dropdown' role='button' />
+	[132] (47,143)<div  />
+		[133] (46,143)<div  />
+			[134] (46,134)<div  />
+				[135] (47,140)<div  />
+[136] (76,203)<div  />
+[137] (22,550)<div  />
+[138] (778,564)<div class='native-scrollbar native-scrollbar-ltr native-scrollbar-y' scrollable='true' />
+[139] (400,951)<div class='native-scrollbar native-scrollbar-ltr native-scrollbar-x' scrollable='true' />
+[140] (50,183)<div  />
+[141] (32,980)<div aria-label='Add Sheet' class='docs-sheet-button goog-inline-block docs-sheet-add-button' id=':e' role='button' />
+	[142] (32,980)<div  />
+		[143] (32,980)<div  />
+			[144] (32,980)<div  />
+[145] (53,980)<div aria-label='All Sheets' class='docs-sheet-menu-button goog-inline-block docs-sheet-all-button docs-sheet-button' id=':f' role='button' />
+	[146] (53,980)<div  />
+		[147] (53,980)<div  />
+			[148] (52,980)<div  />
+[149] (93,981)<div class='goog-inline-block docs-sheet-tab docs-material docs-sheet-active-tab' id=':y' role='button' />
+	Sheet1
+[150] (321,213)<div class='goog-menu goog-menu-vertical docs-material shell-menu shell-primary-menu shell-menu-has-icon goog-menu-noaccel apps-menu-hide-mnemonics docs-menu-attached-button-above' role='menu' />
+	[151] (321,89)<div class='goog-menuitem apps-menuitem goog-submenu goog-menuitem-highlight goog-submenu-open' id='1ldytm:13m' role='menuitem' />
+		[152] (316,89)<div  />
+			[153] (248,89)<div  />
+			[154] (273,89)<span >dd-ons />
+				[155] (260,89)<span >A />
+			[156] (394,89)<span >► />
+	[157] (321,124)<div class='goog-menuitem apps-menuitem goog-submenu' id='1ldytm:13n' role='menuitem' />
+		[158] (316,124)<div  />
+			[159] (248,124)<div  />
+			[160] (271,124)<span >acros />
+				[161] (260,124)<span >M />
+			[162] (394,124)<span >► />
+	[163] (321,159)<div class='goog-menuitem apps-menuitem' id='1ldytm:13o' role='menuitem' />
+		[164] (327,159)<div  />
+			[165] (248,159)<div  />
+			[166] (278,159)<span >Apps Script />
+	[167] (321,213)<div class='goog-menuitem apps-menuitem goog-submenu' id='1ldytm:13q' role='menuitem' />
+		[168] (316,213)<div  />
+			[169] (248,213)<div  />
+			[170] (275,213)<span >AppS
+eet />
+				[171] (277,213)<span >h />
+			[172] (394,213)<span >► />
+	[173] (321,248)<div class='goog-menuitem apps-menuitem goog-submenu' id='1ldytm:13r' role='menuitem' />
+		[174] (316,248)<div  />
+			[175] (248,248)<div  />
+			[176] (282,248)<span >ooker Studio />
+				[177] (259,248)<span >L />
+			[178] (394,248)<span >► />
+	[179] (321,302)<div class='goog-menuitem apps-menuitem goog-submenu' id='MQej57hMmqxTaQ48uBXZREnNiaCb_EVGq' role='menuitem' />
+		[180] (316,302)<div >Claude for Sheets™ />
+			[181] (248,302)<div  />
+			[182] (394,302)<span >► />
+	[183] (321,337)<div class='goog-menuitem apps-menuitem goog-submenu' id='M-_9I5KrFW9xwuxlb14sUgiJk5uJxyjf0' role='menuitem' />
+		[184] (316,337)<div >GPT for Sheets™ and Docs™ />
+			[185] (248,337)<div  />
+			[186] (394,337)<span >► />
+[187] (793,507)<div class='appsElementsSidekickResizeHandle' />
+[188] (809,99)<button aria-label='More options' class='javascriptMaterialdesignGm3WizIconButtonStandard-icon-button javascriptMaterialdesignGm3WizIconButtonStandard-icon-button--with-tooltip appsElementsSidekickHeaderButton appsElementsSidekickHeaderMainButton' />
+	[189] (809,99)<div  />
+Gemini
+[190] (928,99)<button aria-label='View' class='javascriptMaterialdesignGm3WizButtonDropdownText-button javascriptMaterialdesignGm3WizButtonDropdownText-button--icon-dropdown javascriptMaterialdesignGm3WizButtonDropdownText-button--ellipsis javascriptMaterialdesignGm3WizButtonDropdownText-button--icon-leading javascriptMaterialdesignGm3WizButtonDropdownText-button--icon-dropdown-and-leading javascriptMaterialdesignGm3WizButtonDropdownText-button--with-tooltip javascriptMaterialdesignGm3WizButtonDropdownText-deprecated-hcm-border javascriptMaterialdesignGm3WizButtonDropdownText-button__use-updated-font-styles appsElementsSidekickHeaderViewSelectorButton' />
+	[191] (923,99)<span  />
+		[192] (923,99)<span  />
+	[193] (933,99)<span  />
+[194] (949,99)<button aria-label='Close' class='javascriptMaterialdesignGm3WizIconButtonStandard-icon-button javascriptMaterialdesignGm3WizIconButtonStandard-icon-button--with-tooltip appsElementsSidekickHeaderButton' />
+	[195] (949,99)<div  />
+Type @ to reference sources
+[196] (879,616)<li aria-label='Create a resource allocation template' class='javascriptMaterialdesignGm3WizListShared-list-item javascriptMaterialdesignGm3WizListShared-list-item--interactive javascriptMaterialdesignGm3WizListShared-list-item--fill-font-icon javascriptMaterialdesignGm3WizListShared-list-item--with-one-line javascriptMaterialdesignGm3WizListSharedOldTokens appsElementsSidekickInlineSuggestionListSuggestion' id='8' role='option' />
+	Create a resource allocation template
+Build me a workout tracker
+Create a DCF valuation
+View all suggestions
+[197] (826,856)<button aria-label='Sheet1' class='javascriptMaterialdesignGm3WizButtonDropdownOutlined-button javascriptMaterialdesignGm3WizButtonDropdownOutlined-button--icon-dropdown javascriptMaterialdesignGm3WizButtonDropdownOutlined-button--icon-leading javascriptMaterialdesignGm3WizButtonDropdownOutlined-button--icon-dropdown-and-leading javascriptMaterialdesignGm3WizButtonDropdownOutlined-button--with-tooltip javascriptMaterialdesignGm3WizButtonDropdownOutlined-button--ellipsis javascriptMaterialdesignGm3WizButtonDropdownOutlined-button__use-updated-font-styles appsElementsScoperCompactScoperMenuButton appsElementsScoperSingleSource' />
+	[198] (820,856)<span  />
+		[199] (820,856)<span  />
+	[200] (833,856)<span  />
+[201] (858,856)<button aria-label='Build' class='javascriptMaterialdesignGm3WizButtonDropdownText-button javascriptMaterialdesignGm3WizButtonDropdownText-button--icon-dropdown javascriptMaterialdesignGm3WizButtonDropdownText-button--ellipsis javascriptMaterialdesignGm3WizButtonDropdownText-button--icon-leading javascriptMaterialdesignGm3WizButtonDropdownText-button--icon-dropdown-and-leading javascriptMaterialdesignGm3WizButtonDropdownText-button--with-tooltip javascriptMaterialdesignGm3WizButtonDropdownText-deprecated-hcm-border javascriptMaterialdesignGm3WizButtonDropdownText-button__use-updated-font-styles appsElementsModifierSelectorMenuButton appsElementsModifierSelectorMenuButtonLabelBehaviorHoverExpandCollapse appsElementsModifierSelectorMenuButtonWithDropdown' />
+	[202] (853,856)<span  />
+		[203] (853,856)<span  />
+	[204] (865,856)<span  />
+Beta
+Gemini in Workspace can make mistakes.
+[205] (936,914)<a class='appsElementsSidekickMessagesLearnMoreLink' href='https://support.google.com/a/users?p=gw_gemini_responses'>Learn more />
+[206] (920,685)<button aria-label='Close' class='javascriptMaterialdesignGm3WizIconButtonStandard-icon-button javascriptMaterialdesignGm3WizIconButtonStandard-icon-button--with-tooltip appsElementsCalloutCloseButtonIcon appsElementsCalloutLargeStandardIconButton' />
+	[207] (920,685)<div  />
+Try out Build
+Turn prompts into robust spreadsheets. Create analytical reports and trackers in seconds using data from your Workspace files and the web.
+[208] (472,141)<div class='goog-menu goog-menu-vertical docs-material shell-menu goog-menu-noaccel apps-menu-hide-mnemonics' role='menu' />
+	[209] (472,97)<div class='goog-menuitem apps-menuitem goog-menuitem-highlight' id='1ldytm:147' role='menuitem' />
+		[210] (473,97)<div  />
+			[211] (435,97)<span >et add-ons />
+				[212] (415,97)<span >G />
+	[213] (472,132)<div class='goog-menuitem apps-menuitem' id='1ldytm:148' role='menuitem' />
+		[214] (473,132)<div  />
+			[215] (442,132)<span >anage add-ons />
+				[216] (416,132)<span >M />
+	View document
+	a
+	dd-ons
+
+</current_dom>

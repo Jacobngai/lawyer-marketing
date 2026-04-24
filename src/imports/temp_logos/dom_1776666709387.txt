@@ -1,0 +1,48 @@
+[0] (183,428)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0' />
+	[1] (183,270)<div  />
+	[2] (183,391)<div  />
+		[3] (93,378)<div  />
+			[4] (93,378)<span >SEO />
+		[5] (245,378)<div >July 18, 2025 />
+	[6] (183,479)<div >How Local SEO Services for Law Firms Drive Case-Generating Traffic />
+	[7] (183,649)<div  />
+		[8] (120,648)<a href='https://rankings.io/blog/how-local-seo-services-for-law-firms-drive-case-generating-traffic/'>Read More />
+[9] (500,428)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0' />
+	[10] (500,270)<div  />
+	[11] (500,391)<div  />
+		[12] (410,378)<div  />
+			[13] (410,378)<span >SEO />
+		[14] (562,378)<div >July 18, 2025 />
+	[15] (500,479)<div >Essential Law Firm Website Content to Convert Clients />
+	[16] (500,649)<div  />
+		[17] (437,648)<a href='https://rankings.io/blog/essential-law-firm-website-content/'>Read More />
+[18] (817,428)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0' />
+	[19] (817,270)<div  />
+	[20] (817,391)<div  />
+		[21] (718,378)<div  />
+			[22] (718,378)<span >AI />
+		[23] (879,378)<div >July 16, 2025 />
+	[24] (817,518)<div >Perplexity for Lawyers: How to Use It, Best Use Cases, and Prompts [Complete PI Guide for 2026] />
+	[25] (817,649)<div  />
+		[26] (754,648)<a href='https://rankings.io/blog/perplexity-for-lawyers/'>Read More />
+[27] (183,927)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0'>What Is ROI for Law Firms and How to Calculate It />
+	[28] (183,808)<div  />
+	[29] (183,929)<div  />
+		[30] (126,916)<div  />
+			[31] (126,916)<span >Marketing />
+		[32] (250,916)<div >July 7, 2025 />
+	What Is ROI for Law Firms and How to Calculate It
+[33] (500,927)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0'>AI for Personal Injury Lawyers: Complete Guide & Trends in 2026 />
+	[34] (500,808)<div  />
+	[35] (500,929)<div  />
+		[36] (443,916)<div  />
+			[37] (443,916)<span >Marketing />
+		[38] (567,916)<div >July 7, 2025 />
+	AI for Personal Injury Lawyers: Complete Guide & Trends in 2026
+[39] (817,927)<div class='rel-cell-inner post-inner d-flex flex-column h-100 p-4 pb-0'>Marketing ROI for Attorneys: 10 Game-Changing Tips for 2026 />
+	[40] (817,808)<div  />
+	[41] (817,929)<div  />
+		[42] (752,916)<div  />
+			[43] (752,916)<span >Strategy />
+		[44] (884,916)<div >July 7, 2025 />
+	Marketing ROI for Attorneys: 10 Game-Changing Tips for 2026

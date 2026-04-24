@@ -1,0 +1,13 @@
+[0] (122,68)<a href='/' />
+	[1] (122,68)<div  />
+		[2] (41,68)<img  />
+		[3] (149,68)<div >LawyerMarketing.my />
+[4] (808,68)<a class='text-xs md:text-sm uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/blog'>Insights />
+[5] (921,68)<a class='shrink-0' href='https://cal.com/zen-pdcnlc/lawyer-marketing' />
+	[6] (921,68)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group text-xs md:text-base'>Get Started />
+Lawyer Growth Insights
+The
+Library
+Strategic intelligence on legal marketing, compliance, and AI-driven growth for top-tier Malaysian firms.
+Compliance
+Jan 15, 2026

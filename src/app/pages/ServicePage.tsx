@@ -1,33 +1,85 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { services } from "../data/services";
-import { ArrowLeft, CheckCircle2, MessageCircle, Zap, Shield, BarChart, Sparkles, Star, ChevronRight, ArrowRight } from "lucide-react";
+import { 
+  Zap, Shield, BarChart, Sparkles, Star, 
+  ArrowRight, Search, MousePointer2, Users, ShieldCheck, Share2, Layout,
+  CheckCircle2, Phone, TrendingUp, Target
+} from "lucide-react";
+import { cn } from "../components/ui/utils";
+import { serviceTiers } from "../data/serviceCopy";
+import { AISearchDemo } from "../components/AISearchDemo";
+import pagespeedImg from "../../imports/services/pagespeed_insights.png";
+import mockupImg from "../../imports/services/law_firm_mockup.png";
+import handshakeImg from "../../imports/services/partnership_handshake.png";
+import dashboardImg from "../../imports/services/data_dashboard.png";
 
-function FloatingParticles() {
+const getServiceIcon = (id: string) => {
+  switch (id) {
+    case "law-firm-seo": return Search;
+    case "law-firm-ai-search-optimization": return Sparkles;
+    case "google-ads-for-lawyers": return MousePointer2;
+    case "meta-advertising-for-lawyers": return Users;
+    case "local-service-ads-for-lawyers": return ShieldCheck;
+    case "social-media-marketing-for-lawyers": return Share2;
+    case "website-design-for-lawyers": return Layout;
+    default: return Zap;
+  }
+};
+
+function SubNav() {
+  const { id } = useParams();
+  
+  const getShortName = (serviceId: string) => {
+    switch (serviceId) {
+      case "law-firm-seo": return "seo";
+      case "law-firm-ai-search-optimization": return "aio";
+      case "google-ads-for-lawyers": return "google ads";
+      case "meta-advertising-for-lawyers": return "meta";
+      case "local-service-ads-for-lawyers": return "lsa";
+      case "social-media-marketing-for-lawyers": return "content";
+      case "website-design-for-lawyers": return "website";
+      default: return "service";
+    }
+  };
+
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {[...Array(15)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-1 h-1 bg-accent/30 rounded-full"
-          initial={{
-            x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-            y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000),
-          }}
-          animate={{
-            x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-            y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000),
-          }}
-          transition={{
-            duration: Math.random() * 20 + 10,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-      ))}
+    <div className="sticky top-[60px] md:top-[80px] z-40 bg-background/80 backdrop-blur-xl border-b border-white/5 py-2 md:py-3 overflow-x-auto no-scrollbar scroll-smooth scroll-px-6">
+      <div className="container mx-auto px-6 md:px-10 whitespace-nowrap flex flex-nowrap items-center justify-start md:justify-center gap-8 md:gap-6 lg:gap-20 pr-32 md:pr-0">
+        {services.map((s) => {
+          const Icon = getServiceIcon(s.id);
+          const isActive = s.id === id;
+          return (
+            <Link 
+              key={s.id} 
+              to={s.href}
+              className={cn(
+                "flex flex-col items-center gap-1 group transition-all relative py-1 shrink-0",
+                isActive ? "opacity-100" : "opacity-40 hover:opacity-80"
+              )}
+            >
+              <Icon className={cn("w-4 h-4 md:w-5 md:h-5", isActive ? "text-accent" : "text-foreground")} strokeWidth={1.5} />
+              <span className={cn("text-[8px] md:text-[9px] uppercase tracking-[0.2em] font-black", isActive ? "text-accent" : "text-foreground")}>
+                {getShortName(s.id)}
+              </span>
+              {isActive && (
+                <motion.div 
+                  layoutId="activeSubNav"
+                  className="absolute -bottom-2 md:-bottom-3 h-[2px] w-full bg-accent"
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                />
+              )}
+            </Link>
+          );
+        })}
+        {/* Terminal buffer spacer for mobile */}
+        <div className="w-1 md:hidden shrink-0" />
+      </div>
     </div>
   );
 }
+
+import { SEO } from "../components/SEO";
 
 export function ServicePage() {
   const { id } = useParams();
@@ -37,259 +89,297 @@ export function ServicePage() {
     return (
       <div className="pt-32 min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl mb-6">Service Not Found</h1>
-          <Link to="/" className="text-accent hover:underline">Return Home</Link>
+          <h1 className="text-4xl mb-6 font-serif lowercase-headings">service not found</h1>
+          <Link to="/" className="text-accent underline uppercase tracking-widest text-xs">Return Home</Link>
         </div>
       </div>
     );
   }
 
-  // Define Layout Types
-  const isLanding = service.layoutType === "landing";
+  // Specialized content for Law Firm SEO
+  const isSEOPage = id === "law-firm-seo";
+  const isWebDesignPage = id === "website-design-for-lawyers";
+  const showAIDemo = [
+    "law-firm-seo", 
+    "law-firm-ai-search-optimization", 
+    "local-service-ads-for-lawyers", 
+    "google-ads-for-lawyers"
+  ].includes(id || "");
 
-  if (isLanding) {
-    return (
-      <div className="pt-20 min-h-screen bg-background text-foreground selection:bg-accent/30 lowercase-headings relative overflow-hidden">
-        {/* Animated Background Grid */}
-        <div className="absolute inset-0 opacity-[0.15] pointer-events-none">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `linear-gradient(rgba(201, 169, 97, 0.3) 1px, transparent 1px),
-                               linear-gradient(90deg, rgba(201, 169, 97, 0.3) 1px, transparent 1px)`,
-              backgroundSize: "60px 60px",
-            }}
-          />
-        </div>
-        <div className="hidden md:block">
-          <FloatingParticles />
-        </div>
+  return (
+    <div className="pt-[60px] md:pt-[80px] min-h-screen bg-background text-foreground lowercase-headings selection:bg-accent/30">
+      <SEO 
+        title={`${service.title} | Specialized Strategy`}
+        description={`Expert ${service.title.toLowerCase()} for law firms in Malaysia. We engineer your digital presence to dominate search results and convert high-value leads into cases.`}
+      />
+      <SubNav />
 
-        {/* Landing Hero */}
-        <section className="container mx-auto px-6 py-24 md:py-40 text-center max-w-5xl relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex justify-center mb-8">
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.5, type: "spring" }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/20 border border-accent/40 rounded-full"
-              >
-                <Star className="w-3 h-3 text-accent fill-accent animate-pulse" />
-                <span className="text-accent uppercase tracking-[0.3em] text-[8px] font-black">
-                  Performance Driven Infrastructure
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-24 md:pt-48 md:pb-32 flex flex-col items-center justify-center text-center px-8 md:px-12 overflow-hidden bg-black">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="max-w-4xl z-10"
+        >
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight mb-6 leading-[1.1] md:leading-[0.95]">
+            {isSEOPage ? (
+              <>
+                Law <span className="italic font-serif text-accent">Firm</span> <br /> SEO
+              </>
+            ) : (
+              service.title.split(' ').map((word, i) => (
+                <span key={i} className={i % 2 === 0 ? "text-white" : "font-serif text-accent"}>
+                  {word}{" "}
                 </span>
-              </motion.div>
-            </div>
-            
-            <h1 className="text-5xl md:text-8xl lg:text-9xl font-light leading-[0.9] tracking-tight mb-12 italic">
-              {service.title.split(' ').map((word, i) => (
-                <span key={i}>
-                  {word.toLowerCase() === 'web' || word.toLowerCase() === 'seo' || word.toLowerCase() === 'ai' || word.toLowerCase() === 'ads' || word.toLowerCase() === 'google' || word.toLowerCase() === 'meta' || word.toLowerCase() === 'social' ? (
-                    <motion.span 
-                      className="font-serif text-accent"
-                      animate={{
-                        textShadow: [
-                          "0 0 20px rgba(201, 169, 97, 0.1)",
-                          "0 0 40px rgba(201, 169, 97, 0.4)",
-                          "0 0 20px rgba(201, 169, 97, 0.1)",
-                        ],
-                      }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                    >
-                      {word}{" "}
-                    </motion.span>
-                  ) : (
-                    <span>{word}{" "}</span>
-                  )}
-                </span>
-              ))}
-            </h1>
-            <p className="text-xl md:text-2xl text-foreground/60 max-w-3xl mx-auto leading-relaxed mb-16">
-              {service.description}
-            </p>
+              ))
+            )}
+          </h1>
+          <p className="text-lg md:text-xl text-foreground/50 max-w-2xl mx-auto leading-relaxed italic">
+            {isSEOPage 
+              ? "Rank at the top of Google for the high‑value searches that drive your best injury and complex legal cases."
+              : `Get a ${service.title.toLowerCase()} strategy designed to rank on Google and convert your visitors into cases.`}
+          </p>
+          <div className="mt-8">
             <Link to="/contact">
-              <button className="px-12 py-5 bg-accent text-accent-foreground uppercase tracking-widest text-xs font-bold hover:scale-105 transition-transform rounded-sm shadow-2xl">
-                Request a Blueprint
+              <button className="px-12 py-4 bg-accent text-accent-foreground font-black uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-all">
+                Get Your Strategy Call
               </button>
             </Link>
-          </motion.div>
-        </section>
+          </div>
+        </motion.div>
+        
+        <div className="absolute inset-0 opacity-40 grayscale pointer-events-none">
+          <img src={service.image} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black" />
+        </div>
+      </section>
 
-        {/* Feature Sections - Focused Middle */}
-        <section className="py-24 bg-card/30 border-y border-border relative overflow-hidden">
-          {/* Floating orbs */}
-          <motion.div
-            className="absolute top-1/4 -left-20 w-64 h-64 bg-accent/5 rounded-full blur-3xl"
-            animate={{
-              y: [0, 50, 0],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          />
-          
-          <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
-            <h2 className="text-4xl md:text-6xl font-light mb-24 italic">Our Partnership Philosophy</h2>
-            
-            <div className="space-y-32">
-              {[
-                {
-                  index: "01",
-                  title: "Your Speed as a Weapon",
-                  desc: "We'll ensure your site is optimized for core web vitals, giving you the sub-second load times that keep your prospects engaged instead of bouncing."
-                },
-                {
-                  index: "02",
-                  title: "Your Conversion Psychology",
-                  desc: "Together, we'll place every pixel to guide your prospects toward authority signals and CTAs, utilizing proven intake patterns to maximize your lead volume."
-                },
-                {
-                  index: "03",
-                  title: "Your Compliance Guaranteed",
-                  desc: "We'll navigate the complexities of the Legal Profession Rules together, ensuring your presence is powerful without compromising your professional standing."
-                }
-              ].map((item) => (
-                <div key={item.index} className="group">
-                  <div className="text-accent font-serif text-6xl md:text-8xl mb-6 opacity-30 group-hover:opacity-100 transition-opacity duration-500 italic">
-                    {item.index}
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-light mb-6 uppercase tracking-wider">{item.title}</h3>
-                  <p className="text-lg md:text-xl text-foreground/60 leading-relaxed max-w-2xl mx-auto">
-                    {item.desc}
+      {/* AI Citation Demo (Side-by-Side) */}
+      {showAIDemo && (
+        <section className="py-20 md:py-32 bg-black border-y border-white/5 overflow-hidden">
+          <div className="container mx-auto px-8 md:px-12 max-w-7xl">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-accent/10 border border-accent/20 rounded-full mb-6">
+                {service.id === 'local-service-ads-for-lawyers' && <ShieldCheck className="w-3 h-3 text-green-500" />}
+                {service.id === 'law-firm-seo' && <Search className="w-3 h-3 text-accent" />}
+                {service.id === 'google-ads-for-lawyers' && <MousePointer2 className="w-3 h-3 text-accent" />}
+                {service.id === 'law-firm-ai-search-optimization' && <Sparkles className="w-3 h-3 text-accent" />}
+                
+                <span className="text-accent uppercase tracking-[0.4em] text-[8px] font-black">
+                  {service.id === 'local-service-ads-for-lawyers' && 'Google Local Dominance'}
+                  {service.id === 'law-firm-seo' && 'Organic Dominance'}
+                  {service.id === 'google-ads-for-lawyers' && 'Sponsored Priority'}
+                  {service.id === 'law-firm-ai-search-optimization' && 'AI Citation Dominance'}
+                </span>
+              </div>
+              <h2 className="text-4xl md:text-6xl font-light italic text-white lowercase tracking-tighter">
+                {service.id === 'local-service-ads-for-lawyers' && <>own the <span className="text-accent font-serif tracking-tight">#1 rank</span> above the fold</>}
+                {service.id === 'law-firm-seo' && <>own the <span className="text-accent font-serif tracking-tight">undisputed answer</span> organically</>}
+                {service.id === 'google-ads-for-lawyers' && <>dominate the <span className="text-accent font-serif tracking-tight">priority spot</span> instantly</>}
+                {service.id === 'law-firm-ai-search-optimization' && <>get <span className="text-accent font-serif tracking-tight">ai-cited</span> on page 1</>}
+              </h2>
+            </div>
+            {/* Logic to choose demo type */}
+            <AISearchDemo 
+              layout="horizontal" 
+              type={
+                service.id === 'local-service-ads-for-lawyers' ? 'lsa' :
+                service.id === 'law-firm-seo' ? 'seo' :
+                service.id === 'google-ads-for-lawyers' ? 'google-ads' : 'ai'
+              } 
+            />
+          </div>
+        </section>
+      )}
+
+      {/* Educational Block (Only for SEO) */}
+      {isSEOPage && (
+        <section className="py-32 bg-white border-b border-black/5 relative overflow-hidden">
+          <div className="container mx-auto px-8 md:px-12 max-w-4xl text-center relative z-10">
+            <h2 className="text-3xl md:text-6xl font-light italic mb-8 text-black lowercase tracking-tighter">Why Law Firm SEO is <span className="text-accent font-serif tracking-tight">Non-Negotiable</span> in 2026</h2>
+            <p className="text-xl text-black/70 leading-relaxed mb-10">
+              In an era of AI-driven search and hyper-local competition, your firm is either the authority or you are invisible. We don't just "do SEO"—we secure your territory and engineer your site to be the undisputed answer for high-intent legal queries.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center pt-8 border-t border-black/5">
+              <div>
+                <div className="text-4xl font-serif text-accent mb-2">01</div>
+                <div className="text-[10px] uppercase tracking-widest font-black text-black/40">Market Authority</div>
+              </div>
+              <div>
+                <div className="text-4xl font-serif text-accent mb-2">02</div>
+                <div className="text-[10px] uppercase tracking-widest font-black text-black/40">Lead Quality</div>
+              </div>
+              <div>
+                <div className="text-4xl font-serif text-accent mb-2">03</div>
+                <div className="text-[10px] uppercase tracking-widest font-black text-black/40">Asset Ownership</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Dynamic Tiers (1-4) */}
+      {(serviceTiers[service.id]?.tiers || []).map((tier, idx) => {
+        const isAlternate = idx % 2 !== 0;
+        const isThird = idx === 2;
+        const isFourth = idx === 3;
+        
+        let bgColor = "bg-[#0a0a0a]"; // Tier 1
+        let textColor = "text-white";
+        let subtextColor = "text-foreground/60";
+        let tierColor = "text-white/10";
+        let btnColor = "bg-accent text-accent-foreground";
+        let borderColor = "border-white/5";
+
+        if (idx === 1) { // Tier 2 (White)
+          bgColor = "bg-white";
+          textColor = "text-black";
+          subtextColor = "text-black/60";
+          tierColor = "text-black/10";
+          btnColor = "bg-black text-white shadow-black/10";
+          borderColor = "border-black/5";
+        } else if (idx === 2) { // Tier 3 (Apple Gray)
+          bgColor = "bg-[#f5f5f7]";
+          textColor = "text-black";
+          subtextColor = "text-black/60";
+          tierColor = "text-black/10";
+          btnColor = "bg-black text-white shadow-black/10";
+          borderColor = "border-black/5";
+        } else if (idx === 3) { // Tier 4 (Black)
+          bgColor = "bg-black";
+          textColor = "text-white";
+          subtextColor = "text-foreground/60";
+          tierColor = "text-white/10";
+          btnColor = "bg-accent text-accent-foreground";
+          borderColor = "border-white/5";
+        }
+
+        const TierIcon = tier.imageIcon === "Phone" ? Phone 
+                       : tier.imageIcon === "ShieldCheck" ? ShieldCheck 
+                       : tier.imageIcon === "TrendingUp" ? TrendingUp 
+                       : tier.imageIcon === "Search" ? Search 
+                       : tier.imageIcon === "Sparkles" ? Sparkles 
+                       : tier.imageIcon === "Share2" ? Share2
+                       : tier.imageIcon === "Target" ? Target
+                       : Layout;
+
+        return (
+          <section key={tier.id} className={cn("py-32 md:py-40 relative border-y", bgColor, borderColor)}>
+            <div className="container mx-auto px-8 md:px-12 max-w-7xl">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <div className={cn("md:col-span-1", isAlternate && "order-none md:order-none")}>
+                  <span className={cn("text-5xl md:text-7xl font-serif italic", tierColor)}>{tier.id}</span>
+                </div>
+                
+                <div className={cn("md:col-span-6 space-y-8", isAlternate && "order-first md:order-last")}>
+                  <h2 className={cn("text-3xl md:text-5xl font-light italic leading-tight uppercase tracking-tight", textColor)}>
+                    {tier.headline}
+                  </h2>
+                  <p className={cn("text-lg leading-relaxed", subtextColor)}>
+                    {tier.p1}
                   </p>
+                  <p className={cn("text-lg leading-relaxed italic border-l-2 border-accent pl-6", subtextColor)}>
+                    {tier.p2}
+                  </p>
+                  <div className="pt-8">
+                    <Link to="/contact">
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className={cn("px-8 py-4 rounded-sm text-xs uppercase tracking-widest font-black shadow-xl", btnColor)}
+                      >
+                        Get Started
+                      </motion.button>
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="md:col-span-1" />
+
+                <div className={cn("md:col-span-4 relative group", isAlternate && "order-last md:order-first")}>
+                  {tier.image ? (
+                    <div className={cn("relative aspect-square rounded-sm overflow-hidden border bg-black shadow-2xl", borderColor)}>
+                      <img 
+                        src={tier.image} 
+                        className="w-full h-full object-cover transition-all duration-700 opacity-100 grayscale-0" 
+                        alt={tier.headline} 
+                      />
+                    </div>
+                  ) : (
+                    <div className={cn("relative p-12 border rounded-sm text-center shadow-sm aspect-square flex flex-col items-center justify-center", bgColor === "bg-[#0a0a0a]" || bgColor === "bg-black" ? "bg-accent/5" : "bg-white", borderColor)}>
+                      <TierIcon className="w-16 h-16 text-accent mx-auto mb-6" />
+                      <h4 className={cn("font-bold uppercase tracking-[0.2em] mb-2", textColor)}>Expert Insight</h4>
+                      <p className={cn("text-sm", subtextColor)}>Strategy. Performance. Scale.</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      })}
+
+      {/* FAQ Section (Special for SEO Page - Contrast: White) */}
+      {isSEOPage && (
+        <section className="py-40 bg-white border-t border-black/5">
+          <div className="container mx-auto px-8 md:px-12 max-w-4xl">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-7xl font-light italic mb-6 text-black lowercase tracking-tighter">Expert <span className="text-accent font-serif tracking-tight">SEO Insights</span></h2>
+              <p className="text-lg text-black/40">Common questions about law firm search engine optimization.</p>
+            </div>
+            
+            <div className="space-y-12">
+              {[
+                { 
+                  q: "How long until we see results from SEO?", 
+                  a: "Law firm SEO is a competitive territory acquisition. Most firms see movement within 90 days, but compounding ROI typically accelerates at the 6-12 month mark as technical authority builds." 
+                },
+                { 
+                  q: "Will we own the content you create for us?", 
+                  a: "Yes. Every word we publish and every technical optimization we make belongs to your firm outright. We believe in providing freedom, not platform handcuffs." 
+                },
+                { 
+                  q: "How is AI-Search (AIO) different from traditional SEO?", 
+                  a: "Traditional SEO ranks you for human queries. AIO ensures LLMs like ChatGPT and Claude cite your firm as the recommended local authority when users ask for advice." 
+                }
+              ].map((faq, i) => (
+                <div key={i} className="pb-10 border-b border-black/5 last:border-0">
+                  <h3 className="text-xl font-bold text-accent uppercase tracking-widest mb-4">§ {faq.q}</h3>
+                  <p className="text-lg text-black/60 leading-relaxed">{faq.a}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
+      )}
 
-        {/* Final CTA */}
-        <section className="py-32 text-center container mx-auto px-6 relative overflow-hidden">
+      {/* Final CTA */}
+      <section className="py-40 md:py-60 bg-background relative overflow-hidden flex items-center justify-center border-t border-white/5">
+        <div className="container mx-auto px-8 md:px-12 max-w-4xl relative z-10">
           <motion.div
-            className="absolute inset-0 opacity-10 pointer-events-none"
-            animate={{
-              backgroundImage: [
-                "linear-gradient(45deg, rgba(201, 169, 97, 0.1) 25%, transparent 25%, transparent 75%, rgba(201, 169, 97, 0.1) 75%)",
-                "linear-gradient(45deg, transparent 25%, rgba(201, 169, 97, 0.1) 25%, rgba(201, 169, 97, 0.1) 75%, transparent 75%)",
-              ],
-              backgroundPosition: ["0px 0px", "60px 60px"],
-            }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            style={{ backgroundSize: "60px 60px" }}
-          />
-
-          <div className="max-w-3xl mx-auto p-12 border border-accent/20 bg-accent/5 rounded-lg backdrop-blur-sm relative z-10">
-            <h2 className="text-4xl md:text-5xl font-light mb-8 italic">Secure Your Digital Territory</h2>
-            <p className="text-lg text-foreground/70 mb-12">
-              Our 2026 Founder's Program is currently reviewing 5 elite Malaysian firms for exclusive market dominance. Together, we'll build your legacy.
-            </p>
-            <Link to="/contact">
-              <button className="px-10 py-4 bg-white text-black font-black uppercase tracking-[0.2em] text-[10px] hover:bg-accent hover:text-white transition-colors flex items-center justify-center gap-3 mx-auto group">
-                Apply for Beta Program
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-              </button>
-            </Link>
-          </div>
-        </section>
-      </div>
-    );
-  }
-
-  // Standard Sidebar Layout (Default)
-  return (
-    <div className="pt-20 min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center overflow-hidden border-b border-border">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={service.image} 
-            alt={service.title} 
-            className="w-full h-full object-cover opacity-40 grayscale-[0.5]" 
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="p-16 md:p-24 bg-gradient-to-br from-accent/5 to-accent/15 border border-accent/20 rounded-sm text-center relative backdrop-blur-3xl overflow-hidden"
           >
-            <div className="flex items-center gap-2 text-accent mb-6 uppercase tracking-[0.3em] text-[10px] font-bold">
-              <Zap className="w-3 h-3" /> Digital Marketing Solution
-            </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-8">
-              {service.title}
-            </h1>
-            <p className="text-xl text-foreground/70 leading-relaxed max-w-2xl">
-              {service.description}
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Main Content Area */}
-      <section className="py-24 container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-          {/* Left Column: Details */}
-          <div className="lg:col-span-2 space-y-12">
-            <div>
-              <h2 className="text-3xl font-light mb-8 italic">Your Strategic Advantage</h2>
-              <p className="text-lg text-foreground/70 leading-relaxed mb-6">
-                In today's legal landscape, your visibility is the foundation of your firm's growth. Our partnership approach to {service.title} is clinical, data-driven, and focused exclusively on your client acquisition.
+            <div className="relative z-10">
+              <h2 className="text-4xl md:text-6xl font-light italic mb-8">You’ll Know If We’re a Fit<br/>After Your Complimentary Audit</h2>
+              <p className="text-lg md:text-xl text-foreground/60 mb-12 max-w-2xl mx-auto leading-relaxed">
+                See exactly how your firm stacks up with a complimentary audit <span className="text-accent font-bold">($3,500 value)</span> focused on where your next cases should come from.
               </p>
-              <p className="text-lg text-foreground/70 leading-relaxed">
-                We'll work together to engineer your authority. Every touchpoint we create is optimized to reflect your firm's prestige while maximizing the conversion rate of your qualified prospects.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
-              <div className="p-8 bg-card/50 border border-border rounded-lg">
-                <Shield className="w-10 h-10 text-accent mb-6" />
-                <h3 className="text-xl mb-4 font-medium italic">Bar Council Compliance</h3>
-                <p className="text-sm text-foreground/60 leading-relaxed">
-                  Every asset is reviewed against the Legal Profession (Publicity) Rules 2001 to ensure your firm maintains its professional standing while scaling.
-                </p>
-              </div>
-              <div className="p-8 bg-card/50 border border-border rounded-lg">
-                <BarChart className="w-10 h-10 text-accent mb-6" />
-                <h3 className="text-xl mb-4 font-medium italic">Performance Mapping</h3>
-                <p className="text-sm text-foreground/60 leading-relaxed">
-                  Granular tracking of lead quality, ensuring your budget is allocated toward the case types that drive your firm's profitability.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: CTA Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-32 bg-accent/10 border border-accent/20 p-8 rounded-lg backdrop-blur-md">
-              <h3 className="text-2xl font-light mb-6 italic text-accent">Ready to Scale?</h3>
-              <ul className="space-y-4 mb-8">
-                {[
-                  "Market-specific targeting",
-                  "Dedicated strategist",
-                  "Direct WhatsApp routing",
-                  "Full transparency reporting"
-                ].map(item => (
-                  <li key={item} className="flex items-center gap-3 text-sm text-foreground/80">
-                    <CheckCircle2 className="w-4 h-4 text-accent shrink-0" /> {item}
-                  </li>
-                ))}
-              </ul>
-              
               <Link to="/contact">
-                <button className="w-full py-4 bg-accent text-accent-foreground font-bold uppercase tracking-widest text-xs hover:scale-[1.02] transition-transform rounded-sm shadow-xl">
-                  Request Strategic Audit
+                <button className="px-12 py-5 bg-white text-black font-black uppercase tracking-[0.3em] text-[10px] hover:bg-accent hover:text-white transition-all transform hover:scale-105">
+                  Claim Your Free Landing Page
+                  <ArrowRight className="inline-block ml-3 w-4 h-4" />
                 </button>
               </Link>
+              <p className="text-[10px] text-foreground/40 mt-6 uppercase tracking-[0.2em] font-bold">
+                You just pay for the hosting.
+              </p>
             </div>
-          </div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 blur-[100px] pointer-events-none" />
+          </motion.div>
         </div>
       </section>
     </div>

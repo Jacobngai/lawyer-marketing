@@ -1,0 +1,147 @@
+Apps Script
+LawyerMarketing CRM
+cloud_done
+Deploy
+
+person_add
+help_outline
+info_outline
+code
+history
+alarm
+playlist_play
+settings
+Files
+sort_by_alpha
+add
+Code.gs
+Libraries
+add
+Services
+add
+undo
+redo
+play_arrow
+Run
+Debug
+doPost
+Execution log
+1
+2
+3
+4
+5
+6
+7
+function
+doPost
+(
+e
+)
+{
+var
+sheet
+=
+SpreadsheetApp
+.
+getActiveSpreadsheet
+(
+)
+.
+getActiveSheet
+(
+)
+;
+var
+data
+=
+JSON
+.
+parse
+(
+e
+.
+postData
+.
+contents
+)
+;
+sheet
+.
+appendRow
+(
+[
+data
+.
+name
+,
+data
+.
+email
+,
+data
+.
+firmName
+,
+data
+.
+website
+,
+data
+.
+caseVolume
+,
+data
+.
+contactMethod
+,
+data
+.
+message
+||
+""
+,
+new
+Date
+(
+)
+]
+)
+;
+return
+ContentService
+.
+createTextOutput
+(
+"Success"
+)
+.
+setMimeType
+(
+ContentService
+.
+MimeType
+.
+TEXT
+)
+;
+}
+New deployment
+Deployment successfully updated.
+Version 2 on Apr 20, 2026, 5:09 PM
+Deployment ID
+AKfycbygNzxMYfx9eVbalSW69GxLZMPZ-Xbd3FtBDaqC9wW15V6sYtCA9TFHa5VJ_hm6Y8eU
+[0] (326,425)<button aria-label='Copy the deployment ID' class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf ksBjEc lKxP2d LQeN7 l0twQc'>content_copy
+Copy />
+	content_copy
+	Copy
+Web app
+URL
+[1] (521,563)<a href='https://script.google.com/macros/s/AKfycbygNzxMYfx9eVbalSW69GxLZMPZ-Xbd3FtBDaqC9wW15V6sYtCA9TFHa5VJ_hm6Y8eU/exec'>https://script.google.com/macros/s/AKfycbygNzxMYfx9eVbalSW69GxLZMPZ-Xbd3FtBDaqC9wW15V6sYtCA9TFHa5VJ_hm6Y8eU/exec />
+[2] (326,593)<button aria-label='Copy the web app URL' class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf ksBjEc lKxP2d LQeN7 l0twQc VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe'>content_copy
+Copy />
+	content_copy
+	Copy
+[3] (668,796)<button class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc LQeN7'>Done />
+	Done
+Copied Web app url

@@ -1,0 +1,37 @@
+[0] (500,620)<div  />
+	[1] (332,29)<a href='/' />
+		[2] (332,29)<div  />
+			[3] (296,29)<img  />
+			[4] (344,29)<div >LawyerMarketing.my />
+	[5] (601,29)<a class='uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/blog'>Insights />
+	[6] (637,29)<a class='uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/contact'>Contact />
+	[7] (687,29)<a class='shrink-0' href='/contact' />
+		[8] (687,29)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group'>Get Started />
+	Complies with Bar Council Rules
+	Secure Your
+	2026
+	Competitive Advantage
+	We are selecting 5 expansion-focused law firms in Malaysia to join our
+	Exclusive Founder's Beta Program
+	. Get a complete technical audit and conversion-focused digital architecture.
+	Technical Gap Analysis
+	Discover where your firm is losing high-intent search traffic to competitors. (Valued at $3,500)
+	2026 Regulatory Audit
+	Ensure your digital assets are fully compliant with the latest Bar Council publicity standards.
+	Conversion Blueprints
+	Receive a custom architectural plan to transform your website into a high-performance intake engine.
+	Rated 4.9 across 200+ Reviews
+	Request Strategic Audit
+	Book Digital Audit
+	WhatsApp Strategy
+	Full Name
+	Work Email
+	Law Firm Name
+	Website URL
+	Monthly Case Volume
+	[9] (612,560)<button class='w-full py-5 font-bold uppercase tracking-[0.2em] transition-all disabled:opacity-50 group flex items-center justify-center gap-3 overflow-hidden relative bg-accent text-accent-foreground'>Initiate Audit />
+		Initiate Audit
+	Confidentiality Guaranteed. Data managed in compliance with Legal Profession Publicity Rules.
+	Strategic Request Logged
+	Your firm's data has been added to our 2026 audit queue. A senior strategist will review your profile and reach out within 12 business hours.
+	[10] (612,495)<button class='px-8 py-3 border border-border hover:border-accent transition-colors uppercase tracking-widest text-xs'>Close />

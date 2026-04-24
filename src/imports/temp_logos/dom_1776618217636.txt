@@ -1,0 +1,14 @@
+[0] (122,68)<a href='/' />
+	[1] (122,68)<div  />
+		[2] (41,68)<img  />
+		[3] (149,68)<div >LawyerMarketing.my />
+[4] (796,68)<a class='text-xs md:text-sm uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/blog'>Insights />
+[5] (909,68)<a class='shrink-0' href='https://cal.com/zen-pdcnlc/lawyer-marketing' />
+	[6] (909,68)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group text-xs md:text-base'>Get Started />
+Since the Bar Council's landmark decision in January 2026, law firms can now advertise. We help you seize this opportunity with elegance and authority.
+SEO & GEO Optimized Website
+Dominate search results with a cutting-edge website engineered for maximum visibility. Our SEO and geolocation optimization ensures your firm appears exactly when and where potential clients are searching.
+Premium
+Google Business Profile Optimization
+Claim your territory on Google Maps and local search. We transform your Google Business Profile into a client-generating powerhouse with strategic optimization and reputation management.
+Premium

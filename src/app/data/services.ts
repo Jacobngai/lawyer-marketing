@@ -17,53 +17,60 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "seo",
-    title: "High-Impact SEO for Law Firms",
-    description: "We secure your Page 1 rankings for high-value keywords. You capture the local market share your firm deserves.",
-    image: seoImg,
-    href: "/services/seo"
-  },
-  {
-    id: "aio",
-    title: "Authority-Building AI Search Optimization",
-    description: "We position your firm as the primary authority. You get cited by ChatGPT and AI search engines as the trusted answer.",
-    image: aioImg,
-    href: "/services/aio"
-  },
-  {
-    id: "google-ads",
-    title: "ROI-Focused Google Ads for Lawyers",
-    description: "We manage precision-targeted search campaigns. You start scaling your case volume immediately.",
-    image: googleImg,
-    href: "/services/google-ads"
-  },
-  {
-    id: "social-media-advertising",
-    title: "Conversion-Driven Meta Advertising",
-    description: "We build your brand presence on Meta and Instagram. You attract clients actively searching for your expertise.",
-    image: metaImg,
-    href: "/services/social-media-advertising"
-  },
-  {
-    id: "google-lsa",
-    title: "Credentialed Local Services Ads",
-    description: "We verify your 'Google Screened' badge. You dominate the top of search results with instant professional trust.",
-    image: lsaImg,
-    href: "/services/google-lsa"
-  },
-  {
-    id: "social-media",
-    title: "Elite Organic Social Media Management",
-    description: "We transform your social profile into an authority hub. You nurture and convert your prospects through strategic content.",
-    image: socialImg,
-    href: "/services/social"
-  },
-  {
     id: "website-design-for-lawyers",
-    title: "High-Performing Web Design for Law Firms",
-    description: "We engineer high-speed digital infrastructure. You dominate search results and convert visitors in under 120 days.",
+    title: "HIGH-PERFORMING WEB DESIGN FOR LAW FIRMS",
+    subtitle: "High-performance architecture. Built to convert.",
+    description: "Get the blazing fast, high-conversion website your firm needs to dominate search results and turn visitors into high-value cases.",
     image: webImg,
     href: "/services/website-design-for-lawyers",
     layoutType: "landing"
+  },
+  {
+    id: "local-service-ads-for-lawyers",
+    title: "CREDENTIALED LOCAL SERVICES ADS (LSA)",
+    subtitle: "Dominate Google's pay-per-lead",
+    description: "Dominate Google's pay-per-lead LSAs so your firm appears first when your prospects are ready to hire.",
+    image: lsaImg,
+    href: "/services/local-service-ads-for-lawyers"
+  },
+  {
+    id: "google-ads-for-lawyers",
+    title: "ROI-FOCUSED GOOGLE ADS FOR LAWYERS",
+    subtitle: "Capture high-intent searches",
+    description: "Capture high-intent searches with tightly targeted Google Ads that drive qualified calls to your firm.",
+    image: googleImg,
+    href: "/services/google-ads-for-lawyers"
+  },
+  {
+    id: "meta-advertising-for-lawyers",
+    title: "CONVERSION-DRIVEN LAWYER META ADVERTISING",
+    subtitle: "Deploy targeted Meta campaigns",
+    description: "Deploy targeted Meta campaigns to transform your prospects' attention into profitable consultations.",
+    image: metaImg,
+    href: "/services/meta-advertising-for-lawyers"
+  },
+  {
+    id: "social-media-marketing-for-lawyers",
+    title: "ELITE SOCIAL MEDIA MARKETING FOR LAWYERS",
+    subtitle: "Publish consistent, on-brand content",
+    description: "Publish the consistent, on-brand content you need to stay visible, credible, and top-of-mind.",
+    image: socialImg,
+    href: "/services/social-media-marketing-for-lawyers"
+  },
+  {
+    id: "law-firm-ai-search-optimization",
+    title: "AI SEARCH OPTIMIZATION FOR LAW FIRMS",
+    subtitle: "Structure your site for AI search",
+    description: "Structure your site so AI search engines like ChatGPT surface your firm as the trusted, recommended answer.",
+    image: aioImg,
+    href: "/services/law-firm-ai-search-optimization"
+  },
+  {
+    id: "law-firm-seo",
+    title: "HIGH-IMPACT LAW FIRM SEO",
+    subtitle: "Rank at the top of Google",
+    description: "Rank at the top of Google for high-value searches that drive your best injury and complex cases.",
+    image: seoImg,
+    href: "/services/law-firm-seo"
   }
 ];

@@ -1,0 +1,20 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (122,68)<a href='/' />
+	[1] (122,68)<div  />
+		[2] (41,68)<img  />
+		[3] (149,68)<div >LawyerMarketing.my />
+[4] (808,68)<a class='text-xs md:text-sm uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/blog'>Insights />
+[5] (921,68)<a class='shrink-0' href='https://cal.com/zen-pdcnlc/lawyer-marketing' />
+	[6] (921,68)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group text-xs md:text-base'>Get Started />
+The way to win is to be the primary source of truth for the AI's training data. This requires a multi-channel approach where your personal brand, your firm's press releases, and your social media presence are all perfectly synchronized.
+Prepare Your Firm for the AI Era
+Let's audit your current digital footprint and see if you're ready for the 2026 transition.
+[7] (500,633)<a class='px-8 py-4 bg-background text-foreground rounded-sm hover:scale-105 transition-transform flex items-center justify-center gap-2 font-medium' href='https://wa.me/60175032281?text=Hello!%20I%20just%20read%20your%20article%20about%20AI-Cited%20Authority%20and%20I'd%20like%20to%20audit%20my%20firm's%20presence.'>Whatsup Consultation />
+LawyerMarketing.my
+Knowledge Hub
+Connect
+
+</current_dom>

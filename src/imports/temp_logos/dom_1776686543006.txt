@@ -1,0 +1,293 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (50,37)<a aria-label='Google Apps Script' class='gb_ee gb_Wc' href='/home' id='sdgBod' />
+	[1] (20,37)<img class='gb_1c' role='presentation' />
+	[2] (59,36)<span >Apps Script />
+[3] (168,35)<div aria-label='Rename' class='UGZzee KOiXb' role='button'>LawyerMarketing CRM />
+sync
+Saving...
+[4] (847,35)<div class='U26fgb c7fp5b JvtX2e rGMe1e Gn5yxe' role='button' />
+	[5] (847,35)<span  />
+		[6] (847,35)<span  />
+			[7] (849,35)<div >Deploy />
+				[8] (863,35)<span > />
+[9] (908,35)<button aria-label='Share this project with others' class='VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ mN1ivc MNz5Rc' />
+	[10] (908,35)<i >person_add />
+[11] (932,35)<div aria-label='Support' class='U26fgb JRtysb WzwrXb lmSKjb' role='button' />
+	[12] (932,44)<span  />
+		[13] (932,44)<span  />
+			[14] (932,36)<i >help_outline />
+[15] (957,35)<a aria-label='Google apps' class='gb_C' href='https://www.google.com.my/intl/en/about/products' role='button' />
+[16] (982,35)<a aria-label='Google Account: Zen  
+(ngsanzen@gmail.com)' class='gb_C gb_1a gb_2' href='https://accounts.google.com/SignOutOptions?hl=en&continue=https://script.google.com/home&ec=GBRAiwM' role='button' />
+[17] (16,102)<div aria-label='Overview' class='kcW8jf' role='link' />
+	[18] (16,102)<div  />
+		[19] (16,98)<i >info_outline />
+[20] (16,146)<div aria-label='Editor' class='kcW8jf hcgnWc' role='link' />
+	[21] (16,146)<div  />
+		[22] (16,142)<i >code />
+[23] (16,190)<div aria-label='Project History' class='kcW8jf' role='link' />
+	[24] (16,190)<div  />
+		[25] (16,186)<i >history />
+[26] (16,234)<div aria-label='Triggers' class='kcW8jf' role='link' />
+	[27] (16,234)<div  />
+		[28] (16,229)<i >alarm />
+[29] (16,278)<div aria-label='Executions' class='kcW8jf' role='link' />
+	[30] (16,278)<div  />
+		[31] (16,273)<i >playlist_play />
+[32] (16,322)<div aria-label='Project Settings' class='kcW8jf' role='link' />
+	[33] (16,322)<div  />
+		[34] (16,317)<i >settings />
+Files
+[35] (122,92)<div aria-label='Sort files alphabetically' class='U26fgb mUbCce fKz7Od pLZ8ve M9Bg4d RDPZE' role='button' />
+	sort_by_alpha
+[36] (139,92)<div aria-label='Add a file' class='U26fgb JRtysb WzwrXb rgrYqe' role='button' />
+	[37] (139,100)<span  />
+		[38] (139,99)<span  />
+			[39] (139,92)<i >add />
+[40] (90,141)<li aria-label='Code.gs' class='StrnGf-VfPpkd-rymPhb-ibnC6b lMUT6c Ftje6d UeVsd' role='option' />
+	[41] (43,141)<div  />
+	[42] (89,141)<div >Code.gs />
+	[43] (139,141)<div role='button' />
+		[44] (139,141)<div aria-label='File operations menu for Code.gs.' class='U26fgb JRtysb WzwrXb ohpN7c OcWJn' role='button' />
+			[45] (139,141)<span  />
+				[46] (139,151)<span  />
+					[47] (139,141)<span  />
+Libraries
+[48] (139,188)<div aria-label='Add a library' class='U26fgb mUbCce fKz7Od wIlPPc M9Bg4d' role='button' />
+	[49] (139,190)<span  />
+		[50] (139,188)<i >add />
+Services
+[51] (139,231)<div aria-label='Add a service' class='U26fgb mUbCce fKz7Od wIlPPc M9Bg4d' role='button' />
+	[52] (139,232)<span  />
+		[53] (139,231)<i >add />
+[54] (149,536)<div  />
+[55] (160,92)<button aria-label='Undo code edit' class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf LjDxcd XhPA0b HDnnrf LQeN7 IVKqHd n7tYFd kQidhf'>undo />
+	undo
+redo
+[56] (229,92)<button aria-label='Run the selected function' class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf LjDxcd XhPA0b HDnnrf LQeN7 IVKqHd DOZNHf kQidhf'>play_arrow
+Run />
+	play_arrow
+	Run
+[57] (268,92)<button aria-label='Debug the selected function' class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf LjDxcd XhPA0b HDnnrf LQeN7 IVKqHd DOZNHf C9y3Me'>Debug />
+	Debug
+[58] (317,92)<div aria-label='Select function to run' class='jgvuAb VsRsme' role='listbox' />
+	[59] (317,93)<div role='presentation' />
+		[60] (317,93)<div class='ry3kXd' role='presentation' />
+			[61] (317,93)<div class='MocG8c epDKCb LMgvRb KKjvXb' role='option' />
+				[62] (307,93)<span >doPost />
+		[63] (337,93)<div class='e2CuFe eU809d' role='presentation' />
+[64] (379,92)<button aria-label='Open the execution log panel' class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf LjDxcd XhPA0b LQeN7 IVKqHd DOZNHf VieVBd'>Execution log />
+	Execution log
+[65] (175,150)<div  />
+1
+[66] (175,170)<div  />
+2
+[67] (175,190)<div  />
+3
+[68] (175,210)<div  />
+4
+5
+[69] (175,249)<div  />
+6
+[70] (175,269)<div  />
+7
+20
+[71] (175,289)<div  />
+8
+[72] (175,308)<div  />
+9
+[73] (175,328)<div  />
+10
+[74] (175,348)<div  />
+11
+[75] (175,368)<div  />
+12
+[76] (175,387)<div  />
+13
+14
+[77] (175,427)<div  />
+15
+16
+[78] (175,467)<div  />
+17
+18
+19
+21
+[79] (590,557)<div class='view-lines monaco-mouse-cursor-text' role='presentation' />
+	[80] (590,150)<div  />
+		[81] (221,150)<span  />
+			[82] (197,150)<span >function />
+			[83] (215,150)<span  />
+			[84] (229,150)<span >doPost />
+			[85] (244,150)<span >( />
+			[86] (248,150)<span >e />
+			[87] (252,150)<span >) />
+			[88] (256,150)<span  />
+			[89] (260,150)<span >{ />
+	[90] (590,170)<div  />
+		[91] (353,170)<span  />
+			[92] (189,170)<span  />
+			[93] (203,170)<span >var />
+			[94] (211,170)<span  />
+			[95] (217,170)<span >ss />
+			[96] (227,170)<span >= />
+			[97] (262,170)<span >SpreadsheetApp />
+			[98] (292,170)<span >. />
+			[99] (311,170)<span >openById />
+			[100] (329,170)<span >( />
+			[101] (425,170)<span >"1shtuUg4ZlE_FoNBzwAT3TDOueZT1VIMU1L6lMfbzfjg" />
+			[102] (520,170)<span >) />
+			[103] (524,170)<span >; />
+	[104] (590,190)<div  />
+		[105] (254,190)<span  />
+			[106] (193,190)<span  />
+			[107] (211,190)<span >var />
+			[108] (219,190)<span  />
+			[109] (232,190)<span >sheet />
+			[110] (248,190)<span >= />
+			[111] (258,190)<span >ss />
+			[112] (264,190)<span >. />
+			[113] (284,190)<span >getSheets />
+			[114] (305,190)<span >( />
+			[115] (309,190)<span >) />
+			[116] (313,190)<span >[ />
+			[117] (317,190)<span >0 />
+			[118] (321,190)<span >] />
+			[119] (325,190)<span >; />
+	[120] (590,210)<div  />
+		[121] (284,210)<span  />
+			[122] (197,210)<span  />
+			[123] (219,210)<span >var />
+			[124] (227,210)<span  />
+			[125] (238,210)<span >data />
+			[126] (252,210)<span >= />
+			[127] (266,210)<span >JSON />
+			[128] (276,210)<span >. />
+			[129] (288,210)<span >parse />
+			[130] (301,210)<span >( />
+			[131] (305,210)<span >e />
+			[132] (309,210)<span >. />
+			[133] (327,210)<span >postData />
+			[134] (345,210)<span >. />
+			[135] (364,210)<span >contents />
+			[136] (382,210)<span >) />
+			[137] (386,210)<span >; />
+	[138] (590,229)<div  />
+		[139] (201,229)<span  />
+			[140] (201,229)<span  />
+	[141] (590,249)<div  />
+		[142] (240,249)<span  />
+			[143] (205,249)<span  />
+			[144] (240,249)<span >sheet />
+			[145] (252,249)<span >. />
+			[146] (272,249)<span >appendRow />
+			[147] (292,249)<span >( />
+			[148] (297,249)<span >[ />
+	[149] (590,269)<div  />
+		[150] (238,269)<span  />
+			[151] (217,269)<span  />
+			[152] (262,269)<span >data />
+			[153] (272,269)<span >. />
+			[154] (282,269)<span >name />
+			[155] (292,269)<span >, />
+	[156] (590,526)<div  />
+		[157] (209,526)<span  />
+			[158] (205,526)<span  />
+			[159] (232,526)<span >] />
+			[160] (236,526)<span >) />
+	[161] (590,289)<div  />
+		[162] (248,289)<span  />
+			[163] (225,289)<span  />
+			[164] (278,289)<span >data />
+			[165] (288,289)<span >. />
+			[166] (301,289)<span >email />
+			[167] (313,289)<span >, />
+	[168] (590,308)<div  />
+		[169] (262,308)<span  />
+			[170] (234,308)<span  />
+			[171] (295,308)<span >data />
+			[172] (305,308)<span >. />
+			[173] (323,308)<span >firmName />
+			[174] (341,308)<span >, />
+	[175] (590,328)<div  />
+		[176] (268,328)<span  />
+			[177] (242,328)<span  />
+			[178] (311,328)<span >data />
+			[179] (321,328)<span >. />
+			[180] (337,328)<span >website />
+			[181] (353,328)<span >, />
+	[182] (590,348)<div  />
+		[183] (282,348)<span  />
+			[184] (250,348)<span  />
+			[185] (327,348)<span >data />
+			[186] (337,348)<span >. />
+			[187] (360,348)<span >caseVolume />
+			[188] (382,348)<span >, />
+	[189] (590,368)<div  />
+		[190] (297,368)<span  />
+			[191] (258,368)<span  />
+			[192] (343,368)<span >data />
+			[193] (353,368)<span >. />
+			[194] (382,368)<span >contactMethod />
+			[195] (410,368)<span >, />
+	[196] (590,387)<div  />
+		[197] (305,387)<span  />
+			[198] (266,387)<span  />
+			[199] (360,387)<span >data />
+			[200] (370,387)<span >. />
+			[201] (386,387)<span >message />
+			[202] (408,387)<span >|| />
+			[203] (420,387)<span >"" />
+			[204] (427,387)<span >, />
+	[205] (590,407)<div  />
+		[206] (295,407)<span  />
+			[207] (274,407)<span  />
+			[208] (374,407)<span >new />
+			[209] (382,407)<span  />
+			[210] (392,407)<span >Date />
+			[211] (402,407)<span >( />
+			[212] (406,407)<span >) />
+	[213] (590,427)<div  />
+		[214] (211,427)<span  />
+			[215] (205,427)<span  />
+			[216] (232,427)<span >] />
+			[217] (236,427)<span >) />
+			[218] (240,427)<span >; />
+	[219] (590,447)<div  />
+		[220] (209,447)<span  />
+			[221] (209,447)<span  />
+	[222] (590,467)<div  />
+		[223] (313,467)<span  />
+			[224] (213,467)<span  />
+			[225] (258,467)<span >return />
+			[226] (272,467)<span  />
+			[227] (303,467)<span >ContentService />
+			[228] (333,467)<span >. />
+			[229] (368,467)<span >createTextOutput />
+			[230] (402,467)<span >( />
+			[231] (422,467)<span >"Success" />
+			[232] (443,467)<span >) />
+	[233] (590,486)<div  />
+		[234] (309,486)<span  />
+			[235] (223,486)<span >. />
+			[236] (288,486)<span >setMimeType />
+			[237] (313,486)<span >( />
+			[238] (343,486)<span >ContentService />
+			[239] (374,486)<span >. />
+			[240] (392,486)<span >MimeType />
+			[241] (410,486)<span >. />
+			[242] (420,486)<span >TEXT />
+			[243] (431,486)<span >) />
+			[244] (435,486)<span >; />
+	[245] (590,506)<div  />
+		[246] (223,506)<span  />
+			[247] (221,506)<span  />
+			[248] (264,506)<span >} />
+	[249] (590,546)<div  />
+[250] (181,546)<div  />
+Saving project...
+
+</current_dom>

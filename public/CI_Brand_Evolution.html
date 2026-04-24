@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI Brand Evolution | LawyerMarketing.my</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-black: #050505;
+            --color-apple-gray: #f5f5f7;
+            --color-white: #ffffff;
+            --color-gold: #c9a961;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--color-white);
+            color: var(--color-black);
+            scroll-behavior: smooth;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-inky-black { background-color: var(--color-black); }
+        .bg-apple-gray { background-color: var(--color-apple-gray); }
+        .text-gold { color: var(--color-gold); }
+        .border-gold { border-color: var(--color-gold); }
+        
+        .whitespace-luxury {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+        
+        .glass-dark {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-light {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .lowercase-headings h2, .lowercase-headings h3 {
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+<body class="selection:bg-gold/30">
+
+    <!-- Nav Mockup -->
+    <nav class="fixed top-0 w-full z-50 glass-light border-b border-black/5 px-8 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-inky-black flex items-center justify-center rounded-sm">
+                <span class="text-gold font-bold text-xl">L</span>
+            </div>
+            <span class="uppercase tracking-[0.3em] text-[10px] font-black">LawyerMarketing<span class="text-gold">.my</span></span>
+        </div>
+        <div class="flex gap-12 text-[11px] uppercase tracking-widest font-bold">
+            <a href="#" class="hover:text-gold transition-colors">What we do</a>
+            <a href="#" class="hover:text-gold transition-colors">Success Stories</a>
+            <a href="#" class="hover:text-gold transition-colors">Insights</a>
+            <a href="#" class="text-gold">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: THE HIGH-AUTHORITY HERO (DARK MODE) -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center text-center bg-inky-black text-white px-6">
+        <div class="max-w-5xl z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 border border-gold/20 rounded-full mb-12">
+                <span class="text-gold text-[9px] font-black uppercase tracking-[0.4em]">The New Standard of Legal Marketing</span>
+            </div>
+            <h1 class="text-6xl md:text-9xl font-light tracking-tighter mb-8 leading-[0.85]">
+                Authority. <span class="font-serif italic text-gold">Cleaned</span>.<br/>ROI. <span class="font-serif italic">Engineered</span>.
+            </h1>
+            <p class="text-xl md:text-3xl text-white/40 max-w-3xl mx-auto leading-relaxed italic mb-12">
+                We evolve your firm’s digital territory with the precision of a high-end architectural firm. Authority isn't just felt—it's seen.
+            </p>
+            <button class="px-12 py-6 bg-gold text-white font-black uppercase tracking-[0.4em] text-xs hover:bg-white hover:text-black transition-all">
+                The Consultation Call
+            </button>
+        </div>
+        
+        <!-- Hero Background Placeholder -->
+        <div class="absolute inset-0 opacity-20 filter grayscale pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2669" class="w-full h-full object-cover">
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE CLARITY LAYER (WHITE MODE) -->
+    <section class="bg-white whitespace-luxury border-b border-black/5">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+                <div>
+                    <h2 class="text-5xl md:text-7xl font-serif text-black italic mb-8 lowercase">clarity as a <span class="text-gold">competitive advantage</span></h2>
+                    <p class="text-xl text-black/60 leading-relaxed mb-8">
+                        Most legal marketing is a cluttered mess of stock photos and broken promises. We help you cut through the noise with a clean, high-readability brand system that projects absolute competence.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 pb-6 border-b border-black/5">
+                            <div class="w-12 h-12 bg-apple-gray rounded-full flex-shrink-0 flex items-center justify-center font-serif text-2xl italic text-gold">1</div>
+                            <div>
+                                <h4 class="font-black uppercase tracking-widest text-xs mb-2">High-Intent Readability</h4>
+                                <p class="text-sm text-black/40">Contrast ratios engineered for human focus and information gain.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-apple-gray rounded-full flex-shrink-0 flex items-center justify-center font-serif text-2xl italic text-gold">2</div>
+                            <div>
+                                <h4 class="font-black uppercase tracking-widest text-xs mb-2">Modern Transparency</h4>
+                                <p class="text-sm text-black/40">Data-driven reporting that looks as good as it performs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Interactive Mockup Image -->
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-apple-gray rounded-sm -z-10 transition-all group-hover:scale-105"></div>
+                    <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&q=80&w=2070" class="w-full h-auto rounded-sm shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute -bottom-8 -right-8 p-8 glass-light shadow-xl max-w-xs">
+                        <span class="text-gold font-serif text-3xl italic">89%</span>
+                        <p class="text-[10px] uppercase tracking-widest font-black text-black/40 mt-2">Increase in Information Gain Score</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE TRANSITION (GRAY MODE) -->
+    <section class="bg-apple-gray whitespace-luxury relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-5xl text-center">
+            <div class="mb-20">
+                <h2 class="text-4xl md:text-6xl font-light italic text-black mb-6 lowercase">the <span class="text-gold font-serif">editorial</span> palette</h2>
+                <p class="text-lg text-black/40 max-w-2xl mx-auto">We alternate backgrounds to maintain engagement and provide visual reprieve between technical blocks.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-12 bg-white rounded-sm shadow-sm hover:shadow-xl transition-all group">
+                    <div class="w-16 h-1 bg-gold mb-8 group-hover:w-full transition-all duration-700"></div>
+                    <h3 class="text-2xl font-serif italic mb-4 lowercase">pure white</h3>
+                    <p class="text-sm text-black/50 leading-relaxed">The foundation of information. Used for high-content blocks, case studies, and FAQ navigation where focus is paramount.</p>
+                </div>
+                <div class="p-12 bg-inky-black text-white rounded-sm shadow-sm hover:shadow-xl transition-all group">
+                    <div class="w-16 h-1 bg-gold mb-8 group-hover:w-full transition-all duration-700"></div>
+                    <h3 class="text-2xl font-serif italic mb-4 lowercase">midnight luxe</h3>
+                    <p class="text-sm text-white/40 leading-relaxed">The layer of authority. Used for high-impact hero sections, exclusive tiers, and call-to-actions to drive decisive behavior.</p>
+                </div>
+                <div class="p-12 border border-black/5 rounded-sm shadow-sm hover:shadow-xl transition-all group">
+                    <div class="w-16 h-1 bg-gold mb-8 group-hover:w-full transition-all duration-700"></div>
+                    <h3 class="text-2xl font-serif italic mb-4 lowercase">editorial gray</h3>
+                    <p class="text-sm text-black/40 leading-relaxed">The silent transition. Used for logo walls, statistics, and editorial asides to separate high-intensity sections.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: THE TYPOGRAPHY & COLOR SYSTEM -->
+    <section class="bg-white whitespace-luxury border-t border-black/5">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+                <!-- Colors -->
+                <div class="md:col-span-4 space-y-12">
+                    <div>
+                        <h4 class="font-black uppercase tracking-[0.3em] text-[10px] mb-8">Brand Colors</h4>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center gap-6">
+                                <div class="w-16 h-16 bg-inky-black border border-white/10 rounded-sm shadow-xl flex items-center justify-center overflow-hidden">
+                                    <span class="text-gold font-serif text-3xl italic">A</span>
+                                </div>
+                                <div>
+                                    <span class="block font-black text-xs">MIDNIGHT LUXE</span>
+                                    <span class="text-[10px] text-black/40">#050505</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <div class="w-16 h-16 bg-apple-gray border border-black/5 rounded-sm shadow-inner flex items-center justify-center overflow-hidden">
+                                    <span class="text-gold font-serif text-3xl italic">B</span>
+                                </div>
+                                <div>
+                                    <span class="block font-black text-xs">APPLE GRAY</span>
+                                    <span class="text-[10px] text-black/40">#F5F5F7</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <div class="w-16 h-16 bg-white border border-black/5 rounded-sm shadow-sm flex items-center justify-center overflow-hidden">
+                                    <span class="text-gold font-serif text-3xl italic">C</span>
+                                </div>
+                                <div>
+                                    <span class="block font-black text-xs">PURE WHITE</span>
+                                    <span class="text-[10px] text-black/40">#FFFFFF</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Typography -->
+                <div class="md:col-span-8 space-y-12">
+                    <div>
+                        <h4 class="font-black uppercase tracking-[0.3em] text-[10px] mb-8">Typography System</h4>
+                        <div class="space-y-12">
+                            <div>
+                                <h2 class="text-7xl font-serif italic text-black lowercase leading-none">Playfair Display</h2>
+                                <p class="text-[10px] uppercase tracking-widest text-black/40 mt-4">Pillar Font: Authority, Tradition, Elegance</p>
+                            </div>
+                            <div>
+                                <h4 class="text-4xl font-light text-black tracking-tight leading-normal">Inter Display / San Francisco</h4>
+                                <p class="text-[10px] uppercase tracking-widest text-black/40 mt-4">Body Font: Precision, Technical Clout, Clarity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL SECTION: INTERACTIVE CTA -->
+    <section class="bg-inky-black whitespace-luxury text-center relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-4xl relative z-10">
+            <h2 class="text-5xl md:text-7xl font-light italic text-white mb-12 leading-tight lowercase">evolve your <span class="text-gold">firm's perspective</span></h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="px-12 py-5 bg-gold text-white font-black uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-all">
+                    Request Aesthetic Audit
+                </button>
+                <button class="px-12 py-5 border border-white/20 text-white font-black uppercase tracking-[0.3em] text-[10px] hover:bg-white/10 transition-all">
+                    View Portfolio
+                </button>
+            </div>
+        </div>
+        
+        <!-- Decorative Glow -->
+        <div class="absolute -bottom-1/2 -left-1/4 w-full h-full bg-gold/10 blur-[150px] pointer-events-none"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-black/5 text-center lowercase-headings">
+        <div class="container mx-auto px-6">
+            <span class="text-[10px] uppercase tracking-[0.3em] font-black text-black/20">LawyerMarketing<span class="text-gold">.my</span> &copy; 2026</span>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+LawyerMarketing.my
+[0] (854,37)<a class='shrink-0' href='https://cal.com/zen-pdcnlc/lawyer-marketing' />
+	[1] (854,37)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group text-xs md:text-base'>Get Started />
+Get
+AI-Cited
+on Page 1
+When potential clients search for legal help, AI recommends firms with strong digital presence. Watch how your firm gets featured as the trusted choice.
+[2] (500,765)<input class='w-full pl-12 md:pl-16 pr-4 md:pr-6 py-4 md:py-5 bg-card border-2 border-accent/50 rounded-lg text-base md:text-lg text-foreground focus:outline-none focus:border-accent' placeholder='Ask AI anything...' />
+AI Response
+Based on your search for
+corporate & commercial law
+services in your area, I recommend the following highly-rated law firm:

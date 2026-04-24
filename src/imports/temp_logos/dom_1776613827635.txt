@@ -1,0 +1,28 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (500,275)<div  />
+	[1] (122,68)<a href='/' />
+		[2] (122,68)<div  />
+			[3] (41,68)<img  />
+			[4] (149,68)<div >LawyerMarketing.my />
+	[5] (808,68)<a class='text-xs md:text-sm uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/blog'>Insights />
+	[6] (921,68)<a class='shrink-0' href='https://cal.com/zen-pdcnlc/lawyer-marketing' />
+		[7] (921,68)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group text-xs md:text-base'>Get Started />
+	Everything you need to know about the Bar Council's landmark decision on digital advertising and social media presence.
+	Read Featured Article
+	[8] (171,744)<div  />
+		[9] (171,563)<div  />
+			[10] (171,563)<img  />
+		[11] (171,781)<div >AI Marketing />
+		[12] (171,869)<h3 >Becoming an AI-Cited Authority: The Rise of AIEO & GEO />
+		[13] (171,978)<p >Why the classic SEO playbook is dead, and how to optimize your firm for Perplexity, ChatGPT, and AI Search Engines. />
+	[14] (500,744)<div >From professional photography to LinkedIn thought leadership—how to build a name that commands premium fees. />
+		[15] (500,563)<div  />
+			[16] (500,563)<img  />
+		[17] (500,781)<div >Branding />
+		[18] (500,869)<h3 >High-Ticket Personal Branding for Litigation Partners />
+		From professional photography to LinkedIn thought leadership—how to build a name that commands premium fees.
+
+</current_dom>

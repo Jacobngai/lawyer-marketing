@@ -3,6 +3,8 @@ import { ArrowLeft, MessageCircle, Share2, Printer, ChevronRight, CheckCircle2 }
 import { Link, useParams } from "react-router-dom";
 import { blogPosts } from "../data/posts";
 
+import { SEO } from "../components/SEO";
+
 export function BlogPostPage() {
   const { id } = useParams();
   const post = blogPosts.find(p => p.id === id);
@@ -20,6 +22,11 @@ export function BlogPostPage() {
 
   return (
     <div className="pt-16 min-h-screen bg-background">
+      <SEO 
+        title={`${post.title} | Lawyer Growth Insights`}
+        description={post.excerpt}
+        canonical={`https://lawyermarketing.my/blog/${post.id}`}
+      />
       {/* Article Hero Image */}
       <section className="relative h-[40vh] md:h-[60vh] min-h-[400px] w-full overflow-hidden bg-zinc-900">
         <motion.div 

@@ -1,0 +1,14 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Google hasn’t verified this app
+The app is requesting access to sensitive info in your Google Account. Until the developer (
+[0] (167,387)<a href='mailto:ngsanzen@gmail.com'>ngsanzen@gmail.com />
+) verifies this app with Google, you shouldn't use it.
+[1] (91,490)<a class='xTI6Gf vh6Iad' href='#'>Advanced />
+[2] (856,489)<div class='U26fgb O0WRkf zZhnYe e3Duub C0oVfc fcV7Gc M9Bg4d' role='button' />
+	[3] (856,489)<span  />
+		[4] (856,489)<span >Back to safety />
+
+</current_dom>

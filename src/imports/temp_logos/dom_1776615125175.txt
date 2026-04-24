@@ -1,0 +1,25 @@
+[0] (494,484)<div  />
+	[1] (242,46)<a href='/' />
+		[2] (242,46)<div  />
+			[3] (188,46)<img  />
+			[4] (260,46)<div >LawyerMarketing.my />
+	[5] (699,46)<a class='text-xs md:text-sm uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/blog'>Insights />
+	[6] (775,46)<a class='shrink-0' href='https://cal.com/zen-pdcnlc/lawyer-marketing' />
+		[7] (775,46)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group text-xs md:text-base'>Get Started />
+	JN
+	Jacob Ng
+	Jan 15, 2026
+	The Paradigm Shift in Malaysia's Legal Sector
+	January 2026 marks a historic turning point for the Malaysian legal profession. The Bar Council's updated Publicity Rules have finally aligned with the digital age, allowing firms to engage in strategic digital marketing while maintaining the decorum and integrity of the profession.
+	What Has Changed?
+	Under the new rules, firms are no longer restricted to passive presence. Active engagement through search engine marketing, social media educational content, and professional directory listings is now officially sanctioned, provided they don't engage in "ambulance chasing" or disparaging other members of the Bar.
+	"The goal is not to sell, but to inform. Publicity must be performed with the dignity that matches the legal profession."
+	Key Compliance Checklist
+	Factual Content:
+	All advertisements must be based on verifiable facts.
+	No Direct Solicitation:
+	Direct messages to potential clients who haven't expressed interest remain restricted.
+	Bar Council Identification:
+	All digital assets must clearly state the firm's registration details.
+	Dominate Your Market
+	Let's discuss how to apply these strategies specifically to your practice area.

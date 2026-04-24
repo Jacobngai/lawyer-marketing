@@ -1,0 +1,161 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Apps Script
+LawyerMarketing CRM
+cloud_done
+Deploy
+
+person_add
+help_outline
+info_outline
+code
+history
+alarm
+playlist_play
+settings
+Files
+sort_by_alpha
+add
+Code.gs
+Libraries
+add
+Services
+add
+undo
+redo
+play_arrow
+Run
+Debug
+doPost
+Execution log
+1
+2
+3
+4
+5
+6
+7
+function
+doPost
+(
+e
+)
+{
+var
+sheet
+=
+SpreadsheetApp
+.
+getActiveSpreadsheet
+(
+)
+.
+getActiveSheet
+(
+)
+;
+var
+data
+=
+JSON
+.
+parse
+(
+e
+.
+postData
+.
+contents
+)
+;
+sheet
+.
+appendRow
+(
+[
+data
+.
+name
+,
+data
+.
+email
+,
+data
+.
+firmName
+,
+data
+.
+website
+,
+data
+.
+caseVolume
+,
+data
+.
+contactMethod
+,
+data
+.
+message
+||
+""
+,
+new
+Date
+(
+)
+]
+)
+;
+return
+ContentService
+.
+createTextOutput
+(
+"Success"
+)
+.
+setMimeType
+(
+ContentService
+.
+MimeType
+.
+TEXT
+)
+;
+}
+New deployment
+Select type
+[0] (394,260)<div aria-label='Enable deployment types' class='U26fgb JRtysb WzwrXb yKcM7c iWO5td' id='ow17' role='button' />
+	[1] (394,264)<span  />
+		[2] (394,264)<span  />
+			[3] (394,260)<i >settings />
+[4] (433,310)<span aria-label='Web app' class='z80M1 NmX0eb wtGOrb' role='menuitemcheckbox' />
+	[5] (439,310)<div  />
+		[6] (439,310)<div >Web app />
+[7] (433,350)<span aria-label='API Executable' class='z80M1 NmX0eb wtGOrb' role='menuitemcheckbox' />
+	[8] (439,350)<div  />
+		[9] (439,350)<div >API Executable />
+[10] (433,389)<span aria-label='Add-on' class='z80M1 NmX0eb wtGOrb' role='menuitemcheckbox' />
+	[11] (439,389)<div  />
+		[12] (439,389)<div >Add-on />
+[13] (433,429)<span aria-label='Library' class='z80M1 NmX0eb wtGOrb' role='menuitemcheckbox' />
+	[14] (439,429)<div  />
+		[15] (439,429)<div >Library />
+Configuration
+[16] (685,260)<div >help_outline />
+	help_outline
+	[17] (685,260)<a aria-label='Learn more about deployments' class='WpHeLc VfPpkd-mRLv6' href='https://developers.google.com/apps-script/concepts/deployments' />
+Please select a deployment type
+[18] (608,796)<button class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-INsAgc VfPpkd-LgbsSe-OWXEXe-dgl2Hf Rj2Mlf OLiIxf PDpWxe P62QJc LQeN7'>Cancel />
+	Cancel
+Deploy
+Saving project...
+
+</current_dom>

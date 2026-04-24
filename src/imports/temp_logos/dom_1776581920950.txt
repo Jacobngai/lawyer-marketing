@@ -1,0 +1,93 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+LawyerMarketing.my
+[0] (781,42)<a class='shrink-0' href='https://cal.com/zen-pdcnlc/lawyer-marketing' />
+	[1] (781,42)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group text-xs md:text-base'>Get Started />
+[2] (282,88)<div  />
+	[3] (282,88)<div  />
+		[4] (209,88)<div  />
+		Corporate & Commercial Law
+[5] (500,88)<div  />
+	[6] (500,88)<div  />
+		[7] (427,88)<div  />
+		Banking & Finance
+[8] (718,88)<div  />
+	[9] (718,88)<div  />
+		[10] (645,88)<div  />
+		Civil Litigation
+[11] (282,234)<div  />
+	[12] (282,234)<div  />
+		[13] (209,234)<div  />
+		[14] (299,229)<div  />
+			[15] (299,224)<h3 >Criminal Law />
+	[16] (377,190)<div  />
+[17] (500,234)<div  />
+	[18] (500,234)<div  />
+		[19] (427,234)<div  />
+		[20] (517,229)<div  />
+			[21] (517,224)<h3 >Family & Matrimonial />
+	[22] (595,190)<div  />
+[23] (718,234)<div  />
+	[24] (718,234)<div  />
+		[25] (645,234)<div  />
+		[26] (735,229)<div  />
+			[27] (735,224)<h3 >Property & Conveyancing />
+	[28] (813,190)<div  />
+[29] (282,390)<div  />
+	[30] (282,380)<div  />
+		[31] (209,380)<div  />
+		[32] (299,375)<div  />
+			[33] (299,370)<h3 >Immigration Law />
+	[34] (377,336)<div  />
+[35] (500,390)<div  />
+	[36] (500,380)<div  />
+		[37] (427,380)<div  />
+		[38] (517,375)<div  />
+			[39] (517,370)<h3 >Intellectual Property />
+	[40] (595,336)<div  />
+[41] (718,390)<div  />
+	[42] (718,390)<div  />
+		[43] (645,380)<div  />
+		[44] (735,390)<div  />
+			[45] (735,385)<h3 >Employment & Industrial Relations />
+	[46] (813,336)<div  />
+[47] (282,555)<div  />
+	[48] (282,546)<div  />
+		[49] (209,546)<div  />
+		[50] (299,540)<div  />
+			[51] (299,535)<h3 >Islamic Law (Syariah) />
+	[52] (377,501)<div  />
+[53] (500,547)<div  />
+	[54] (500,537)<div  />
+		[55] (425,537)<div  />
+		[56] (517,531)<div  />
+			[57] (517,526)<h3 >Tax & Revenue />
+	[58] (597,492)<div  />
+[59] (718,555)<div  />
+	[60] (718,555)<div  />
+		[61] (645,546)<div  />
+		[62] (735,555)<div  />
+			[63] (735,550)<h3 >Dispute Resolution & Arbitration />
+	[64] (813,501)<div  />
+[65] (282,711)<div  />
+	[66] (282,711)<div  />
+		[67] (209,711)<div  />
+		[68] (299,705)<div  />
+			[69] (299,700)<h3 >Mergers & Acquisitions />
+	[70] (377,666)<div  />
+[71] (500,711)<div  />
+	[72] (500,711)<div  />
+		[73] (427,711)<div  />
+		[74] (517,705)<div  />
+			[75] (517,700)<h3 >Construction Law />
+	[76] (595,666)<div  />
+[77] (718,711)<div  />
+	[78] (718,711)<div  />
+		[79] (645,711)<div  />
+		[80] (735,705)<div  />
+			[81] (735,700)<h3 >Insolvency & Bankruptcy />
+	[82] (813,666)<div  />
+
+</current_dom>

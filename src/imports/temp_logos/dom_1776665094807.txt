@@ -1,0 +1,168 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+https://rankings.io/services/lawyer-marketing-ads-google-confirmation/
+41
+2026-02-11 18:41 +00:00
+[0] (176,14)<a href='https://rankings.io/services/legal-marketing-ads-google-confirmation/'>https://rankings.io/services/legal-marketing-ads-google-confirmation/ />
+38
+2026-02-11 18:41 +00:00
+[1] (219,33)<a href='https://rankings.io/services/dominate-your-online-competition-google-ads-confirmation/'>https://rankings.io/services/dominate-your-online-competition-google-ads-confirmation/ />
+28
+2026-02-11 18:41 +00:00
+[2] (185,52)<a href='https://rankings.io/services/personal-injury-seo-ads-google-confirmation/'>https://rankings.io/services/personal-injury-seo-ads-google-confirmation/ />
+28
+2026-02-11 18:41 +00:00
+[3] (200,71)<a href='https://rankings.io/services/personal-injury-marketing-ads-google-confirmation/'>https://rankings.io/services/personal-injury-marketing-ads-google-confirmation/ />
+41
+2026-02-11 18:41 +00:00
+[4] (209,90)<a href='https://rankings.io/services/law-firm-traditional-marketing-ads-google-confirmation/'>https://rankings.io/services/law-firm-traditional-marketing-ads-google-confirmation/ />
+23
+2026-02-11 18:41 +00:00
+[5] (77,110)<a href='https://rankings.io/services/'>https://rankings.io/services/ />
+0
+2026-02-19 17:05 +00:00
+[6] (124,129)<a href='https://rankings.io/services/personal-injury-seo/'>https://rankings.io/services/personal-injury-seo/ />
+0
+2026-02-20 22:25 +00:00
+[7] (124,148)<a href='https://rankings.io/services/divorce-lawyer-seo/'>https://rankings.io/services/divorce-lawyer-seo/ />
+0
+2026-02-21 09:18 +00:00
+[8] (113,167)<a href='https://rankings.io/services/dui-lawyer-seo/'>https://rankings.io/services/dui-lawyer-seo/ />
+0
+2026-02-22 19:45 +00:00
+[9] (157,186)<a href='https://rankings.io/services/personal-injury-lawyer-marketing/'>https://rankings.io/services/personal-injury-lawyer-marketing/ />
+0
+2026-02-23 18:24 +00:00
+[10] (161,205)<a href='https://rankings.io/services/criminal-defense-lawyer-marketing/'>https://rankings.io/services/criminal-defense-lawyer-marketing/ />
+0
+2026-02-23 18:33 +00:00
+[11] (129,224)<a href='https://rankings.io/services/dui-lawyer-marketing/'>https://rankings.io/services/dui-lawyer-marketing/ />
+0
+2026-02-23 18:37 +00:00
+[12] (128,243)<a href='https://rankings.io/services/family-law-marketing/'>https://rankings.io/services/family-law-marketing/ />
+0
+2026-02-23 18:40 +00:00
+[13] (139,262)<a href='https://rankings.io/services/divorce-lawyer-marketing/'>https://rankings.io/services/divorce-lawyer-marketing/ />
+0
+2026-02-23 18:43 +00:00
+[14] (151,281)<a href='https://rankings.io/services/employment-lawyer-marketing/'>https://rankings.io/services/employment-lawyer-marketing/ />
+0
+2026-02-23 18:46 +00:00
+[15] (148,300)<a href='https://rankings.io/services/bankruptcy-lawyer-marketing/'>https://rankings.io/services/bankruptcy-lawyer-marketing/ />
+0
+2026-02-23 18:48 +00:00
+[16] (121,319)<a href='https://rankings.io/results/portfolio/nicolet-law/'>https://rankings.io/results/portfolio/nicolet-law/ />
+1
+2026-02-25 16:47 +00:00
+[17] (138,338)<a href='https://rankings.io/results/portfolio/fletcher-injury-law/'>https://rankings.io/results/portfolio/fletcher-injury-law/ />
+1
+2026-02-25 16:48 +00:00
+[18] (139,357)<a href='https://rankings.io/results/portfolio/dolman-law-group/'>https://rankings.io/results/portfolio/dolman-law-group/ />
+1
+2026-02-25 16:50 +00:00
+[19] (127,376)<a href='https://rankings.io/results/portfolio/morris-law-llc/'>https://rankings.io/results/portfolio/morris-law-llc/ />
+1
+2026-02-25 16:50 +00:00
+[20] (163,396)<a href='https://rankings.io/results/portfolio/galine-frye-fitting-frangos-llp/'>https://rankings.io/results/portfolio/galine-frye-fitting-frangos-llp/ />
+1
+2026-02-25 16:51 +00:00
+[21] (120,415)<a href='https://rankings.io/results/portfolio/king-jones/'>https://rankings.io/results/portfolio/king-jones/ />
+1
+2026-02-25 16:51 +00:00
+[22] (132,434)<a href='https://rankings.io/results/portfolio/abels-annes-pc/'>https://rankings.io/results/portfolio/abels-annes-pc/ />
+1
+2026-02-25 16:51 +00:00
+[23] (158,453)<a href='https://rankings.io/results/portfolio/holliday-karatinos-law-firm/'>https://rankings.io/results/portfolio/holliday-karatinos-law-firm/ />
+1
+2026-02-25 16:52 +00:00
+[24] (143,472)<a href='https://rankings.io/results/portfolio/the-bruning-law-firm/'>https://rankings.io/results/portfolio/the-bruning-law-firm/ />
+1
+2026-02-25 16:52 +00:00
+[25] (143,491)<a href='https://rankings.io/results/portfolio/the-reinartz-law-firm/'>https://rankings.io/results/portfolio/the-reinartz-law-firm/ />
+1
+2026-02-25 16:53 +00:00
+[26] (122,510)<a href='https://rankings.io/results/portfolio/rawlins-law/'>https://rankings.io/results/portfolio/rawlins-law/ />
+1
+2026-02-25 16:53 +00:00
+[27] (153,529)<a href='https://rankings.io/results/portfolio/ed-bernstein-associates/'>https://rankings.io/results/portfolio/ed-bernstein-associates/ />
+1
+2026-02-25 16:53 +00:00
+[28] (150,548)<a href='https://rankings.io/results/case-studies/dolman-law-group/'>https://rankings.io/results/case-studies/dolman-law-group/ />
+13
+2026-02-26 10:46 +00:00
+[29] (138,567)<a href='https://rankings.io/results/case-studies/the-levin-firm/'>https://rankings.io/results/case-studies/the-levin-firm/ />
+13
+2026-02-26 10:47 +00:00
+[30] (140,586)<a href='https://rankings.io/results/case-studies/stewart-j-guss/'>https://rankings.io/results/case-studies/stewart-j-guss/ />
+13
+2026-02-26 10:47 +00:00
+[31] (157,605)<a href='https://rankings.io/results/case-studies/gomez-trial-attorneys/'>https://rankings.io/results/case-studies/gomez-trial-attorneys/ />
+13
+2026-02-26 10:47 +00:00
+[32] (151,624)<a href='https://rankings.io/results/case-studies/emroch-and-kilduff/'>https://rankings.io/results/case-studies/emroch-and-kilduff/ />
+13
+2026-02-26 10:47 +00:00
+[33] (138,643)<a href='https://rankings.io/results/case-studies/randolph-rice/'>https://rankings.io/results/case-studies/randolph-rice/ />
+13
+2026-02-26 10:47 +00:00
+[34] (143,662)<a href='https://rankings.io/results/case-studies/richard-stevens/'>https://rankings.io/results/case-studies/richard-stevens/ />
+13
+2026-02-26 10:47 +00:00
+[35] (158,682)<a href='https://rankings.io/results/case-studies/ronald-weiss-law-firm/'>https://rankings.io/results/case-studies/ronald-weiss-law-firm/ />
+13
+2026-02-26 10:48 +00:00
+[36] (116,701)<a href='https://rankings.io/services/geo-for-lawyers/'>https://rankings.io/services/geo-for-lawyers/ />
+0
+2026-02-26 20:55 +00:00
+[37] (133,720)<a href='https://rankings.io/services/paid-digital-for-law-firm/'>https://rankings.io/services/paid-digital-for-law-firm/ />
+0
+2026-03-02 21:02 +00:00
+[38] (108,739)<a href='https://rankings.io/services/law-firm-seo/'>https://rankings.io/services/law-firm-seo/ />
+0
+2026-03-06 20:38 +00:00
+[39] (166,758)<a href='https://rankings.io/results/case-studies/galine-frye-fitting-frangos/'>https://rankings.io/results/case-studies/galine-frye-fitting-frangos/ />
+1
+2026-03-09 18:57 +00:00
+[40] (114,777)<a href='https://rankings.io/services/personal-injury/'>https://rankings.io/services/personal-injury/ />
+0
+2026-03-11 14:18 +00:00
+[41] (146,796)<a href='https://rankings.io/services/criminal-defense-lawyer-seo/'>https://rankings.io/services/criminal-defense-lawyer-seo/ />
+0
+2026-03-11 14:35 +00:00
+[42] (120,815)<a href='https://rankings.io/services/family-lawyer-seo/'>https://rankings.io/services/family-lawyer-seo/ />
+0
+2026-03-11 14:38 +00:00
+[43] (134,834)<a href='https://rankings.io/services/immigration-lawyer-seo/'>https://rankings.io/services/immigration-lawyer-seo/ />
+0
+2026-03-11 14:42 +00:00
+[44] (136,853)<a href='https://rankings.io/services/employment-lawyer-seo/'>https://rankings.io/services/employment-lawyer-seo/ />
+0
+2026-03-11 14:47 +00:00
+[45] (133,872)<a href='https://rankings.io/services/bankruptcy-lawyer-seo/'>https://rankings.io/services/bankruptcy-lawyer-seo/ />
+0
+2026-03-11 14:49 +00:00
+[46] (141,891)<a href='https://rankings.io/services/estate-probate-lawyer-seo/'>https://rankings.io/services/estate-probate-lawyer-seo/ />
+0
+2026-03-11 14:53 +00:00
+[47] (166,910)<a href='https://rankings.io/services/google-local-service-ads-for-lawyers/'>https://rankings.io/services/google-local-service-ads-for-lawyers/ />
+0
+2026-03-11 15:02 +00:00
+[48] (163,929)<a href='https://rankings.io/services/social-media-marketing-for-lawyers/'>https://rankings.io/services/social-media-marketing-for-lawyers/ />
+0
+2026-03-11 21:03 +00:00
+[49] (127,948)<a href='https://rankings.io/services/mass-tort-marketing/'>https://rankings.io/services/mass-tort-marketing/ />
+0
+2026-03-11 21:05 +00:00
+[50] (143,968)<a href='https://rankings.io/services/website-design-for-lawyers/'>https://rankings.io/services/website-design-for-lawyers/ />
+0
+2026-03-11 21:06 +00:00
+[51] (133,987)<a href='https://rankings.io/services/google-ads-for-lawyers/'>https://rankings.io/services/google-ads-for-lawyers/ />
+0
+2026-03-11 21:08 +00:00
+https://rankings.io/results/case-studies/florida-personal-injury-seo-results/
+1
+2026-03-12 16:38 +00:00
+
+</current_dom>

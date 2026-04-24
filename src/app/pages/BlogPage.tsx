@@ -2,10 +2,15 @@ import { motion } from "motion/react";
 import { Sparkles, ArrowRight, Calendar, Tag, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { blogPosts } from "../data/posts";
+import { SEO } from "../components/SEO";
 
 export function BlogPage() {
   return (
     <div className="pt-24 min-h-screen bg-background">
+      <SEO 
+        title="Law Firm Marketing Insights & Strategies | The Library"
+        description="Strategic intelligence on legal marketing, compliance, and AI-driven growth for top-tier Malaysian firms. Discover how to scale your law firm with expert insights."
+      />
       {/* Blog Header */}
       <section className="py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-secondary/30 to-background" />

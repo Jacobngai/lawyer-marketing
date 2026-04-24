@@ -1,0 +1,73 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (248,46)<a href='/' />
+	[1] (248,46)<div  />
+		[2] (194,46)<img  />
+		[3] (266,46)<div >LawyerMarketing.my />
+[4] (705,46)<a class='uppercase tracking-widest text-foreground/70 hover:text-accent transition-colors hidden sm:block' href='/blog'>Insights />
+[5] (781,46)<a class='shrink-0' href='https://cal.com/zen-pdcnlc/lawyer-marketing' />
+	[6] (781,46)<button class='px-4 py-1.5 md:px-6 md:py-2.5 bg-accent text-accent-foreground rounded-sm flex items-center gap-2 group'>Get Started />
+Specialized
+Expertise
+Tailored marketing strategies for every legal specialization in Malaysia.
+[7] (282,494)<div  />
+	[8] (282,494)<div  />
+		[9] (209,490)<div  />
+		[10] (299,494)<div  />
+			[11] (299,488)<h3 >Corporate & Commercial Law />
+[12] (500,494)<div  />
+	[13] (500,490)<div  />
+		[14] (427,490)<div  />
+		[15] (517,481)<div  />
+			[16] (517,475)<h3 >Banking & Finance />
+[17] (718,494)<div  />
+	[18] (718,490)<div  />
+		[19] (645,490)<div  />
+		[20] (735,481)<div  />
+			[21] (735,475)<h3 >Civil Litigation />
+[22] (282,655)<div  />
+	[23] (282,655)<div  />
+		[24] (209,655)<div  />
+		[25] (299,646)<div  />
+			[26] (299,640)<h3 >Criminal Law />
+[27] (500,655)<div  />
+	[28] (500,655)<div  />
+		[29] (427,655)<div  />
+		[30] (517,646)<div  />
+			[31] (517,640)<h3 >Family & Matrimonial />
+[32] (718,655)<div  />
+	[33] (718,655)<div  />
+		[34] (645,655)<div  />
+		[35] (735,646)<div  />
+			[36] (735,640)<h3 >Property & Conveyancing />
+[37] (282,816)<div  />
+	[38] (282,812)<div  />
+		[39] (209,812)<div  />
+		[40] (299,803)<div  />
+			[41] (299,798)<h3 >Immigration Law />
+[42] (500,816)<div  />
+	[43] (500,812)<div  />
+		[44] (427,812)<div  />
+		[45] (517,803)<div  />
+			[46] (517,798)<h3 >Intellectual Property />
+[47] (718,816)<div  />
+	[48] (718,816)<div  />
+		[49] (645,812)<div  />
+		[50] (735,816)<div  />
+			[51] (735,810)<h3 >Employment & Industrial Relations />
+[52] (282,981)<div  />
+	[53] (282,977)<div  />
+		[54] (209,977)<div  />
+		[55] (299,968)<div  />
+			[56] (299,963)<h3 >Islamic Law (Syariah) />
+[57] (427,977)<div  />
+Tax & Revenue
+[58] (718,981)<div  />
+	[59] (718,981)<div  />
+		[60] (645,977)<div  />
+		[61] (735,981)<div  />
+			[62] (735,976)<h3 >Dispute Resolution & Arbitration />
+
+</current_dom>

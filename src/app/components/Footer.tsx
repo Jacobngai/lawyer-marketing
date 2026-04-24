@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import logoImage from "../../imports/logo_cropped.webp";
+import logoImage from "../../imports/logo_full_final.png";
 import { Link } from "react-router-dom";
 
 export function Footer() {
@@ -32,12 +32,9 @@ export function Footer() {
                 alt="LawyerMarketing.my"
                 className="h-10 md:h-16 w-auto block shrink-0"
               />
-              <div className="text-base md:text-lg font-light tracking-[0.1em] text-accent uppercase">
-                LawyerMarketing.my
-              </div>
             </div>
             <p className="text-foreground/70 max-w-xs text-sm leading-relaxed">
-              Malaysia's premier marketing agency specializing in digital growth for the legal sector. Est. 2026.
+              We are Malaysia's premier marketing agency. We specialize in your digital growth within the legal sector. Est. 2026.
             </p>
           </motion.div>
           <motion.div

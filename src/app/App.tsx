@@ -3,6 +3,8 @@ import { HomePage } from "./pages/HomePage";
 import { BlogPage } from "./pages/BlogPage";
 import { BlogPostPage } from "./pages/BlogPostPage";
 import { ContactPage } from "./pages/ContactPage";
+import { ServicePage } from "./pages/ServicePage";
+import { PracticeAreaPage } from "./pages/PracticeAreaPage";
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
 import { useEffect } from "react";
@@ -28,6 +30,8 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:id" element={<BlogPostPage />} />
+            <Route path="/services/:id" element={<ServicePage />} />
+            <Route path="/practice-areas/:id" element={<PracticeAreaPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </div>

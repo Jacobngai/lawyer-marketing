@@ -1,0 +1,191 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Apps Script
+LawyerMarketing CRM
+sync
+Unsaved changes
+Deploy
+
+person_add
+help_outline
+info_outline
+code
+history
+alarm
+playlist_play
+settings
+Files
+sort_by_alpha
+add
+Code.gs
+Libraries
+add
+Services
+add
+undo
+redo
+play_arrow
+Run
+Debug
+No functions
+Execution log
+1
+2
+3
+4
+5
+6
+19
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+20
+function
+doPost
+(
+e
+)
+{
+var
+sheet
+=
+SpreadsheetApp
+.
+getActiveSpreadsheet
+(
+)
+.
+getActiveSheet
+(
+)
+;
+var
+data
+=
+JSON
+.
+parse
+(
+e
+.
+postData
+.
+contents
+)
+;
+sheet
+.
+appendRow
+(
+[
+data
+.
+name
+,
+]
+)
+data
+.
+email
+,
+data
+.
+firmName
+,
+data
+.
+website
+,
+data
+.
+caseVolume
+,
+data
+.
+contactMethod
+,
+data
+.
+message
+||
+""
+,
+new
+Date
+(
+)
+]
+)
+;
+return
+ContentService
+.
+createTextOutput
+(
+"Success"
+)
+.
+setMimeType
+(
+ContentService
+.
+MimeType
+.
+TEXT
+)
+;
+}
+}
+New deployment
+Select type
+[0] (394,260)<div aria-label='Enable deployment types' class='U26fgb JRtysb WzwrXb yKcM7c' id='ow16' role='button' />
+	[1] (394,264)<span  />
+		[2] (394,264)<span  />
+			[3] (394,260)<i >settings />
+[4] (353,311)<li class=' VfPpkd-StrnGf-rymPhb-ibnC6b' role='option' />
+	[5] (328,311)<span >Web app />
+Configuration
+[6] (685,260)<div >help_outline />
+	help_outline
+	[7] (685,260)<a aria-label='Learn more about deployments' class='WpHeLc VfPpkd-mRLv6' href='https://developers.google.com/apps-script/concepts/deployments' />
+[8] (551,523)<div class='B0Jhrc' scrollable='true'>This can also be used as a library. />
+	Description
+	[9] (547,343)<label class='VfPpkd-fmcmS-yrriRe VfPpkd-fmcmS-yrriRe-OWXEXe-mWPk3d VfPpkd-ksKsZd-mWPk3d VfPpkd-fmcmS-yrriRe-OWXEXe-INsAgc cfWmIb orScbe' />
+		New description
+		[10] (547,343)<input class='VfPpkd-fmcmS-wGMbrd ' id='c25' />
+	Web app
+	[11] (547,462)<div class='VfPpkd-TkwUic' role='combobox' />
+		Execute as
+		Me (ngsanzen@gmail.com)
+		[12] (547,462)<div  />
+	The web app will be authorized to run using your account data.
+	[13] (547,567)<div class='VfPpkd-TkwUic VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe VfPpkd-ksKsZd-mWPk3d' role='combobox' />
+		Who has access
+		Anyone
+		[14] (547,567)<div  />
+	[15] (547,631)<li class=' VfPpkd-StrnGf-rymPhb-ibnC6b' role='option' />
+		[16] (443,631)<span >Only myself />
+	[17] (547,683)<li class=' VfPpkd-StrnGf-rymPhb-ibnC6b' role='option' />
+		[18] (475,683)<span >Anyone with Google account />
+	[19] (547,736)<li class='VfPpkd-StrnGf-rymPhb-ibnC6b VfPpkd-StrnGf-rymPhb-ibnC6b-OWXEXe-gk6SMd VfPpkd-ksKsZd-mWPk3d' role='option' />
+		[20] (435,736)<span >Anyone />
+	This can also be used as a library.
+	Learn more
+[21] (608,796)<button class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-INsAgc VfPpkd-LgbsSe-OWXEXe-dgl2Hf Rj2Mlf OLiIxf PDpWxe P62QJc LQeN7'>Cancel />
+	Cancel
+[22] (665,796)<button class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc LQeN7'>Deploy />
+	Deploy
+Saving project...
+
+</current_dom>

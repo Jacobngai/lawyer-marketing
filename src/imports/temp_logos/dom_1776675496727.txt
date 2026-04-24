@@ -1,0 +1,92 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (23,25)<a href='https://developers.google.com/workspace' />
+	[1] (22,25)<div  />
+		[2] (22,25)<picture  />
+			[3] (22,25)<img  />
+[4] (83,25)<a class='devsite-breadcrumb-link gc-analytics-event' href='https://developers.google.com/workspace' />
+	[5] (83,25)<h1 >Workspace />
+[6] (177,25)<a class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/workspace'>Home />
+[7] (225,25)<a aria-label='Apps Script, selected' class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/apps-script'>Apps Script />
+[8] (279,25)<a class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/workspace/products-menu'>All products />
+[9] (317,25)<button aria-label='Dropdown menu for All products' class='devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down' />
+[10] (352,25)<a class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/workspace/resources-menu'>Resources />
+[11] (386,25)<button aria-label='Dropdown menu for Resources' class='devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down' />
+[12] (820,25)<input aria-label='Search' class='devsite-search-field devsite-search-query' placeholder='Search' role='combobox' />
+/
+[13] (916,25)<button  />
+	[14] (920,25)<span >Language />
+[15] (976,25)<a class='devsite-user-signin button devsite-top-button' href='https://developers.google.com/_d/signin?continue=https%3A%2F%2Fdevelopers.google.com%2Fapps-script%2F&prompt=select_account' id='devsite-signin-btn'>Sign in />
+[16] (40,92)<a class='devsite-breadcrumb-link gc-analytics-event' href='https://developers.google.com/apps-script'>Apps Script />
+[17] (29,137)<a aria-label='Overview, selected' class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/apps-script'>Overview />
+[18] (76,137)<a class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/apps-script/overview'>Guides />
+[19] (124,137)<a class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/apps-script/reference'>Reference />
+[20] (174,137)<a class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/apps-script/samples'>Samples />
+[21] (221,137)<a class='devsite-tabs-content gc-analytics-event ' href='https://developers.google.com/apps-script/support'>Support />
+[22] (70,387)<devsite-book-nav scrollable='true' />
+	[23] (68,204)<input aria-label='Type to filter' placeholder='Filter' role='searchbox' />
+	[24] (66,273)<a class='devsite-nav-title' href='/workspace' />
+		[25] (22,273)<span >Home />
+	[26] (66,298)<a class='devsite-nav-title' href='/workspace/products' />
+		[27] (42,298)<span >Developer products />
+	[28] (66,324)<a class='devsite-nav-title' href='/workspace/guides/get-started' />
+		[29] (29,324)<span >Get started />
+	[30] (66,349)<a class='devsite-nav-title' href='/workspace/guides/ai-overview' />
+		[31] (31,349)<span >Build with AI />
+	[32] (66,375)<a class='devsite-nav-title' href='/workspace/explore' />
+		[33] (27,375)<span >Try it now />
+	Google Workspace apps
+	[34] (66,451)<a class='devsite-nav-title' href='/workspace/admin' />
+		[35] (35,451)<span >Admin console />
+	[36] (66,476)<a class='devsite-nav-title' href='/workspace/cloud-search' />
+		[37] (32,476)<span >Cloud Search />
+	[38] (66,502)<a class='devsite-nav-title' href='/workspace/gmail' />
+		[39] (21,502)<span >Gmail />
+	[40] (66,527)<a class='devsite-nav-title' href='/workspace/calendar' />
+		[41] (37,527)<span >Google Calendar />
+	[42] (66,552)<a class='devsite-nav-title' href='/workspace/chat' />
+		[43] (31,552)<span >Google Chat />
+	[44] (66,578)<a class='devsite-nav-title' href='/workspace/classroom' />
+		[45] (40,578)<span >Google Classroom />
+	[46] (66,603)<a class='devsite-nav-title' href='/workspace/docs' />
+		[47] (32,603)<span >Google Docs />
+	Google Drive
+	Google Forms
+	Google Keep
+	Google Meet
+	Google Sheets
+	Google Sites
+	Google Slides
+	Google Tasks
+	Google Vault
+	Subscribe to Google Workspace events
+	Extend, automate & share
+	Overview
+	Add-ons
+[48] (126,962)<button aria-label='Hide side navigation' class='devsite-book-nav-toggle' />
+	[49] (126,962)<span  />
+Automate & extend Google Workspace with simple code
+.
+Apps Script is a cloud-based JavaScript platform powered by Google Drive that lets you integrate with and automate tasks across Google products.
+[50] (265,572)<a class='button button-primary' href='https://accounts.google.com/ServiceLogin?continue=https://developers.google.com/_d/return%3Fcontinue%3Dhttps%253A%252F%252Fdevelopers.google.com%252Fapps-script'>Sign in />
+[51] (356,572)<a class='button' href='/apps-script/overview'>What can Apps Script do? />
+Develop high quality solutions with ease
+[52] (553,697)<button aria-label='Copy link to this section: 
+      
+    
+        Develop high quality solutions with ease
+      
+  
+    ' class='devsite-heading-link button-flat material-icons' />
+[53] (271,772)<a href='https://developers.google.com/apps-script/guides/menus'>Automations />
+Write code that programmatically performs tasks across Google products. Automations are set in motion by custom menus, buttons, user actions, or a time-based schedule.
+[54] (548,772)<a href='https://developers.google.com/apps-script/guides/sheets/functions'>Custom functions />
+Write Google Sheets functions in Apps Script and call them from your spreadsheet just like built-in functions.
+[55] (262,920)<a href='https://developers.google.com/apps-script/add-ons/overview'>Add-ons />
+Build an app that automates tasks or connects to third-party services from within Google Workspace. Share your solution with others on the Google Workspace Marketplace.
+[56] (530,920)<a href='https://developers.google.com/workspace/add-ons/chat/quickstart-apps-script'>Chat apps />
+Provide a conversational interface that lets Google Chat users interact with services as if the service were a person.
+
+</current_dom>

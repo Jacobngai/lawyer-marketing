@@ -1,0 +1,157 @@
+[0] (19,35)<div aria-label='Main menu' class='gb_2c' role='button' />
+[1] (72,37)<a aria-label='Google Apps Script' class='gb_ee gb_Wc' href='/home' id='sdgBod' />
+	[2] (43,37)<img class='gb_1c' role='presentation' />
+	[3] (82,36)<span >Apps Script />
+[4] (323,35)<input aria-label='Search' class='Ax4B8 ZAGvjd' role='combobox' />
+[5] (169,35)<button aria-label='Search' class='gb_Re' role='button' />
+[6] (932,35)<div aria-label='Support' class='U26fgb JRtysb WzwrXb lmSKjb' role='button' />
+	[7] (932,44)<span  />
+		[8] (932,44)<span  />
+			[9] (932,36)<i >help_outline />
+[10] (957,35)<a aria-label='Google apps' class='gb_C' href='https://www.google.com.my/intl/en/about/products' role='button' />
+[11] (982,35)<a aria-label='Google Account: Zen  
+(ngsanzen@gmail.com)' class='gb_C gb_1a gb_2' href='https://accounts.google.com/SignOutOptions?hl=en&continue=https://script.google.com/home%3Fpli%3D1&ec=GBRAiwM' role='button' />
+[12] (48,119)<button class='VfPpkd-BIzmGd VfPpkd-BIzmGd-OWXEXe-X9G3K bgpk6e gl6QPb' />
+	[13] (21,119)<span  />
+	[14] (58,119)<span >New project />
+[15] (66,192)<div aria-label='Starred Projects' class='U26fgb O0WRkf oG5Srb C0oVfc QcbH4c M9Bg4d' role='button' />
+	[16] (66,192)<span  />
+		[17] (66,192)<span  />
+			[18] (18,192)<i >star_outline />
+			[19] (57,192)<span >Starred Projects />
+[20] (66,236)<div aria-label='My Projects' class='U26fgb O0WRkf oG5Srb C0oVfc QcbH4c jBCeZb M9Bg4d' role='button' />
+	[21] (66,236)<span  />
+		[22] (66,236)<span  />
+			[23] (18,236)<i >folder />
+			[24] (50,236)<span >My Projects />
+[25] (66,280)<div aria-label='All Projects' class='U26fgb O0WRkf oG5Srb C0oVfc QcbH4c M9Bg4d' role='button' />
+	[26] (66,280)<span  />
+		[27] (66,280)<span  />
+			[28] (18,280)<i >folder />
+			[29] (49,280)<span >All Projects />
+[30] (66,324)<div aria-label='Shared with me' class='U26fgb O0WRkf oG5Srb C0oVfc QcbH4c M9Bg4d' role='button' />
+	[31] (66,324)<span  />
+		[32] (66,324)<span  />
+			[33] (18,324)<i >group />
+			[34] (56,324)<span >Shared with me />
+[35] (66,368)<div aria-label='Trash' class='U26fgb O0WRkf oG5Srb C0oVfc QcbH4c M9Bg4d' role='button' />
+	[36] (66,368)<span  />
+		[37] (66,368)<span  />
+			[38] (18,368)<i >delete />
+			[39] (40,368)<span >Trash />
+[40] (66,445)<div aria-label='My Executions' class='U26fgb O0WRkf oG5Srb C0oVfc QcbH4c M9Bg4d' role='button' />
+	[41] (66,445)<span  />
+		[42] (66,445)<span  />
+			[43] (18,445)<span  />
+			[44] (54,445)<span >My Executions />
+[45] (66,488)<div aria-label='My Triggers' class='U26fgb O0WRkf oG5Srb C0oVfc QcbH4c M9Bg4d' role='button' />
+	[46] (66,488)<span  />
+		[47] (66,488)<span  />
+			[48] (18,488)<i >alarm />
+			[49] (50,488)<span >My Triggers />
+[50] (66,565)<div aria-label='Getting Started' class='U26fgb O0WRkf oG5Srb C0oVfc QcbH4c M9Bg4d' role='button' />
+	[51] (66,565)<span  />
+		[52] (66,565)<span  />
+			[53] (18,565)<i >play_circle_outline />
+			[54] (56,565)<span >Getting Started />
+[55] (66,609)<div aria-label='Settings' class='U26fgb O0WRkf oG5Srb C0oVfc QcbH4c M9Bg4d' role='button' />
+	[56] (66,609)<span  />
+		[57] (66,609)<span  />
+			[58] (18,609)<i >settings />
+			[59] (44,609)<span >Settings />
+[60] (66,653)<div aria-label='Service Status' class='U26fgb O0WRkf oG5Srb C0oVfc QcbH4c M9Bg4d' role='button' />
+	[61] (66,653)<span  />
+		[62] (66,653)<span  />
+			[63] (18,653)<i >warning_amber />
+			[64] (54,653)<span >Service Status />
+My Projects
+Showing 7 projects
+[65] (311,151)<div class='U26fgb O0WRkf oG5Srb HQ8yf C0oVfc NBX8 dKvcb M9Bg4d' role='button' />
+	[66] (311,151)<div  />
+	[67] (176,151)<span  />
+		[68] (176,151)<span >Project />
+Owner
+[69] (675,151)<div aria-label='Sorted by: Last modified, Descending. Reverse sort.' class='U26fgb O0WRkf oG5Srb HQ8yf C0oVfc NBX8 dKvcb M9Bg4d' role='button' />
+	[70] (675,151)<div  />
+	[71] (635,151)<span  />
+		[72] (635,151)<span >Last modified />
+			[73] (659,148)<div  />
+				[74] (659,150)<span > />
+[75] (573,206)<div class='f9RONd' role='option' />
+	[76] (573,205)<div class='heEy3e' role='button' />
+		[77] (311,205)<div  />
+			[78] (164,205)<div  />
+			[79] (238,205)<span >Copy of ChatHero HubSpot Integration />
+		[80] (536,205)<div >Me />
+		[81] (675,205)<div >Sep 12, 2025 />
+		
+		[82] (981,205)<div  />
+			[83] (974,205)<div  />
+				
+[84] (573,260)<div class='f9RONd' role='option' />
+	[85] (573,259)<div class='heEy3e' role='button' />
+		[86] (311,259)<div  />
+			[87] (165,259)<div  />
+			[88] (202,259)<span >Untitled project />
+		[89] (536,259)<div >Me />
+		[90] (675,259)<div >Aug 8, 2025 />
+		
+		[91] (981,259)<div  />
+			[92] (974,259)<div  />
+				
+[93] (573,313)<div class='f9RONd' role='option' />
+	[94] (573,313)<div class='heEy3e' role='button' />
+		[95] (311,313)<div  />
+			[96] (165,313)<div  />
+			[97] (202,313)<span >Untitled project />
+		[98] (536,313)<div >Me />
+		[99] (675,313)<div >Jul 6, 2025 />
+		
+		[100] (981,313)<div  />
+			[101] (974,313)<div  />
+				
+[102] (573,367)<div class='f9RONd' role='option' />
+	[103] (573,367)<div class='heEy3e' role='button' />
+		[104] (311,367)<div  />
+			[105] (165,367)<div  />
+			[106] (202,367)<span >Untitled project />
+		[107] (536,367)<div >Me />
+		[108] (675,367)<div >Jul 5, 2025 />
+		
+		[109] (981,367)<div  />
+			[110] (974,367)<div  />
+				
+[111] (573,421)<div class='f9RONd' role='option' />
+	[112] (573,420)<div class='heEy3e' role='button' />
+		[113] (311,420)<div  />
+			[114] (165,420)<div  />
+			[115] (202,420)<span >Untitled project />
+		[116] (536,420)<div >Me />
+		[117] (675,420)<div >Nov 25, 2024 />
+		
+		[118] (981,420)<div  />
+			[119] (974,420)<div  />
+				
+[120] (573,475)<div class='f9RONd' role='option' />
+	[121] (573,474)<div class='heEy3e' role='button' />
+		[122] (311,474)<div  />
+			[123] (165,474)<div  />
+			[124] (217,474)<span >DEMO sheet for chatGPT />
+		[125] (536,474)<div >Me />
+		[126] (675,474)<div >Nov 27, 2023 />
+		
+		[127] (981,474)<div  />
+			[128] (974,474)<div  />
+				
+[129] (573,529)<div class='f9RONd' role='option' />
+	[130] (573,528)<div class='heEy3e' role='button' />
+		[131] (311,528)<div  />
+			[132] (165,528)<div  />
+			[133] (194,528)<span >GPT demo />
+		[134] (536,528)<div >Me />
+		[135] (675,528)<div >Nov 27, 2023 />
+		
+		[136] (981,528)<div  />
+			[137] (974,528)<div  />
+				
+Sorted by: Last modified, Descending. Reverse sort.

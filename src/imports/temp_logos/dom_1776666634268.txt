@@ -1,0 +1,26 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Skip to content
+[0] (387,75)<a class='navbar-brand d-block position-relative p-0 m-0' href='/' />
+[1] (837,75)<a class='btn blue-btn no-btn-min-width me-2' href='/contact/'>Let's Talk />
+[2] (935,75)<button aria-label='Toggle navigation' class='navbar-toggler btn btn-alt no-btn-min-width no-btn-deco' />
+	[3] (935,75)<span  />
+Law Firm Marketing Blog
+Learn how to grow your law firm with these in-depth resources
+[4] (95,675)<a href='https://rankings.io/wp-content/uploads/archive-subscribe-icon.svg' />
+	[5] (95,677)<img  />
+Get the latest Rankings Newsletter delivered straight to your inbox.
+Email
+(Required)
+[6] (622,620)<input class='large' id='input_1_1' placeholder='Enter your Email' />
+[7] (831,621)<button class='btn gform_button' id='gform_submit_button_1' />
+	[8] (816,621)<span >Subscribe />
+By clicking Subscribe you’re confirming that you agree with our
+[9] (602,727)<a href='https://rankings.io/blog/#'>privacy policy />
+[10] (465,964)<input class='override-col-x-padding' id='-sc-search' placeholder='Search By keyword' />
+[11] (892,964)<button alt='Search' class='override-col-x-padding' />
+	[12] (892,964)<i  />
+
+</current_dom>

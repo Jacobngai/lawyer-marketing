@@ -1,0 +1,19 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+[0] (496,947)<div  />
+	Digital Marketing Solution
+	High-Impact SEO for Law Firms
+	Rank on Page 1 for high-value legal keywords and capture local market share before your competitors.
+	The Strategic Advantage
+	In the modern legal landscape, visibility is no longer optional—it is the baseline for survival. Our approach to
+	High-Impact SEO for Law Firms
+	is clinical, data-driven, and focused exclusively on high-value client acquisition.
+	We don't just "manage" campaigns; we engineer authority. Every touchpoint is optimized to reflect the prestige of your firm while maximizing the conversion rate of qualified prospects.
+	Ready to Scale?
+	Market-specific targeting
+	Dedicated strategist
+	Direct WhatsApp routing
+
+</current_dom>

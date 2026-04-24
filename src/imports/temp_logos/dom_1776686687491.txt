@@ -1,0 +1,184 @@
+<current_dom_explanation>
+This is a temporary snapshot of the current page's DOM structure. The DOM will change if you navigate to or interact with another page. Use a tool like browser_get_dom to capture and preserve the DOM in your trajectory if needed for later reference.
+</current_dom_explanation>
+<current_dom>
+Apps Script
+LawyerMarketing CRM
+cloud_done
+Deploy
+
+person_add
+help_outline
+info_outline
+code
+history
+alarm
+playlist_play
+settings
+Files
+sort_by_alpha
+add
+Code.gs
+Libraries
+add
+Services
+add
+undo
+redo
+play_arrow
+Run
+Debug
+doPost
+Execution log
+1
+2
+3
+4
+5
+6
+7
+20
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+function
+doPost
+(
+e
+)
+{
+var
+ss
+=
+SpreadsheetApp
+.
+openById
+(
+"1shtuUg4ZlE_FoNBzwAT3TDOueZT1VIMU1L6lMfbzfjg"
+)
+;
+var
+sheet
+=
+ss
+.
+getSheets
+(
+)
+[
+0
+]
+;
+var
+data
+=
+JSON
+.
+parse
+(
+e
+.
+postData
+.
+contents
+)
+;
+sheet
+.
+appendRow
+(
+[
+data
+.
+name
+,
+data
+.
+email
+,
+data
+.
+firmName
+,
+data
+.
+website
+,
+data
+.
+caseVolume
+,
+data
+.
+contactMethod
+,
+data
+.
+message
+||
+""
+,
+new
+Date
+(
+)
+]
+)
+;
+return
+ContentService
+.
+createTextOutput
+(
+"Success"
+)
+.
+setMimeType
+(
+ContentService
+.
+MimeType
+.
+TEXT
+)
+;
+}
+Manage deployments
+[0] (500,500)<div class='B0Jhrc' scrollable='true'>Deployment successfully updated. />
+	Deployment successfully updated.
+	Version 3 on Apr 20, 2026, 8:04 PM
+	Deployment ID
+	AKfycbygNzxMYfx9eVbalSW69GxLZMPZ-Xbd3FtBDaqC9wW15V6sYtCA9TFHa5VJ_hm6Y8eU
+	[1] (326,425)<button aria-label='Copy the deployment ID' class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf ksBjEc lKxP2d LQeN7 l0twQc'>content_copy
+Copy />
+		content_copy
+		Copy
+	Web app
+	URL
+	[2] (521,563)<a href='https://script.google.com/macros/s/AKfycbygNzxMYfx9eVbalSW69GxLZMPZ-Xbd3FtBDaqC9wW15V6sYtCA9TFHa5VJ_hm6Y8eU/exec'>https://script.google.com/macros/s/AKfycbygNzxMYfx9eVbalSW69GxLZMPZ-Xbd3FtBDaqC9wW15V6sYtCA9TFHa5VJ_hm6Y8eU/exec />
+	[3] (326,593)<button aria-label='Copy the web app URL' class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf ksBjEc lKxP2d LQeN7 l0twQc'>content_copy
+Copy />
+		content_copy
+		Copy
+	Library
+	URL
+	[4] (496,731)<a href='https://script.google.com/macros/library/d/15Yk53NVmOsFNbL1PDeFuQfREr6OR3lstYix3ks1skmZUEMgsDPo4E8C5/3'>https://script.google.com/macros/library/d/15Yk53NVmOsFNbL1PDeFuQfREr6OR3lstYix3ks1skmZUEMgsDPo4E8C5/3 />
+	[5] (326,761)<button aria-label='Copy the library URL' class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-Bz112c-M1Soyc VfPpkd-LgbsSe-OWXEXe-dgl2Hf ksBjEc lKxP2d LQeN7 l0twQc'>content_copy
+Copy />
+		content_copy
+		Copy
+	To let other people and groups to use this project as a library, share this project with them.
+[6] (668,796)<button class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc LQeN7 VfPpkd-ksKsZd-mWPk3d-OWXEXe-Tv8l5d-lJfZMc VfPpkd-ksKsZd-mWPk3d-OWXEXe-AHe6Kc-XpnDCe VfPpkd-ksKsZd-mWPk3d' />
+	[7] (668,796)<span >Done />
+Project deployed successfully
+
+</current_dom>
