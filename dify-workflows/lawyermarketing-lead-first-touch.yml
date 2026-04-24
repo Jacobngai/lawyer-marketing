@@ -1,0 +1,315 @@
+app:
+  description: First-touch workflow for LawyerMarketing website leads. It formats a stage-aware WhatsApp message and sends it through Evolution API.
+  icon: "\U0001F4AC"
+  icon_background: '#FFEAD5'
+  mode: workflow
+  name: LawyerMarketing Lead First Touch
+  use_icon_as_answer_icon: false
+dependencies: []
+kind: app
+version: 0.3.1
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      enabled: false
+    opening_statement: ''
+    retriever_resource:
+      enabled: false
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: template-transform
+      id: start-to-message
+      source: start
+      sourceHandle: source
+      target: compose_first_touch
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: template-transform
+        targetType: http-request
+      id: message-to-evolution
+      source: compose_first_touch
+      sourceHandle: source
+      target: send_whatsapp
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: end
+      id: evolution-to-end
+      source: send_whatsapp
+      sourceHandle: source
+      target: end
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        desc: Lead data received from the LawyerMarketing website backend.
+        selected: false
+        title: Start
+        type: start
+        variables:
+        - label: lead_id
+          max_length: 100
+          options: []
+          required: true
+          type: text-input
+          variable: lead_id
+        - label: name
+          max_length: 100
+          options: []
+          required: true
+          type: text-input
+          variable: name
+        - label: email
+          max_length: 200
+          options: []
+          required: false
+          type: text-input
+          variable: email
+        - label: phone_number
+          max_length: 30
+          options: []
+          required: true
+          type: text-input
+          variable: phone_number
+        - label: firm_name
+          max_length: 200
+          options: []
+          required: true
+          type: text-input
+          variable: firm_name
+        - label: website
+          max_length: 300
+          options: []
+          required: false
+          type: text-input
+          variable: website
+        - label: goal
+          max_length: 50
+          options: []
+          required: true
+          type: text-input
+          variable: goal
+        - label: goal_label
+          max_length: 100
+          options: []
+          required: true
+          type: text-input
+          variable: goal_label
+        - label: case_volume
+          max_length: 50
+          options: []
+          required: false
+          type: text-input
+          variable: case_volume
+        - label: source
+          max_length: 100
+          options: []
+          required: false
+          type: text-input
+          variable: source
+        - label: submitted_at
+          max_length: 50
+          options: []
+          required: false
+          type: text-input
+          variable: submitted_at
+        - label: lead_message
+          max_length: 1000
+          options: []
+          required: false
+          type: paragraph
+          variable: lead_message
+        - label: approved_message
+          max_length: 1500
+          options: []
+          required: false
+          type: paragraph
+          variable: approved_message
+        - label: notes
+          max_length: 2000
+          options: []
+          required: false
+          type: paragraph
+          variable: notes
+        - label: evolution_base_url
+          max_length: 300
+          options: []
+          required: true
+          type: text-input
+          variable: evolution_base_url
+        - label: evolution_instance
+          max_length: 100
+          options: []
+          required: true
+          type: text-input
+          variable: evolution_instance
+        - label: evolution_api_key
+          max_length: 300
+          options: []
+          required: true
+          type: text-input
+          variable: evolution_api_key
+      height: 90
+      id: start
+      position:
+        x: 30
+        y: 227
+      positionAbsolute:
+        x: 30
+        y: 227
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: Compose the first WhatsApp touch. This avoids model dependency for the initial test and keeps the message deterministic.
+        selected: false
+        template: |-
+          Hi {{ name }}, thanks for requesting the {{ goal_label }} for {{ firm_name }}. We received your details and will review the fastest direction for your firm. Quick check so we prepare the right path: do you already have a firm website, or are we starting from zero?
+        title: Compose First Touch
+        type: template-transform
+        variables:
+        - value_selector:
+          - start
+          - name
+          value_type: string
+          variable: name
+        - value_selector:
+          - start
+          - goal_label
+          value_type: string
+          variable: goal_label
+        - value_selector:
+          - start
+          - firm_name
+          value_type: string
+          variable: firm_name
+      height: 90
+      id: compose_first_touch
+      position:
+        x: 334
+        y: 227
+      positionAbsolute:
+        x: 334
+        y: 227
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        authorization:
+          type: no-auth
+        body:
+          data:
+          - key: ''
+            type: text
+            value: |-
+              {
+                "number": "{{#start.phone_number#}}",
+                "text": "{{#compose_first_touch.output#}}",
+                "delay": 1000,
+                "linkPreview": false
+              }
+          type: json
+        desc: Send the first WhatsApp message through Evolution API.
+        headers: |-
+          Content-Type: application/json
+          apikey: {{#start.evolution_api_key#}}
+        method: post
+        params: ''
+        retry_config:
+          enabled: true
+          exponential_backoff:
+            enabled: false
+          max_retries: 2
+          retry_interval: 1000
+        selected: false
+        timeout:
+          connect: 10
+          read: 30
+          write: 30
+        title: Send WhatsApp
+        type: http-request
+        url: '{{#start.evolution_base_url#}}/message/sendText/{{#start.evolution_instance#}}'
+      height: 90
+      id: send_whatsapp
+      position:
+        x: 638
+        y: 227
+      positionAbsolute:
+        x: 638
+        y: 227
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    - data:
+        desc: Return delivery status and the exact message that was attempted.
+        outputs:
+        - value_selector:
+          - send_whatsapp
+          - status_code
+          value_type: number
+          variable: status_code
+        - value_selector:
+          - send_whatsapp
+          - body
+          value_type: string
+          variable: evolution_response
+        - value_selector:
+          - compose_first_touch
+          - output
+          value_type: string
+          variable: message_sent
+        - value_selector:
+          - start
+          - lead_id
+          value_type: string
+          variable: lead_id
+        selected: false
+        title: End
+        type: end
+      height: 90
+      id: end
+      position:
+        x: 942
+        y: 227
+      positionAbsolute:
+        x: 942
+        y: 227
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 244
+    viewport:
+      x: 0
+      y: 0
+      zoom: 0.7

@@ -8,6 +8,7 @@ node_modules/
 # environment
 .env
 .env.*
+!.env.example
 
 # editor
 .vscode/
@@ -20,3 +21,10 @@ Thumbs.db
 # reports (not part of the site)
 ci-report.html
 website-copy-rewrite.md
+devfull.log
+*.sql
+lawyer_marketing_hero_landing_page.html
+CI_Brand_Evolution.html
+
+# runtime lead backups
+server/data/
