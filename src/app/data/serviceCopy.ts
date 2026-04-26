@@ -144,5 +144,69 @@ export const serviceTiers: Record<string, ServiceCopy> = {
         imageIcon: "TrendingUp"
       }
     ]
+  },
+  "meta-advertising-for-lawyers": {
+    tiers: [
+      {
+        id: 1,
+        headline: "Turn Algorithmic Attention Into Retained Cases",
+        p1: "Meta’s targeting engine allows us to place your firm in front of specific demographics before they even know they need to search for a lawyer.",
+        p2: "We build demand through strategic disruption. By the time they have a legal need, you are already the firm they trust.",
+        imageIcon: "Target"
+      },
+      {
+        id: 2,
+        headline: "Direct-Response Copywriting That Commands Action",
+        p1: "We don't do 'vanity branding.' Our Meta campaigns use aggressive, empathy-driven copywriting that speaks directly to the specific legal problems of your ideal client.",
+        p2: "We transform passive scrollers into highly qualified leads by pressing the exact psychological triggers that compel them to seek legal counsel.",
+        imageIcon: "Sparkles"
+      },
+      {
+        id: 3,
+        headline: "Retargeting That Makes Your Firm Omnipresent",
+        p1: "A prospect visited your site but didn't call? We deploy stealth retargeting campaigns that follow them across Facebook and Instagram, reminding them of your authority.",
+        p2: "They will see your firm’s success stories everywhere until they finally book their consultation.",
+        imageIcon: "ShieldCheck"
+      },
+      {
+        id: 4,
+        headline: "Transparent Metrics Based on Revenue, Not 'Likes'",
+        p1: "We don't measure success by algorithmic likes or shares. We track the exact cost per acquisition for every lead generated through Meta platforms.",
+        p2: "You receive a clear, unvarnished dashboard showing exactly how your ad spend translates into high-value case retainers.",
+        imageIcon: "TrendingUp"
+      }
+    ]
+  },
+  "social-media-marketing-for-lawyers": {
+    tiers: [
+      {
+        id: 1,
+        headline: "Establish Uncontested Market Authority Every Single Day",
+        p1: "Consistent, high-impact social media presence isn't an option—it's how modern legal consumers vet your credibility. An empty social profile is a red flag to a high-paying client.",
+        p2: "We publish daily, authoritative content perfectly aligned with the Bar Council’s publicity guidelines so you always look like the dominant force in your market.",
+        imageIcon: "Target"
+      },
+      {
+        id: 2,
+        headline: "Engineer Your Personal Brand For High-Value Litigation",
+        p1: "Clients hire lawyers, not abstract entities. We build your personal brand across LinkedIn and other professional networks, positioning you as the indisputable thought-leader.",
+        p2: "When peers and potential clients see your insights consistently, your referral network expands exponentially without any aggressive pitching.",
+        imageIcon: "Sparkles"
+      },
+      {
+        id: 3,
+        headline: "Educational Content That Pre-Qualifies Your Best Leads",
+        p1: "We answer the exact questions your ideal clients are asking. By providing high-level educational content, we pre-sell your competence before the prospect even dials your number.",
+        p2: "Your consultations change from 'Why should I hire you?' to 'When can we start?'",
+        imageIcon: "ShieldCheck"
+      },
+      {
+        id: 4,
+        headline: "Flawless Execution While You Focus on Practicing Law",
+        p1: "You don't need another job. We handle the content calendar, the professional graphics, the copywriting, and the scheduling. We run your authority engine in the background.",
+        p2: "You instantly upgrade your firm’s image from a local practice to a premium legal powerhouse.",
+        imageIcon: "TrendingUp"
+      }
+    ]
   }
 };
