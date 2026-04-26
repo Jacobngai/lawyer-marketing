@@ -91,7 +91,7 @@ export const ContactPage: React.FC = () => {
 
     try {
       if (normalizedPhone.length < 10 || normalizedPhone.length > 15) {
-        throw new Error("Please enter a valid WhatsApp number. Example: 0175032281 or +60 17-503 2281.");
+        throw new Error("Please enter a valid WhatsApp number.");
       }
 
       const response = await fetch(CONTACT_API_URL, {
@@ -304,12 +304,11 @@ export const ContactPage: React.FC = () => {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="0175032281 or +60 17-503 2281"
+                    placeholder="WhatsApp Number"
                     className="w-full bg-background border border-border px-4 py-4 rounded-none focus:border-accent outline-none transition-colors"
                   />
                   <p className="text-[11px] text-foreground/40 leading-relaxed">
-                    We will format Malaysian numbers automatically for WhatsApp.
-                    {showPhonePreview ? ` Sending as ${normalizedPhone}.` : " Example: 0175032281 becomes 60175032281."}
+                    We'll handle the formatting. {showPhonePreview && `Entering as ${normalizedPhone}.`}
                   </p>
                 </div>
 
