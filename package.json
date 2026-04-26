@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "dev:full": "concurrently \"npm run server\" \"npm run dev\"",
-    "build": "vite build",
+    "build": "node scripts/generate-sitemap.cjs && vite build",
     "preview": "vite preview",
     "server": "node server/index.mjs",
     "start": "node server/index.mjs"
