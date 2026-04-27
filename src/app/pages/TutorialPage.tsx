@@ -1,11 +1,20 @@
 import { motion } from "motion/react";
 import { ArrowLeft, MessageCircle, Share2, Printer, BookOpen } from "lucide-react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { tutorials } from "../data/tutorials";
 import { SEO } from "../components/SEO";
 
 export function TutorialPage() {
   const { id } = useParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (id === 'lawyer-seo-masterclass') {
+      navigate('/tutorials/overview-seo-for-lawyers', { replace: true });
+    }
+  }, [id, navigate]);
+
   const tutorial = tutorials.find(t => t.id === id);
 
   if (!tutorial) {

@@ -25,19 +25,6 @@ function ScrollToTop() {
 export default function App() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-  // Global search shortcut (Cmd/Ctrl + K)
-  useEffect(() => {
-    const down = (e: KeyboardEvent) => {
-      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault();
-        setIsSearchOpen((open) => !open);
-      }
-    };
-
-    document.addEventListener("keydown", down);
-    return () => document.removeEventListener("keydown", down);
-  }, []);
-
   return (
     <Router>
       <ScrollToTop />

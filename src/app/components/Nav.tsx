@@ -90,16 +90,19 @@ export function Nav({ onSearchClick }: { onSearchClick?: () => void }) {
           </div>
 
           <div className="flex items-center gap-4">
-            <button
+            <motion.button
+              whileHover={{ scale: 1.1, color: "#C9A961" }}
+              whileTap={{ scale: 0.9 }}
               onClick={onSearchClick}
-              className="p-2 text-foreground/70 hover:text-accent transition-colors flex items-center gap-2 group"
+              className="p-2 text-foreground/70 transition-colors flex items-center group relative"
               aria-label="Search"
             >
               <Search className="w-5 h-5 md:w-6 md:h-6" />
-              <kbd className="hidden lg:flex items-center gap-1 px-1.5 py-0.5 text-[10px] uppercase font-sans border border-white/10 rounded bg-white/5 text-slate-500 group-hover:border-accent/30 group-hover:text-accent/70 transition-colors">
-                <span className="text-[8px]">⌘</span>K
-              </kbd>
-            </button>
+              <motion.div 
+                layoutId="search-glow"
+                className="absolute inset-0 bg-accent/10 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity"
+              />
+            </motion.button>
 
             <Link to="/contact" onClick={() => setActiveMenu(null)}>
               <motion.button
