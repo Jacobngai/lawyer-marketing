@@ -1,4 +1,8 @@
 import criminalImg from "../../imports/pillars/criminal_defense_lux.png";
+// We will reuse or map images properly in next steps, using placeholder logic for now
+import familyImg from "../../imports/pillars/criminal_defense_lux.png"; 
+import corporateImg from "../../imports/pillars/criminal_defense_lux.png";
+import propertyImg from "../../imports/pillars/criminal_defense_lux.png";
 
 export interface Pillar {
   id: string;
@@ -33,6 +37,54 @@ export const pillars: Pillar[] = [
       { label: "Avg. Response Time", value: "< 2 Mins" },
       { label: "Crisis Lead Conv.", value: "42%" },
       { label: "Market Dominance", value: "Top 3" }
+    ]
+  },
+  {
+    id: "family-law-marketing",
+    title: "Family & Matrimonial Law Marketing",
+    subtitle: "Empathy, Discretion & High-Value Retainers",
+    content: `
+      <p>Family law marketing is a battle for empathy and trust. Clients aren't just looking for an 'expert'—they are looking for a protector who can handle their most personal crises with absolute discretion.</p>
+      
+      <h3>1. The Empathy-First Conversion Path</h3>
+      <p>We move away from 'aggressive' legal copy Toward authoritative empathy. Your website becomes a safe space where prospective clients find clear answers to their emotional and financial fears.</p>
+      
+      <h3>2. Filtering High-Quality Retainers</h3>
+      <p>Don't waste administrative time on information-seekers. We implement intake filters that prioritize high-net-worth matrimonial disputes and complex custody cases, ensuring your team only speaks to clients who appreciate your value.</p>
+      
+      <h3>3. Reputation & Search Dominance</h3>
+      <p>In family law, reviews and local citations are the ultimate currency. We build a 'wall of trust' around your firm that makes you the only logical choice for high-stakes divorce litigation.</p>
+    `,
+    image: familyImg,
+    href: "/practice-areas/family-law-marketing",
+    stats: [
+      { label: "High-Worth Case Lead", value: "+280%" },
+      { label: "Consultation Rate", value: "35%" },
+      { label: "Client Trust Score", value: "Elite" }
+    ]
+  },
+  {
+    id: "corporate-commercial-law-marketing",
+    title: "Corporate & Commercial Law Marketing",
+    subtitle: "Institutional Authority & Panel Acquisition",
+    content: `
+      <p>B2B and Corporate legal marketing requires a shift from 'retail' search to 'institutional' authority. You aren't just looking for clicks; you are looking to be invited onto the panels of Malaysia's largest enterprises.</p>
+      
+      <h3>1. AI Engine Optimization (AIEO)</h3>
+      <p>Multi-national companies use AI-research tools to vet law firms. We ensure your firm is the 'recommended authority' for M&A, cross-border disputes, and commercial advisory when AI models scan the web.</p>
+      
+      <h3>2. Thought Leadership Infrastructure</h3>
+      <p>We transform your partners into industry luminaries through strategic whitepapers and LinkedIn thought leadership that targets C-suite decision makers and General Counsels.</p>
+      
+      <h3>3. The 'Panel Ready' Digital Profile</h3>
+      <p>We engineer your digital presence to meet the highest standards of corporate vetting, showcasing your specialized technical capacity and track record in complex commercial litigation.</p>
+    `,
+    image: corporateImg,
+    href: "/practice-areas/corporate-commercial-law-marketing",
+    stats: [
+      { label: "Institutional Inquiries", value: "Top 1%" },
+      { label: "AIO Citation Velocity", value: "High" },
+      { label: "Market Perc. Value", value: "Premium" }
     ]
   }
 ];

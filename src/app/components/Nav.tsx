@@ -1,9 +1,10 @@
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { services } from "../data/services";
 import { pillars } from "../data/pillars";
+import { tutorials } from "../data/tutorials";
 import { cn } from "./ui/utils";
 
 const logo = "/images/logo-full-360.webp";
@@ -19,7 +20,7 @@ const megaMenuStyles = `
   }
 `;
 
-export function Nav() {
+export function Nav({ onSearchClick }: { onSearchClick?: () => void }) {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -36,6 +37,7 @@ export function Nav() {
 
   const menuItems = [
     { id: "what-we-do", label: "What We Do" },
+    { id: "seo-guide", label: "SEO Guide" },
   ];
 
   return (
@@ -88,6 +90,17 @@ export function Nav() {
           </div>
 
           <div className="flex items-center gap-4">
+            <button
+              onClick={onSearchClick}
+              className="p-2 text-foreground/70 hover:text-accent transition-colors flex items-center gap-2 group"
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5 md:w-6 md:h-6" />
+              <kbd className="hidden lg:flex items-center gap-1 px-1.5 py-0.5 text-[10px] uppercase font-sans border border-white/10 rounded bg-white/5 text-slate-500 group-hover:border-accent/30 group-hover:text-accent/70 transition-colors">
+                <span className="text-[8px]">⌘</span>K
+              </kbd>
+            </button>
+
             <Link to="/contact" onClick={() => setActiveMenu(null)}>
               <motion.button
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(201, 169, 97, 0.9)" }}
@@ -125,9 +138,11 @@ export function Nav() {
               <div className="max-w-7xl mx-auto px-6 py-6 md:py-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
                   <div className="space-y-1">
-                    <span className="text-accent text-[9px] uppercase tracking-[0.4em] font-bold">Solutions</span>
+                    <span className="text-accent text-[9px] uppercase tracking-[0.4em] font-bold">
+                      {activeMenu === "seo-guide" ? "Knowledge Hub" : "Solutions"}
+                    </span>
                     <h2 className="text-2xl md:text-4xl font-serif text-white tracking-tight leading-none">
-                      {activeMenu === "what-we-do" ? "Digital Marketing Services" : "Specialized Practice Areas"}
+                      {activeMenu === "what-we-do" ? "Digital Marketing Services" : activeMenu === "seo-guide" ? "Lawyer SEO Masterclass" : "Specialized Practice Areas"}
                     </h2>
                   </div>
                 </div>
@@ -135,10 +150,10 @@ export function Nav() {
                 <div className="h-px w-full bg-gradient-to-r from-accent/50 via-accent/10 to-transparent mb-8" />
                 
                 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
-                  {(activeMenu === "what-we-do" ? services : pillars).map((item: any, index: number) => (
+                  {(activeMenu === "what-we-do" ? services : activeMenu === "seo-guide" ? tutorials : pillars).map((item: any, index: number) => (
                     <li key={item.id} className="group">
                         <Link
-                          to={item.href}
+                          to={activeMenu === "seo-guide" ? `/tutorials/${item.id}` : item.href}
                           onClick={() => setActiveMenu(null)}
                           className="flex flex-col md:flex-row gap-4 md:gap-8 items-start no-underline outline-none transition-all group"
                         >

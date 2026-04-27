@@ -73,15 +73,15 @@ export function BlogPostPage() {
           </h1>
 
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-accent/20 border border-accent flex items-center justify-center font-serif text-accent italic text-sm">
-                JN
+            <Link to="/author/jacob-ng" className="flex items-center gap-4 group cursor-pointer">
+              <div className="w-10 h-10 rounded-full bg-accent/20 border border-accent flex items-center justify-center font-serif text-accent italic text-sm group-hover:bg-accent/40 transition-colors overflow-hidden">
+                <img src="/images/jacob-headshot.jpg" alt="Jacob Ng" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = 'JN'; }} />
               </div>
               <div>
-                <div className="text-sm font-medium">{post.author}</div>
+                <div className="text-sm font-medium group-hover:text-accent transition-colors">{post.author}</div>
                 <div className="text-[10px] text-foreground/50 uppercase tracking-wider">{post.date}</div>
               </div>
-            </div>
+            </Link>
             <div className="flex items-center gap-2">
               <button className="p-2 hover:text-accent transition-colors text-foreground/50"><Share2 className="w-4 h-4" /></button>
               <button className="p-2 hover:text-accent transition-colors text-foreground/50"><Printer className="w-4 h-4" /></button>

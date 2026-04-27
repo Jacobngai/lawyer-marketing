@@ -19,6 +19,19 @@ import { SEO } from "../components/SEO";
 
 const CONTACT_API_URL = import.meta.env.VITE_CONTACT_API_URL || "/api/contact/submit";
 
+// Google Ads Conversion tracking constants
+const GOOGLE_ADS_ID = "AW-417408785";
+const CONVERSION_LABELS = {
+  "landing-page": "Mn09CNaN8KIcEJHOhMcB",
+  "audit": "gafgCNmN8KIcEJHOhMcB"
+};
+
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 type Goal = "landing-page" | "audit";
 
 type SubmissionState = {
@@ -118,6 +131,16 @@ export const ContactPage: React.FC = () => {
       });
 
       setStatus("success");
+      
+      // Fire Google Ads Conversion Event
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", "conversion", {
+          send_to: `${GOOGLE_ADS_ID}/${CONVERSION_LABELS[formData.goal]}`,
+          value: 1.0,
+          currency: "MYR",
+        });
+      }
+
       resetForm();
     } catch (error) {
       console.error("Submission error:", error);

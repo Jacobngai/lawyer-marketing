@@ -10,57 +10,33 @@ export interface BlogPost {
   readingTime: string;
 }
 
+import { post as post1 } from "./posts/lawyer-advertising-rules-malaysia-2026";
+import { post as post2 } from "./posts/law-firm-ai-authority-search-optimization";
+import { post as post3 } from "./posts/litigation-lawyer-personal-branding-strategy";
+import { post as post4 } from "./posts/chat-gpt-for-lawyers";
+import { post as post5 } from "./posts/ai-seo";
+import { post as post6 } from "./posts/aio-for-law-firms";
+import { post as post7 } from "./posts/content-marketing-for-law-firms";
+import { post as post8 } from "./posts/content-optimization";
+import { post as post9 } from "./posts/crawling-indexing-for-law-firms";
+import { post as post10 } from "./posts/domain-authority-for-law-firms";
+import { post as post11 } from "./posts/google-analytics-for-lawyers";
+import { post as post12 } from "./posts/google-my-business-for-lawyers";
+import { post as post13 } from "./posts/google-my-business-ranking-study";
+import { post as post14 } from "./posts/importance-of-empathy-in-law-firms";
+import { post as post15 } from "./posts/keyword-optimization-for-lawyers";
+import { post as post16 } from "./posts/keyword-research";
+import { post as post17 } from "./posts/law-firm-marketing-conference";
+import { post as post18 } from "./posts/law-firm-marketing-strategies";
+import { post as post19 } from "./posts/lawyer-blog-topics";
+import { post as post20 } from "./posts/lead-generation-lawyers";
+import { post as post21 } from "./posts/legal-directories";
+import { post as post22 } from "./posts/local-services-ads-for-lawyers";
+import { post as post23 } from "./posts/long-tail-keywords-for-lawyers";
+import { post as post24 } from "./posts/semantic-seo-for-law-firms";
+
 export const blogPosts: BlogPost[] = [
-  {
-    id: "lawyer-advertising-rules-malaysia-2026",
-    title: "The 2026 Malaysian Lawyer Advertising Rules: A Definitive Guide",
-    excerpt: "Everything you need to know about the Bar Council's landmark decision on digital lawyer marketing and social media presence.",
-    category: "Compliance",
-    date: "Jan 15, 2026",
-    author: "Jacob Ng",
-    readingTime: "10 MIN READ",
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200",
-    content: `
-      <h2>The Paradigm Shift in Malaysia's Legal Sector</h2>
-      <p>January 2026 marks a historic turning point for the Malaysian lawyer profession. The Bar Council's updated Publicity Rules have finally aligned with the digital age, allowing law firms to engage in strategic lawyer marketing while maintaining the decorum and integrity of the profession.</p>
-      
-      <h3>What Has Changed?</h3>
-      <p>Under the new rules, law firms are no longer restricted to passive presence. Active engagement through search engine marketing, social media educational content, and professional directory listings is now officially sanctioned, provided they don't engage in "ambulance chasing" or disparaging other members of the Bar.</p>
-      
-      <blockquote>
-        "The goal is not to sell, but to inform. Lawyer advertising must be performed with the dignity that matches the legal profession."
-      </blockquote>
-    `
-  },
-  {
-    id: "law-firm-ai-authority-search-optimization",
-    title: "Becoming a Law Firm AI-Cited Authority: AIEO & GEO",
-    excerpt: "Why the classic lawyer SEO playbook is dead, and how to optimize your law firm for Perplexity, ChatGPT, and AI Search Engines.",
-    category: "AI Marketing",
-    date: "Jan 12, 2026",
-    author: "Jacob Ng",
-    readingTime: "8 MIN READ",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200",
-    content: `
-      <h2>The Post-Search Era: AI Engine Optimization (AIEO)</h2>
-      <p>We are transitioning from lawyer SEO to AI Engine Optimization. When a prospective client asks an AI, "Who is the most qualified lawyer for intellectual property in Malaysia?", the AI doesn't give them 10 links; it gives them a single, authoritative law firm recommendation.</p>
-      
-      <h3>How AI Models Select Law Firms</h3>
-      <p>AI models like Perplexity and ChatGPT look for 'Citation Velocity' and 'Contextual Authority'. They analyze the entire web to find law firms that are consistently mentioned in high-quality legal contexts, news outlets, and professional directories.</p>
-    `
-  },
-  {
-    id: "litigation-lawyer-personal-branding-strategy",
-    title: "High-Ticket Lawyer Personal Branding for Litigation Partners",
-    excerpt: "From professional law firm photography to LinkedIn thought leadership—how to build a name that commands premium fees.",
-    category: "Branding",
-    date: "Jan 10, 2026",
-    author: "Jacob Ng",
-    readingTime: "12 MIN READ",
-    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1200",
-    content: `
-      <h2>The Power of the Individual in the Legal Market</h2>
-      <p>Clients don't hire law firms; they hire lawyers. For senior litigation partners, your personal branding is your most valuable asset. In a market saturated with "experts," a well-crafted lawyer brand allows you to command premium fees and win multi-million ringgit cases.</p>
-    `
-  }
+  post1, post2, post3, post4, post5, post6, post7, post8, post9, post10, 
+  post11, post12, post13, post14, post15, post16, post17, post18, post19, post20,
+  post21, post22, post23, post24
 ];

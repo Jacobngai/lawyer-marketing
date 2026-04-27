@@ -65,6 +65,12 @@ export function BlogPage() {
                 <span className="px-3 py-1 bg-accent/10 border border-accent rounded-sm">{blogPosts[0].category}</span>
                 <span className="flex items-center gap-1"><Calendar className="w-4 h-4" /> {blogPosts[0].date}</span>
               </div>
+              <Link to="/author/jacob-ng" className="flex items-center gap-2 mb-6 group/author w-fit">
+                <div className="w-6 h-6 rounded-full bg-accent/20 border border-accent flex items-center justify-center font-serif text-accent italic text-[8px] overflow-hidden">
+                  <img src="/images/jacob-headshot.jpg" alt="Jacob Ng" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = 'JN'; }} />
+                </div>
+                <span className="text-xs text-foreground/50 group-hover/author:text-accent transition-colors">By {blogPosts[0].author}</span>
+              </Link>
               <h2 className="text-3xl md:text-4xl mb-6 leading-tight group-hover:text-accent transition-colors">
                 {blogPosts[0].title}
               </h2>
@@ -112,7 +118,15 @@ export function BlogPage() {
               <p className="text-foreground/60 text-sm mb-6 line-clamp-2">
                 {post.excerpt}
               </p>
-              <div className="mt-auto pt-6">
+              <div className="flex items-center gap-2 mb-6 group/author w-fit">
+                <Link to="/author/jacob-ng" className="flex items-center gap-2">
+                  <div className="w-5 h-5 rounded-full bg-accent/20 border border-accent flex items-center justify-center font-serif text-accent italic text-[7px] overflow-hidden">
+                    <img src="/images/jacob-headshot.jpg" alt="Jacob Ng" className="w-full h-full object-cover" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement!.innerHTML = 'JN'; }} />
+                  </div>
+                  <span className="text-[10px] text-foreground/40 group-hover/author:text-accent transition-colors">By {post.author}</span>
+                </Link>
+              </div>
+              <div className="mt-auto pt-6 border-t border-border/50">
                 <Link to={`/blog/${post.id}`}>
                   <div className="flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all">
                     Read Article <ChevronRight className="w-4 h-4" />

@@ -5,9 +5,12 @@ import { BlogPostPage } from "./pages/BlogPostPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ServicePage } from "./pages/ServicePage";
 import { PracticeAreaPage } from "./pages/PracticeAreaPage";
+import { TutorialPage } from "./pages/TutorialPage";
+import { AuthorPage } from "./pages/AuthorPage";
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
-import { useEffect } from "react";
+import { SearchModal } from "./components/SearchModal";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 // Scroll to top on route change
@@ -20,11 +23,26 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  // Global search shortcut (Cmd/Ctrl + K)
+  useEffect(() => {
+    const down = (e: KeyboardEvent) => {
+      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        setIsSearchOpen((open) => !open);
+      }
+    };
+
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
       <div className="min-h-screen bg-background text-foreground flex flex-col font-inter">
-        <Nav />
+        <Nav onSearchClick={() => setIsSearchOpen(true)} />
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -33,10 +51,16 @@ export default function App() {
             <Route path="/services/:id" element={<ServicePage />} />
             <Route path="/practice-areas/:id" element={<PracticeAreaPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/tutorials/:id" element={<TutorialPage />} />
+            <Route path="/author/:id" element={<AuthorPage />} />
           </Routes>
         </div>
         <Footer />
       </div>
+      <SearchModal 
+        isOpen={isSearchOpen} 
+        onClose={() => setIsSearchOpen(false)} 
+      />
     </Router>
   );
 }
