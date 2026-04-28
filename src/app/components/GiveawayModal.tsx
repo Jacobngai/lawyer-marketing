@@ -228,7 +228,7 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
                     disabled={status === "loading" || !formData.domainStatus}
                     className="w-full py-5 bg-accent text-accent-foreground font-black uppercase tracking-[0.3em] text-[10px] flex items-center justify-center gap-3 hover:bg-white hover:text-black transition-all disabled:opacity-50 shadow-xl"
                   >
-                    {status === "loading" ? "Processing Application..." : "Claim Everything For Free"}
+                    {status === "loading" ? "Processing Application..." : "CHECK IF YOU ARE RIGHT FIT"}
                     <ArrowRight className="w-4 h-4" />
                   </button>
 
