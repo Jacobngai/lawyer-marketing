@@ -1,5 +1,5 @@
 import { Pillar } from "../pillars";
-import criminalImg from "../../../imports/pillars/criminal_defense_lux.png"; // Placeholder
+import constructionImg from "../../../imports/pillars/construction_law.png";
 
 export const pillar: Pillar = {
   id: "construction-law-lawyer-marketing",
@@ -22,7 +22,7 @@ export const pillar: Pillar = {
     <h2>4. Industry-Specific technical SEO</h2>
     <p>Construction law is technical. We create deep-dive analysis of PAM, CIDB, and PWD contract forms. By being the technical "Library" that contractors use to look up clauses, you establish an authority loop that makes your firm the natural choice when a contract is breached.</p>
   `,
-  image: criminalImg,
+  image: constructionImg,
   href: "/practice-areas/construction-law-lawyer-marketing",
   stats: [
     { label: "CIPAA Claims/Mo", value: "15+" },

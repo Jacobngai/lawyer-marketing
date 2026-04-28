@@ -1,5 +1,5 @@
 import { Pillar } from "../pillars";
-import familyImg from "../../../imports/pillars/criminal_defense_lux.png"; // Reusing for now as per original code
+import familyImg from "../../../imports/pillars/family_law.png";
 
 export const pillar: Pillar = {
   id: "family-law-marketing",

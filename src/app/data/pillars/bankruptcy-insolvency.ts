@@ -1,5 +1,5 @@
 import { Pillar } from "../pillars";
-import criminalImg from "../../../imports/pillars/criminal_defense_lux.png"; // Placeholder
+import bankruptcyImg from "../../../imports/pillars/bankruptcy_insolvency.png";
 
 export const pillar: Pillar = {
   id: "bankruptcy-lawyer-marketing",
@@ -22,7 +22,7 @@ export const pillar: Pillar = {
     <h2>4. Discreet Intake & Privacy Signals</h2>
     <p>Privacy is everything. We ensure your landing pages feature prominent confidentiality guarantees and low-friction, discreet contact methods (like direct WhatsApp encrypted lines). By reducing the anxiety of the first contact, we significantly increase your lead-to-retainer conversion rate.</p>
   `,
-  image: criminalImg,
+  image: bankruptcyImg,
   href: "/practice-areas/bankruptcy-lawyer-marketing",
   stats: [
     { label: "Debt Disch. Index", value: "High" },

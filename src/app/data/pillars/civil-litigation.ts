@@ -1,5 +1,5 @@
 import { Pillar } from "../pillars";
-import criminalImg from "../../../imports/pillars/criminal_defense_lux.png"; // Placeholder
+import civilImg from "../../../imports/pillars/civil_litigation.png";
 
 export const pillar: Pillar = {
   id: "civil-litigation-lawyer-marketing",
@@ -22,7 +22,7 @@ export const pillar: Pillar = {
     <h2>4. Outcome-Driven Messaging (Compliance-Safe)</h2>
     <p>While we avoid guaranteeing results, we use empirical data and process transparency to signal success. We highlight the <em>scales of disputes</em> you handle and your experience in the High Court and Court of Appeal. This signaling is the most powerful "Selection Bias" we can create for your firm.</p>
   `,
-  image: criminalImg,
+  image: civilImg,
   href: "/practice-areas/civil-litigation-lawyer-marketing",
   stats: [
     { label: "High Court Cases", value: "100+" },

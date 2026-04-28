@@ -1,5 +1,5 @@
 import { Pillar } from "../pillars";
-import criminalImg from "../../../imports/pillars/criminal_defense_lux.png"; // Placeholder
+import insuranceImg from "../../../imports/pillars/insurance_claims.png";
 
 export const pillar: Pillar = {
   id: "insurance-claims-lawyer-marketing",
@@ -27,7 +27,7 @@ export const pillar: Pillar = {
     <h2>4. Referral Engineering: The Agent Network</h2>
     <p>Many insurance disputes start with a frustrated insurance agent who can't help their client. We build marketing assets that target these agents, positioning your firm as the "Expert Referral Partner" who can handle the claims they can't. This creates a steady stream of high-intent, pre-vetted leads.</p>
   `,
-  image: criminalImg,
+  image: insuranceImg,
   href: "/practice-areas/insurance-claims-lawyer-marketing",
   stats: [
     { label: "Claim Rec. Rate", value: "High" },

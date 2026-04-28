@@ -1,5 +1,5 @@
 import { Pillar } from "../pillars";
-import criminalImg from "../../../imports/pillars/criminal_defense_lux.png"; // Placeholder
+import cyberImg from "../../../imports/pillars/cybercrime_tech.png";
 
 export const pillar: Pillar = {
   id: "cybercrime-tech-lawyer-marketing",
@@ -22,7 +22,7 @@ export const pillar: Pillar = {
     <h2>4. Digital Forensics Narrative</h2>
     <p>We communicate your firm's technical depth. By detailing your approach to "Digital Evidence," "IP-tracing," and "Metadata as Proof," you prove that you aren't just "reading the law," but you are "mastering the machine." This tech-legal hybrid positioning is the ultimate competitive advantage for a modern practice.</p>
   `,
-  image: criminalImg,
+  image: cyberImg,
   href: "/practice-areas/cybercrime-tech-lawyer-marketing",
   stats: [
     { label: "Breach Resp. Index", value: "Elite" },

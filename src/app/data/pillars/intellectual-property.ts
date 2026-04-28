@@ -1,5 +1,5 @@
 import { Pillar } from "../pillars";
-import criminalImg from "../../../imports/pillars/criminal_defense_lux.png"; // Placeholder
+import ipImg from "../../../imports/pillars/intellectual_property.png";
 
 export const pillar: Pillar = {
   id: "intellectual-property-lawyer-marketing",
@@ -22,7 +22,7 @@ export const pillar: Pillar = {
     <h2>4. Startup Ecosystem Integration</h2>
     <p>We build visibility within the digital hubs where founders spend time—LinkedIn, tech forums, and entrepreneur communities. By providing value-first guides on "Startup IP Checklists," we capture high-growth companies at their inception, building a relationship that scales as their IP portfolio grows.</p>
   `,
-  image: criminalImg,
+  image: ipImg,
   href: "/practice-areas/intellectual-property-lawyer-marketing",
   stats: [
     { label: "IP Filings/Mo", value: "25+" },

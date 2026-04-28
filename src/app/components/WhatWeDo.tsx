@@ -2,10 +2,17 @@ import { motion } from "motion/react";
 import { Globe, MapPin, Megaphone, User, ArrowRight, Check, Sparkles, TrendingUp } from "lucide-react";
 import { useState } from "react";
 
+// Image Imports
+import seoImg from "../imports/services/seo_geo_optimized.png";
+import gmbImg from "../imports/services/gmb_optimization.png";
+import adsImg from "../imports/services/paid_advertising.png";
+import brandImg from "../imports/services/brand_building.png";
+
 const services = [
   {
     icon: Globe,
     title: "The Conversion Machine",
+    image: seoImg,
     description: "A generic website is just a digital brochure. We build highly-engineered conversion machines that dominate search results and force potential clients to take action. If you're not on Page 1, you don't exist.",
     features: [
       "Absolute Search Dominance",
@@ -20,6 +27,7 @@ const services = [
   {
     icon: MapPin,
     title: "Local Territory Capture",
+    image: gmbImg,
     description: "We claim your geographic territory and transform your maps profile into a client-generating powerhouse. We make your firm the only logical choice for anyone searching in your backyard.",
     features: [
       "Local Map Domination",
@@ -34,6 +42,7 @@ const services = [
   {
     icon: Megaphone,
     title: "Aggressive Case Acquisition",
+    image: adsImg,
     description: "We don't just 'run ads.' We deploy aggressive acquisition campaigns on Google and Meta that target high-intent searchers and turn them into signed cases. Absolute ROI focus.",
     features: [
       "High-Intent Search Targeting",
@@ -48,6 +57,7 @@ const services = [
   {
     icon: User,
     title: "Authority Manufacturing",
+    image: brandImg,
     description: "We manufacture your reputation as the definitive expert. We craft a compelling narrative that positions you so far above the competition that fees become secondary to your expertise.",
     features: [
       "Expert Narrative Strategy",
@@ -97,6 +107,25 @@ export function WhatWeDo() {
               }
               transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
             />
+
+            {/* Background Image Overlay */}
+            <motion.div
+              className="absolute inset-0 z-0 overflow-hidden"
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={
+                hoveredIndex === index
+                  ? { opacity: 0.15, scale: 1 }
+                  : { opacity: 0, scale: 1.1 }
+              }
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-full object-cover grayscale brightness-50"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+            </motion.div>
 
             {/* Floating particles on hover - hidden on mobile for performance */}
             {hoveredIndex === index && (

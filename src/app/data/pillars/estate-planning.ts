@@ -1,5 +1,5 @@
 import { Pillar } from "../pillars";
-import criminalImg from "../../../imports/pillars/criminal_defense_lux.png"; // Placeholder
+import estateImg from "../../../imports/pillars/estate_planning.png";
 
 export const pillar: Pillar = {
   id: "estate-planning-lawyer-marketing",
@@ -28,7 +28,7 @@ export const pillar: Pillar = {
     <h2>4. High-Net-Worth Trust Pipelines</h2>
     <p>For sophisticated clients, we build authority in family trusts and offshore wealth structuring. This positioning moves you away from the "Retail Will" market and into the "Private Client" sphere, where case values are significantly higher and the client relationship lasts for generations.</p>
   `,
-  image: criminalImg,
+  image: estateImg,
   href: "/practice-areas/estate-planning-lawyer-marketing",
   stats: [
     { label: "New Wills/Month", value: "30+" },

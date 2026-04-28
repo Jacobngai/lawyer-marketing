@@ -1,5 +1,5 @@
 import { Pillar } from "../pillars";
-import criminalImg from "../../../imports/pillars/criminal_defense_lux.png"; // Placeholder
+import immigrationImg from "../../../imports/pillars/immigration.png";
 
 export const pillar: Pillar = {
   id: "immigration-lawyer-marketing",
@@ -22,7 +22,7 @@ export const pillar: Pillar = {
     <h2>4. Urgent Rejection Recovery</h2>
     <p>A visa rejection is a crisis. We create "Urgent Response" landing pages targeting clients whose applications have just been denied. These are high-urgency, high-value leads who need an expert to fix a messy situation immediately. Your firm becomes the "Fixer" they desperation call.</p>
   `,
-  image: criminalImg,
+  image: immigrationImg,
   href: "/practice-areas/immigration-lawyer-marketing",
   stats: [
     { label: "Intl. Reach", value: "Global" },

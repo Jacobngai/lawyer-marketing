@@ -1,5 +1,5 @@
 import { Pillar } from "../pillars";
-import criminalImg from "../../../imports/pillars/criminal_defense_lux.png"; // Placeholder
+import environmentalImg from "../../../imports/pillars/environmental_law.png";
 
 export const pillar: Pillar = {
   id: "environmental-lawyer-marketing",
@@ -22,7 +22,7 @@ export const pillar: Pillar = {
     <h2>4. Sector-Specific Compliance Silos</h2>
     <p>We target the high-risk industries: Plantation, Manufacturing, Energy, and Construction. By creating "Environmental Compliance Guides" for each sector, you prove your industry depth and build a specialized authority that horizontal competitors cannot match.</p>
   `,
-  image: criminalImg,
+  image: environmentalImg,
   href: "/practice-areas/environmental-lawyer-marketing",
   stats: [
     { label: "Compliance Audits", value: "30+" },

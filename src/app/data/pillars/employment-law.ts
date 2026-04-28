@@ -1,5 +1,5 @@
 import { Pillar } from "../pillars";
-import criminalImg from "../../../imports/pillars/criminal_defense_lux.png"; // Placeholder
+import employmentImg from "../../../imports/pillars/employment_law.png";
 
 export const pillar: Pillar = {
   id: "employment-lawyer-marketing",
@@ -22,7 +22,7 @@ export const pillar: Pillar = {
     <h2>4. Preventive Advisory Pipelines</h2>
     <p>The highest-value work is often preventive. We help you market annual retainer packages for HR legal audits and employment contract reviews. By positioning your firm as the "Preventive Shield," you build a predictable, high-value recurring revenue stream for your practice.</p>
   `,
-  image: criminalImg,
+  image: employmentImg,
   href: "/practice-areas/employment-lawyer-marketing",
   stats: [
     { label: "Tribunal Win Signal", value: "High" },

@@ -1,5 +1,5 @@
 import { Pillar } from "../pillars";
-import criminalImg from "../../../imports/pillars/criminal_defense_lux.png"; // Placeholder
+import entertainmentImg from "../../../imports/pillars/entertainment_media.png";
 
 export const pillar: Pillar = {
   id: "entertainment-media-lawyer-marketing",
@@ -22,7 +22,7 @@ export const pillar: Pillar = {
     <h2>4. Speaking the Creative Language</h2>
     <p>We move away from traditional legalese to a voice that is authoritative yet accessible. We build visibility on the platforms where creatives live—social media, creative forums, and digital summits. By being "part of the scene," you build a trust bridge that traditional firms can't even see.</p>
   `,
-  image: criminalImg,
+  image: entertainmentImg,
   href: "/practice-areas/entertainment-media-lawyer-marketing",
   stats: [
     { label: "Influencer Clients", value: "50+" },
