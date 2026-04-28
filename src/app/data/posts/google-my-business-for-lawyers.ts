@@ -44,6 +44,7 @@ export const post: BlogPost = {
         <li><strong>Weekly Case Insights:</strong> Anonymized "Lessons from the Courtroom" that prove you are actively winning cases.</li>
         <li><strong>Legal Update Briefs:</strong> Commentary on new Malaysian statutes or significant Federal Court rulings.</li>
         <li><strong>Behind the Scenes:</strong> Photos of your partners in consultations or in front of the High Court. This humanizes your firm and signals "Active Authority."</li>
+        <li><strong>Success Stories:</strong> Highlighting recent courtroom or settlement victories (adherent to Bar Council rules).</li>
       </ul>
       These updates tell Google your firm is "Fresh," which is a massive ranking trigger over competitors with stagnant, neglected profiles.</p>
 
@@ -65,8 +66,5 @@ export const post: BlogPost = {
     <p>At LawyerMarketing.my, we don't just "manage" profiles; we engineer local dominance. We handle the citation audits, the review protocols, and the visual strategy so that when a client in your city needs a lawyer, you are the first—and only—choice they see. It's time to own the map.</p>
 
     <blockquote>"A law firm without a Map Pack presence is like a storefront with the lights off. In the digital city, visibility is the first step toward victory."</blockquote>
-  `
-};
->
   `
 };

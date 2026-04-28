@@ -1,4 +1,4 @@
-export interface TutorialModule {
+﻿export interface TutorialModule {
   id: string;
   order: number;
   title: string;
@@ -848,7 +848,7 @@ The more enticing the meta description, the greater the chance that a prospectiv
 There’s no ironclad blueprint for writing good meta descriptions, but all effective ones need to include your geography and primary keyword, couched in a compelling reason to click through the result.
 When in doubt, apply copywriting best practices here.
 Here’s an example of a quality meta description:
-Note:The example above uses the word “best,” which is frowned upon by most Bar Council associations, but this is otherwise a superb meta description; always be careful when using superlatives in your advertising. Ensure that your SEO or PPC agency understands the restrictions placed on law firm marketing in your respective state.
+Note: The example above uses the word &ldquo;best,&rdquo; which is prohibited under the <a href="https://www.malaysianbar.org.my" target="_blank" rel="noopener noreferrer">Malaysian Bar Council's Legal Profession (Publicity) Rules 2001</a>. Always be careful when using superlatives in legal marketing. Ensure your agency understands the restrictions placed on law firm advertising in Malaysia.
 Our study of over 112,000 law firm websites shows a direct correlation between meta-data optimization and better ranking positions.</p>
 <h3>6. Optimize Internal Links</h3>
 <p>An internal link is a hyperlink from one of your web pages to another of your web pages on the same web domain.</p>
@@ -1698,7 +1698,7 @@ during a divorce.</p>
 <h4>SO, HOW DO WE DO IT?</h4>
 <p>We reached out to numerous attorneys, asking them to participate in the roundup and answer this question:</p>
 <h4>“WHEN DO I NEED TO HIRE A CAR ACCIDENT LAWYER?”</h4>
-<p>Here&#39;s a sample of a similar email that we used to reach out to these attorneys (thanks to <a href="https://shanebarker.com/">Shane Barker</a> for the modified content).
+<p>Here&#39;s a sample of a similar email that we used to reach out to these attorneys:
 After compiling and formatting those answers, we assembled them into a blog post and then promoted it in collaboration with Dolman Law Group.
 Legal roundups are a great link-building tactic because they promote trust with website visitors, create useful content that visitors actually want to read, and encourage links from contributors and other site owners.
 One hypothesis that I have regarding why this post performed so well is that <a href="https://wpromote.com/blog/seo/everything-need-know-google-medic-update">Google is actively seeking experts on a topic</a>. What better source could you find than having 16 qualified experts weigh in on a given topic?</p>
@@ -2069,20 +2069,19 @@ For firms investing in local SEO services for law firms, a clean and consistent 
 <li>Superpages</li>
 <li>Merchant Circle</li>
 </ol>
-<h3>Top Local Citation Sites</h3>
-<p><a href="https://moz.com/learn/seo/citations-by-city">Here</a> is a list of the top local citations, as sorted by city. Check your local geography since these will vary from location to location.
-Here’s a top 10 list for the legal industry.</p>
+<h3>Top Legal Citation Sites for Malaysian Firms</h3>
+<p>Here is a prioritised list of the top legal citation sources relevant to the Malaysian market. Building a presence on these platforms signals authority to both Google and your potential clients.</p>
 <ol>
-<li><a href="https://www.findlaw.com/">Findlaw</a></li>
-<li><a href="https://www.justia.com/">LexisNexis</a>.</li>
-<li><a href="https://www.avvo.com/">Malaysian Bar Directory</a></li>
-<li><a href="https://www.nolo.com/">Nolo</a></li>
-<li><a href="http://lawyers.com/">lawyers.com</a></li>
-<li><a href="http://hg.org/">hg.org</a></li>
-<li><a href="http://martindale.com/">martindale.com</a></li>
-<li><a href="http://lawyer.com/">lawyer.com</a></li>
-<li><a href="https://www.lawguru.com/">Law Guru</a></li>
-<li><a href="https://www.bestlawyers.com/">Best Lawyers</a></li>
+<li><a href="https://www.malaysianbar.org.my" target="_blank" rel="noopener noreferrer">Malaysian Bar Directory</a> &mdash; The official directory of the Malaysian Bar. Essential for local trust and E-E-A-T signals.</li>
+<li><a href="https://chambers.com/" target="_blank" rel="noopener noreferrer">Chambers Asia-Pacific</a> &mdash; The gold standard for ranking elite Malaysian law firms by practice area.</li>
+<li><a href="https://www.legal500.com/" target="_blank" rel="noopener noreferrer">The Legal 500 Asia Pacific</a> &mdash; Premium international directory with dedicated Malaysia rankings.</li>
+<li><a href="https://www.asialaw.com/" target="_blank" rel="noopener noreferrer">Asialaw Profiles</a> &mdash; Regional legal directory covering Malaysian firms and practice areas.</li>
+<li><a href="https://iflr1000.com/" target="_blank" rel="noopener noreferrer">IFLR1000</a> &mdash; Key for corporate and financial law practices in Malaysia.</li>
+<li><a href="https://www.wooplaw.com/" target="_blank" rel="noopener noreferrer">Wooplaw</a> &mdash; Dedicated Malaysian legal directory connecting clients with local solicitors.</li>
+<li><a href="https://lexisone.com.my/" target="_blank" rel="noopener noreferrer">LexisOne Malaysia</a> &mdash; Malaysian legal research and lawyer directory.</li>
+<li><a href="https://www.google.com/business/" target="_blank" rel="noopener noreferrer">Google Business Profile</a> &mdash; Critical for Map Pack dominance in Malaysia. Non-negotiable.</li>
+<li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook Business Page</a> &mdash; High-reach social citation used widely by Malaysian clients to verify firms.</li>
+<li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn Company Page</a> &mdash; B2B authority signal; critical for corporate practice mandates.</li>
 </ol>
 <h2>How to Fight Google Business Spam</h2>
 <p>Plenty of firms out there will try to scam the system to get an advantage on Google. Don’t let them.</p>
@@ -2447,5 +2446,6 @@ If you don&#39;t have the time to run your own technical SEO audit or don&#39;t 
     `
   },
 ];
+
 
 
