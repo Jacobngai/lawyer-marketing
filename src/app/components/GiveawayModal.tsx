@@ -196,18 +196,46 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
                     </div>
                   </div>
 
+                  {/* Value Stack */}
+                  <div className="bg-white/5 border border-white/10 p-5 space-y-3">
+                    <div className="flex justify-between items-center text-[10px] uppercase tracking-widest">
+                      <span className="text-foreground/40 font-bold">Google Business Profile Opt.</span>
+                      <span className="text-accent font-black">Worth RM 500</span>
+                    </div>
+                    <div className="flex justify-between items-center text-[10px] uppercase tracking-widest">
+                      <span className="text-foreground/40 font-bold">Local Service Ads Setup</span>
+                      <span className="text-accent font-black">Worth RM 1,200</span>
+                    </div>
+                    <div className="flex justify-between items-center text-[10px] uppercase tracking-widest">
+                      <span className="text-foreground/40 font-bold">High-Authority Website</span>
+                      <span className="text-accent font-black">Worth RM 3,500</span>
+                    </div>
+                    <div className="flex justify-between items-center text-[10px] uppercase tracking-widest">
+                      <span className="text-foreground/40 font-bold">SEO Opt. (20 Practice Pages)</span>
+                      <span className="text-accent font-black">Worth RM 1,500</span>
+                    </div>
+                    <div className="pt-3 border-t border-white/10 flex justify-between items-center text-[11px] uppercase tracking-[0.2em] font-black">
+                      <span className="text-white">Total Value:</span>
+                      <span className="text-white line-through opacity-50">RM 6,700</span>
+                    </div>
+                    <div className="flex justify-between items-center text-sm md:text-md uppercase tracking-[0.3em] font-black">
+                      <span className="text-accent">Your Price:</span>
+                      <span className="text-accent">FREE</span>
+                    </div>
+                  </div>
+
                   <button
                     disabled={status === "loading" || !formData.domainStatus}
-                    className="w-full mt-4 py-4 bg-accent text-accent-foreground font-black uppercase tracking-[0.3em] text-[10px] flex items-center justify-center gap-3 hover:bg-white hover:text-black transition-all disabled:opacity-50"
+                    className="w-full py-5 bg-accent text-accent-foreground font-black uppercase tracking-[0.3em] text-[10px] flex items-center justify-center gap-3 hover:bg-white hover:text-black transition-all disabled:opacity-50 shadow-xl"
                   >
-                    {status === "loading" ? "Processing..." : "Submit Portfolio Application"}
+                    {status === "loading" ? "Processing Application..." : "Claim Everything For Free"}
                     <ArrowRight className="w-4 h-4" />
                   </button>
 
-                  <div className="flex items-center justify-center gap-2 pt-2">
-                    <ShieldCheck className="w-3 h-3 text-accent" />
+                  <div className="flex items-center justify-center gap-2">
+                    <ShieldCheck className="w-3.5 h-3.5 text-accent" />
                     <span className="text-[8px] uppercase tracking-widest text-foreground/30 font-bold">
-                      RM 3,500 Build Fee Waived for Eligibile Firms
+                      Strictly limited to the first 5 firms for our 2026 portfolio
                     </span>
                   </div>
                 </form>
