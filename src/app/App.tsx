@@ -10,6 +10,7 @@ import { AuthorPage } from "./pages/AuthorPage";
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
 import { SearchModal } from "./components/SearchModal";
+import { GiveawayPopup } from "./components/GiveawayPopup";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -48,6 +49,7 @@ export default function App() {
         isOpen={isSearchOpen} 
         onClose={() => setIsSearchOpen(false)} 
       />
+      <GiveawayPopup />
     </Router>
   );
 }
