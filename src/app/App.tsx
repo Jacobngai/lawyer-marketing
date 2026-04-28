@@ -29,7 +29,10 @@ export default function App() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isGiveawayOpen, setIsGiveawayOpen] = useState(false);
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
-  const [announcementHeight, setAnnouncementHeight] = useState(0);
+  // Estimate initial height to prevent CLS jump (44px md, ~64px sm)
+  const [announcementHeight, setAnnouncementHeight] = useState(
+    typeof window !== "undefined" ? (window.innerWidth >= 768 ? 44 : 64) : 0
+  );
   const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -38,9 +41,17 @@ export default function App() {
       return;
     }
 
+    // Set initial height immediately if ref exists
+    if (barRef.current) {
+      setAnnouncementHeight(barRef.current.offsetHeight);
+    }
+
     const observer = new ResizeObserver((entries) => {
       for (let entry of entries) {
-        setAnnouncementHeight(entry.contentRect.height);
+        // Use offsetHeight for actual layout height
+        if (entry.target instanceof HTMLElement) {
+          setAnnouncementHeight(entry.target.offsetHeight);
+        }
       }
     });
 
@@ -57,7 +68,7 @@ export default function App() {
     <Router>
       <ScrollToTop />
       <div 
-        className="min-h-screen bg-background text-foreground flex flex-col font-inter transition-all duration-300"
+        className="min-h-screen bg-background text-foreground flex flex-col font-inter"
         style={{ 
           paddingTop: headerOffset,
           "--announcement-height": headerOffset 

@@ -102,8 +102,8 @@ export function HomePage() {
                   width={640}
                   height={640}
                   fetchPriority="high"
-                  decoding="async"
-                  className="relative w-full max-w-lg mx-auto lg:mx-0 object-contain h-[40vh] lg:h-[80vh] drop-shadow-[0_0_50px_rgba(201,169,97,0.3)]"
+                  loading="eager"
+                  className="relative w-full max-w-lg mx-auto lg:mx-0 object-contain h-[40vh] lg:h-[80vh] min-h-[40vh] lg:min-h-[80vh] drop-shadow-[0_0_50px_rgba(201,169,97,0.3)]"
                 />
               </div>
             </motion.div>

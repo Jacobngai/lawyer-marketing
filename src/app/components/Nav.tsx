@@ -61,16 +61,20 @@ export function Nav({ onSearchClick, topOffset = "0px" }: { onSearchClick?: () =
               <img 
                 src={logoFull} 
                 alt="LawyerMarketing.my" 
-                width={360}
-                height={100}
+                width={200}
+                height={66}
+                loading="eager"
+                fetchPriority="high"
                 className="h-10 md:h-12 w-auto hidden sm:block shrink-0 object-contain" 
               />
               {/* Mobile Logo: Square */}
               <img 
                 src={logoSquare} 
                 alt="LawyerMarketing.my" 
-                width={100}
-                height={100}
+                width={40}
+                height={40}
+                loading="eager"
+                fetchPriority="high"
                 className="h-10 w-auto sm:hidden shrink-0 object-contain" 
               />
             </motion.div>
