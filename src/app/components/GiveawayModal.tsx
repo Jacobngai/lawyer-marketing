@@ -71,7 +71,7 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[110] flex items-start md:items-center justify-center px-4 py-8 md:py-12 pointer-events-none overflow-y-auto custom-scrollbar">
+        <div className="fixed inset-0 z-[130] flex items-start md:items-center justify-center px-4 py-8 md:py-12 pointer-events-none overflow-y-auto custom-scrollbar">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
