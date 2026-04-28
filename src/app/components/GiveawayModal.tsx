@@ -27,9 +27,12 @@ const PRACTICE_AREAS = [
 
 export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
+    name: "",
+    email: "",
     firmName: "",
     phone: "",
     areaOfPractice: "",
+    caseVolume: "",
     domainStatus: "" as "have-domain" | "no-domain" | "",
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -121,37 +124,69 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="space-y-1.5">
-                    <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 flex items-center gap-2">
-                      <Building2 className="w-3 h-3" /> Law Firm Name
-                    </label>
-                    <input
-                      required
-                      type="text"
-                      value={formData.firmName}
-                      onChange={(e) => setFormData({ ...formData, firmName: e.target.value })}
-                      placeholder="Advocates & Solicitors"
-                      className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white outline-none focus:border-accent transition-colors text-sm"
-                    />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 flex items-center gap-2">
+                        <ArrowRight className="w-3 h-3 text-accent" /> Your Name
+                      </label>
+                      <input
+                        required
+                        type="text"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        placeholder="John Doe"
+                        className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white outline-none focus:border-accent transition-colors text-sm"
+                      />
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 flex items-center gap-2">
+                        <Globe className="w-3 h-3" /> Work Email
+                      </label>
+                      <input
+                        required
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        placeholder="john@firm.com"
+                        className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white outline-none focus:border-accent transition-colors text-sm"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-1.5">
+                      <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 flex items-center gap-2">
+                        <Building2 className="w-3 h-3" /> Law Firm Name
+                      </label>
+                      <input
+                        required
+                        type="text"
+                        value={formData.firmName}
+                        onChange={(e) => setFormData({ ...formData, firmName: e.target.value })}
+                        placeholder="Advocates & Solicitors"
+                        className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white outline-none focus:border-accent transition-colors text-sm"
+                      />
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 flex items-center gap-2">
+                        <Phone className="w-3 h-3" /> WhatsApp Number
+                      </label>
+                      <input
+                        required
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        placeholder="601..."
+                        className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white outline-none focus:border-accent transition-colors text-sm"
+                      />
+                    </div>
                   </div>
 
                   <div className="space-y-1.5">
                     <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 flex items-center gap-2">
-                      <Phone className="w-3 h-3" /> WhatsApp Number
-                    </label>
-                    <input
-                      required
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="601..."
-                      className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white outline-none focus:border-accent transition-colors text-sm"
-                    />
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 flex items-center gap-2">
-                      < Fingerprint className="w-3 h-3" /> Area of Practice
+                      <Fingerprint className="w-3 h-3" /> Area of Practice
                     </label>
                     <select
                       required
@@ -164,6 +199,28 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
                         <option key={area} value={area}>{area}</option>
                       ))}
                     </select>
+                  </div>
+
+                  <div className="pt-2">
+                    <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 mb-3 block">
+                      Total Firm Headcount
+                    </label>
+                    <div className="grid grid-cols-3 gap-2">
+                      {["1-5", "6-15", "16+"].map((v) => (
+                        <button
+                          key={v}
+                          type="button"
+                          onClick={() => setFormData({ ...formData, caseVolume: v })}
+                          className={`py-2 px-1 border text-[9px] uppercase tracking-widest font-black transition-all ${
+                            formData.caseVolume === v 
+                            ? "border-accent bg-accent/10 text-accent" 
+                            : "border-white/10 text-foreground/40 hover:border-white/30"
+                          }`}
+                        >
+                          {v} Members
+                        </button>
+                      ))}
+                    </div>
                   </div>
 
                   <div className="pt-2">

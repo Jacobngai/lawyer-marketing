@@ -4,6 +4,7 @@ const defaultGoogleScriptUrl =
 const goalLabels = {
   "landing-page": "Free Landing Page",
   audit: "Strategic Growth Audit",
+  "giveaway-website": "2026 Free Website Portfolio",
 };
 
 function isNonEmptyString(value) {
@@ -37,7 +38,7 @@ function normalizeLead(payload) {
     throw new Error("Missing submission payload.");
   }
 
-  const goal = payload.goal === "audit" ? "audit" : "landing-page";
+  const goal = payload.goal === "giveaway-website" ? "giveaway-website" : (payload.goal === "audit" ? "audit" : "landing-page");
   const name = typeof payload.name === "string" ? payload.name.trim() : "";
   const email = typeof payload.email === "string" ? payload.email.trim() : "";
   const phone = typeof payload.phone === "string" ? payload.phone.trim() : "";
@@ -47,8 +48,16 @@ function normalizeLead(payload) {
   const message = typeof payload.message === "string" ? payload.message.trim() : "";
   const caseVolume = typeof payload.caseVolume === "string" ? payload.caseVolume.trim() : "";
 
-  if (!isNonEmptyString(name) || !isNonEmptyString(email) || !isNonEmptyString(phone) || !isNonEmptyString(firmName)) {
-    throw new Error("Required fields are missing.");
+  // For giveaway, name and email are mandatory
+  if (goal === "giveaway-website") {
+    if (!isNonEmptyString(name) || !isNonEmptyString(email) || !isNonEmptyString(phone) || !isNonEmptyString(firmName)) {
+      throw new Error("All fields are required for the portfolio giveaway.");
+    }
+  } else {
+    // For standard audit
+    if (!isNonEmptyString(name) || !isNonEmptyString(email) || !isNonEmptyString(phone) || !isNonEmptyString(firmName)) {
+      throw new Error("Required fields are missing.");
+    }
   }
 
   const phoneDigits = normalizePhone(phone);
