@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Sparkles, Building2, Phone, Fingerprint, Globe, ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { X, Sparkles, Building2, Phone, Fingerprint, Globe, ArrowRight, ShieldCheck, CheckCircle2, Trophy, Timer } from "lucide-react";
 
 interface GiveawayModalProps {
   isOpen: boolean;
@@ -44,7 +44,6 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
     setStatus("loading");
     
     try {
-      // Reusing the contact API logic
       const response = await fetch("/api/contact/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -61,7 +60,7 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
       setTimeout(() => {
         onClose();
         setStatus("idle");
-        setFormData({ firmName: "", phone: "", areaOfPractice: "", domainStatus: "" });
+        setFormData({ name: "", email: "", firmName: "", phone: "", areaOfPractice: "", caseVolume: "", domainStatus: "" });
       }, 3000);
     } catch (err) {
       setStatus("error");
@@ -77,54 +76,106 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/80 backdrop-blur-md pointer-events-auto"
+            className="fixed inset-0 bg-black/90 backdrop-blur-md pointer-events-auto"
           />
 
           <motion.div
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            className="relative w-full max-w-lg bg-[#0a0a0a] border border-accent/20 rounded-none shadow-2xl shadow-accent/10 pointer-events-auto"
+            className="relative w-full max-w-5xl bg-[#0a0a0a] border border-accent/20 rounded-none shadow-2xl shadow-accent/20 pointer-events-auto flex flex-col md:flex-row overflow-hidden"
           >
-            {/* Scarcity Header */}
-            <div className="bg-accent px-6 py-2 flex items-center justify-between">
-              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-accent-foreground">
-                Malaysia Portfolio Opportunity
-              </span>
-              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-accent-foreground/60">
-                4 SPOTS LEFT
-              </span>
+            {/* Left Panel: The Offer */}
+            <div className="w-full md:w-[40%] p-8 md:p-12 bg-gradient-to-br from-accent/10 via-black to-black border-b md:border-b-0 md:border-r border-white/10 flex flex-col justify-between">
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-[9px] font-black uppercase tracking-[0.3em]">
+                    <Trophy className="w-3 h-3" />
+                    2026 Portfolio Opportunity
+                  </div>
+                  <h2 className="text-4xl md:text-5xl font-light italic leading-tight text-white">
+                    I Need a <span className="text-accent underline underline-offset-8 italic">Favor</span>
+                  </h2>
+                  <p className="text-base text-foreground/60 leading-relaxed font-light italic">
+                    Most lawyer websites are expensive digital brochures that don't rank or convert. I’m going to build 5 firms a custom, high-authority website for FREE to launch my 2026 case-study portfolio.
+                  </p>
+                </div>
+
+                {/* Value Stack Breakdown */}
+                <div className="space-y-4 pt-6">
+                  <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-accent">What You Get:</h4>
+                  <div className="space-y-3">
+                    {[
+                      { label: "Google Business Opt.", value: "RM 500" },
+                      { label: "Local Service Ads Setup", value: "RM 1,200" },
+                      { label: "High-Authority Website", value: "RM 3,500" },
+                      { label: "SEO Opt. (20 Pages)", value: "RM 1,500" },
+                    ].map((item, i) => (
+                      <div key={i} className="flex justify-between items-center text-[10px] uppercase tracking-widest border-b border-white/5 pb-2">
+                        <span className="text-white/40 font-bold">{item.label}</span>
+                        <span className="text-white font-black">{item.value}</span>
+                      </div>
+                    ))}
+                    <div className="pt-4 flex justify-between items-center text-xl font-black uppercase tracking-tighter">
+                      <span className="text-white">Total Value:</span>
+                      <span className="text-white/40 line-through">RM 6,700</span>
+                    </div>
+                    <div className="flex justify-between items-center text-2xl font-black uppercase tracking-widest">
+                      <span className="text-accent">Price:</span>
+                      <span className="text-accent underline underline-offset-4 decoration-2">FREE</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hidden md:flex items-center gap-3 pt-12 text-[10px] uppercase tracking-widest text-white/20 font-bold">
+                 <ShieldCheck className="w-4 h-4 text-accent" />
+                 Secure Eligibility Check
+              </div>
             </div>
 
-            <div className="p-8 md:p-10">
-              <button onClick={onClose} className="absolute top-4 right-4 text-white/20 hover:text-white transition-colors">
-                <X className="w-5 h-5" />
+            {/* Right Panel: The Form */}
+            <div className="w-full md:w-[60%] p-8 md:p-12 relative bg-black">
+              <button 
+                onClick={onClose} 
+                className="absolute top-6 right-6 p-2 text-white/20 hover:text-white transition-colors z-20"
+                aria-label="Close"
+              >
+                <X className="w-6 h-6" />
               </button>
 
-              <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-light italic text-white mb-4">
-                  The <span className="text-accent underline underline-offset-8 italic">Portfolio</span> Giveaway
-                </h2>
-                <p className="text-sm text-foreground/50 max-w-xs mx-auto leading-relaxed">
-                  I'm building 5 massive success stories for 2026. If you're a high-growth firm, I’ll build your site for free.
-                </p>
+              <div className="mb-10 flex items-center justify-between border-b border-white/10 pb-6">
+                 <div className="space-y-1">
+                    <h3 className="text-xl font-light text-white uppercase tracking-tight">Claim Your Spot</h3>
+                    <p className="text-[10px] uppercase tracking-widest text-foreground/40 font-bold italic">Verification Required for Free Portfolio Slot</p>
+                 </div>
+                 <div className="flex flex-col items-end">
+                    <span className="text-xs font-black text-accent tracking-[0.2em]">4 SPOTS LEFT</span>
+                    <div className="w-24 h-1 bg-white/5 mt-1 rounded-full overflow-hidden">
+                       <motion.div 
+                        initial={{ width: "0%" }}
+                        animate={{ width: "80%" }}
+                        className="h-full bg-accent" 
+                       />
+                    </div>
+                 </div>
               </div>
 
               {status === "success" ? (
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="py-12 text-center space-y-4"
+                  className="py-20 text-center space-y-4"
                 >
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle2 className="w-8 h-8 text-accent" />
+                  <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-8">
+                    <CheckCircle2 className="w-10 h-10 text-accent" />
                   </div>
-                  <h3 className="text-2xl font-light text-white">Application Received</h3>
-                  <p className="text-foreground/50 text-sm italic">Reviewing your firm's eligibility. Expect a WhatsApp soon.</p>
+                  <h3 className="text-3xl font-light text-white">Application Received</h3>
+                  <p className="text-foreground/50 text-lg italic">Our growth strategist will review your details and text your WhatsApp shortly.</p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-1.5">
                       <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 flex items-center gap-2">
                         <ArrowRight className="w-3 h-3 text-accent" /> Your Name
@@ -135,7 +186,7 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="John Doe"
-                        className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white outline-none focus:border-accent transition-colors text-sm"
+                        className="w-full bg-white/5 border border-white/10 px-4 py-4 text-white outline-none focus:border-accent font-inter transition-all placeholder:text-white/10 text-sm"
                       />
                     </div>
 
@@ -149,12 +200,12 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="john@firm.com"
-                        className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white outline-none focus:border-accent transition-colors text-sm"
+                        className="w-full bg-white/5 border border-white/10 px-4 py-4 text-white outline-none focus:border-accent font-inter transition-all placeholder:text-white/10 text-sm"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-1.5">
                       <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 flex items-center gap-2">
                         <Building2 className="w-3 h-3" /> Law Firm Name
@@ -165,7 +216,7 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
                         value={formData.firmName}
                         onChange={(e) => setFormData({ ...formData, firmName: e.target.value })}
                         placeholder="Advocates & Solicitors"
-                        className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white outline-none focus:border-accent transition-colors text-sm"
+                        className="w-full bg-white/5 border border-white/10 px-4 py-4 text-white outline-none focus:border-accent font-inter transition-all placeholder:text-white/10 text-sm"
                       />
                     </div>
 
@@ -179,121 +230,100 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="601..."
-                        className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white outline-none focus:border-accent transition-colors text-sm"
+                        className="w-full bg-white/5 border border-white/10 px-4 py-4 text-white outline-none focus:border-accent font-inter transition-all placeholder:text-white/10 text-sm"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-1.5">
                     <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 flex items-center gap-2">
-                      <Fingerprint className="w-3 h-3" /> Area of Practice
+                      <Fingerprint className="w-3 h-3" /> Practice Focus
                     </label>
                     <select
                       required
                       value={formData.areaOfPractice}
                       onChange={(e) => setFormData({ ...formData, areaOfPractice: e.target.value })}
-                      className="w-full bg-[#0a0a0a] border border-white/10 px-4 py-3 text-white outline-none focus:border-accent transition-colors text-sm appearance-none"
+                      className="w-full bg-black border border-white/10 px-4 py-4 text-white outline-none focus:border-accent font-inter transition-all text-sm appearance-none cursor-pointer"
                     >
-                      <option value="" disabled>Select Practice Area</option>
+                      <option value="" disabled>Select Primary Practice Area</option>
                       {PRACTICE_AREAS.map((area) => (
                         <option key={area} value={area}>{area}</option>
                       ))}
                     </select>
                   </div>
 
-                  <div className="pt-2">
-                    <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 mb-3 block">
-                      Total Firm Headcount
-                    </label>
-                    <div className="grid grid-cols-3 gap-2">
-                      {["1-5", "6-15", "16+"].map((v) => (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-3">
+                      <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 block">
+                        Firm Headcount
+                      </label>
+                      <div className="grid grid-cols-3 gap-2">
+                        {["1-5", "6-15", "16+"].map((v) => (
+                          <button
+                            key={v}
+                            type="button"
+                            onClick={() => setFormData({ ...formData, caseVolume: v })}
+                            className={`py-3 px-1 border text-[9px] uppercase tracking-widest font-black transition-all ${
+                              formData.caseVolume === v 
+                              ? "border-accent bg-accent/20 text-accent shadow-[0_0_15px_rgba(201,169,97,0.2)]" 
+                              : "border-white/10 text-foreground/40 hover:border-white/30"
+                            }`}
+                          >
+                            {v}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="space-y-3">
+                      <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 block">
+                        Domain/Website
+                      </label>
+                      <div className="grid grid-cols-2 gap-2">
                         <button
-                          key={v}
                           type="button"
-                          onClick={() => setFormData({ ...formData, caseVolume: v })}
-                          className={`py-2 px-1 border text-[9px] uppercase tracking-widest font-black transition-all ${
-                            formData.caseVolume === v 
-                            ? "border-accent bg-accent/10 text-accent" 
+                          onClick={() => setFormData({ ...formData, domainStatus: "have-domain" })}
+                          className={`py-3 px-1 border text-[8px] uppercase tracking-widest font-black transition-all ${
+                            formData.domainStatus === "have-domain" 
+                            ? "border-accent bg-accent/20 text-accent shadow-[0_0_15px_rgba(201,169,97,0.2)]" 
                             : "border-white/10 text-foreground/40 hover:border-white/30"
                           }`}
                         >
-                          {v} Members
+                          Have One
                         </button>
-                      ))}
+                        <button
+                          type="button"
+                          onClick={() => setFormData({ ...formData, domainStatus: "no-domain" })}
+                          className={`py-3 px-1 border text-[8px] uppercase tracking-widest font-black transition-all ${
+                            formData.domainStatus === "no-domain" 
+                            ? "border-accent bg-accent/20 text-accent shadow-[0_0_15px_rgba(201,169,97,0.2)]" 
+                            : "border-white/10 text-foreground/40 hover:border-white/30"
+                          }`}
+                        >
+                          No Website
+                        </button>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="pt-2">
-                    <label className="text-[9px] font-black uppercase tracking-widest text-foreground/40 mb-3 block">
-                      Website/Domain Status
-                    </label>
-                    <div className="grid grid-cols-2 gap-3">
-                      <button
-                        type="button"
-                        onClick={() => setFormData({ ...formData, domainStatus: "have-domain" })}
-                        className={`py-3 px-2 border text-[10px] uppercase tracking-widest font-black transition-all ${
-                          formData.domainStatus === "have-domain" 
-                          ? "border-accent bg-accent/10 text-accent" 
-                          : "border-white/10 text-foreground/40 hover:border-white/30"
-                        }`}
-                      >
-                        I Have a Domain
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => setFormData({ ...formData, domainStatus: "no-domain" })}
-                        className={`py-3 px-2 border text-[10px] uppercase tracking-widest font-black transition-all ${
-                          formData.domainStatus === "no-domain" 
-                          ? "border-accent bg-accent/10 text-accent" 
-                          : "border-white/10 text-foreground/40 hover:border-white/30"
-                        }`}
-                      >
-                        I Need a Domain
-                      </button>
+                  <div className="pt-6">
+                    <button
+                      disabled={status === "loading" || !formData.domainStatus}
+                      className="w-full py-6 bg-accent text-accent-foreground font-black uppercase tracking-[0.4em] text-xs flex items-center justify-center gap-4 hover:bg-white hover:text-black transition-all disabled:opacity-50 shadow-[0_0_50px_rgba(201,169,97,0.3)] relative overflow-hidden group"
+                    >
+                      <span className="relative z-10">{status === "loading" ? "Processing..." : "CHECK IF YOU ARE RIGHT FIT"}</span>
+                      <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-transform" />
+                      <motion.div 
+                        className="absolute inset-0 bg-white/20"
+                        initial={{ x: "-100%" }}
+                        whileHover={{ x: "100%" }}
+                        transition={{ duration: 0.5 }}
+                      />
+                    </button>
+                    <div className="flex items-center justify-center gap-2 mt-4 opacity-30">
+                       <Timer className="w-3 h-3 text-accent animate-pulse" />
+                       <span className="text-[8px] uppercase tracking-[0.3em] font-black">Offer expires once selection criteria met</span>
                     </div>
-                  </div>
-
-                  {/* Value Stack */}
-                  <div className="bg-white/5 border border-white/10 p-5 space-y-3">
-                    <div className="flex justify-between items-center text-[10px] uppercase tracking-widest">
-                      <span className="text-foreground/40 font-bold">Google Business Profile Opt.</span>
-                      <span className="text-accent font-black">Worth RM 500</span>
-                    </div>
-                    <div className="flex justify-between items-center text-[10px] uppercase tracking-widest">
-                      <span className="text-foreground/40 font-bold">Local Service Ads Setup</span>
-                      <span className="text-accent font-black">Worth RM 1,200</span>
-                    </div>
-                    <div className="flex justify-between items-center text-[10px] uppercase tracking-widest">
-                      <span className="text-foreground/40 font-bold">High-Authority Website</span>
-                      <span className="text-accent font-black">Worth RM 3,500</span>
-                    </div>
-                    <div className="flex justify-between items-center text-[10px] uppercase tracking-widest">
-                      <span className="text-foreground/40 font-bold">SEO Opt. (20 Practice Pages)</span>
-                      <span className="text-accent font-black">Worth RM 1,500</span>
-                    </div>
-                    <div className="pt-3 border-t border-white/10 flex justify-between items-center text-[11px] uppercase tracking-[0.2em] font-black">
-                      <span className="text-white">Total Value:</span>
-                      <span className="text-white line-through opacity-50">RM 6,700</span>
-                    </div>
-                    <div className="flex justify-between items-center text-sm md:text-md uppercase tracking-[0.3em] font-black">
-                      <span className="text-accent">Your Price:</span>
-                      <span className="text-accent">FREE</span>
-                    </div>
-                  </div>
-
-                  <button
-                    disabled={status === "loading" || !formData.domainStatus}
-                    className="w-full py-5 bg-accent text-accent-foreground font-black uppercase tracking-[0.3em] text-[10px] flex items-center justify-center gap-3 hover:bg-white hover:text-black transition-all disabled:opacity-50 shadow-xl"
-                  >
-                    {status === "loading" ? "Processing Application..." : "CHECK IF YOU ARE RIGHT FIT"}
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-
-                  <div className="flex items-center justify-center gap-2">
-                    <ShieldCheck className="w-3.5 h-3.5 text-accent" />
-                    <span className="text-[8px] uppercase tracking-widest text-foreground/30 font-bold">
-                      Strictly limited to the first 5 firms for our 2026 portfolio
-                    </span>
                   </div>
                 </form>
               )}
