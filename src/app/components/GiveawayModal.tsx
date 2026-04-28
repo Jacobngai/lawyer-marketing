@@ -97,7 +97,10 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
                     I Need a <span className="text-accent underline underline-offset-8 italic">Favor</span>
                   </h2>
                   <p className="text-base text-foreground/60 leading-relaxed font-light italic">
-                    Most lawyer websites are expensive digital brochures that don't rank or convert. I’m going to build 5 firms a custom, high-authority website for FREE to launch my 2026 case-study portfolio.
+                    In any legal battle, the smart money is on deep expertise, not a generalist. The same is true for search. Every practice area has its own competitive intensity, and if you want to win the best cases, a jack-of-all-trades marketing team will not get it done.
+                  </p>
+                  <p className="text-sm text-foreground/40 leading-relaxed font-light italic mt-4">
+                    I’m building 5 custom, high-authority websites for FREE to launch my 2026 case-study portfolio.
                   </p>
                 </div>
 
