@@ -13,7 +13,7 @@ export const AnnouncementBar: React.FC<AnnouncementBarProps> = ({ onOpenOffer, o
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       exit={{ y: -100 }}
-      className="fixed top-0 left-0 w-full z-[120] bg-accent text-accent-foreground px-4 py-2.5 shadow-2xl flex items-center"
+      className="bg-accent text-accent-foreground px-4 py-2.5 shadow-2xl flex items-center w-full"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-2 md:gap-8 cursor-pointer group flex-grow" onClick={onOpenOffer}>
         <div className="flex items-center gap-2">

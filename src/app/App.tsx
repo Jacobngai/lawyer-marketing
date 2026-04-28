@@ -12,7 +12,7 @@ import { Footer } from "./components/Footer";
 import { SearchModal } from "./components/SearchModal";
 import { GiveawayModal } from "./components/GiveawayModal";
 import { AnnouncementBar } from "./components/AnnouncementBar";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -29,22 +29,48 @@ export default function App() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isGiveawayOpen, setIsGiveawayOpen] = useState(false);
   const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
+  const [announcementHeight, setAnnouncementHeight] = useState(0);
+  const barRef = useRef<HTMLDivElement>(null);
 
-  const headerOffset = isAnnouncementVisible ? "44px" : "0px";
+  useEffect(() => {
+    if (!isAnnouncementVisible) {
+      setAnnouncementHeight(0);
+      return;
+    }
+
+    const observer = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        setAnnouncementHeight(entry.contentRect.height);
+      }
+    });
+
+    if (barRef.current) {
+      observer.observe(barRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isAnnouncementVisible]);
+
+  const headerOffset = `${announcementHeight}px`;
 
   return (
     <Router>
       <ScrollToTop />
       <div 
         className="min-h-screen bg-background text-foreground flex flex-col font-inter transition-all duration-300"
-        style={{ paddingTop: headerOffset }}
+        style={{ 
+          paddingTop: headerOffset,
+          "--announcement-height": headerOffset 
+        } as React.CSSProperties}
       >
         <AnimatePresence>
           {isAnnouncementVisible && (
-            <AnnouncementBar 
-              onOpenOffer={() => setIsGiveawayOpen(true)} 
-              onDismiss={() => setIsAnnouncementVisible(false)}
-            />
+            <div ref={barRef} className="fixed top-0 left-0 w-full z-[120]">
+              <AnnouncementBar 
+                onOpenOffer={() => setIsGiveawayOpen(true)} 
+                onDismiss={() => setIsAnnouncementVisible(false)}
+              />
+            </div>
           )}
         </AnimatePresence>
         
