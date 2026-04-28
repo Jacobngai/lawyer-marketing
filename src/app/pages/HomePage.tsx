@@ -119,9 +119,6 @@ export function HomePage() {
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight leading-[1.1] text-white">
                   Turn Your <span className="text-accent font-serif italic">Firm</span> Into The <span className="text-accent">Obvious Choice</span>
                 </h1>
-                <span className="inline-block px-4 py-1.5 bg-accent/10 border border-accent/20 text-accent text-[8px] md:text-[10px] font-black uppercase tracking-[0.4em] rounded-full">
-                  Free Growth Audit — Find Out What You're Missing
-                </span>
                 <p className="text-lg md:text-xl text-foreground/70 max-w-xl leading-relaxed italic">
                   In any legal battle, the smart money is on deep expertise, not a generalist. The same is true for search. Every practice area has its own competitive intensity, and if you want to win the best cases, a jack-of-all-trades marketing team will not get it done.
                 </p>
@@ -142,7 +139,7 @@ export function HomePage() {
                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                     className="px-12 py-5 bg-accent text-accent-foreground font-black uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-all flex items-center gap-3 group"
                   >
-                    Request Your Free Growth Audit
+                    Get Started
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </motion.button>
                 </Link>
