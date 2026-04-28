@@ -82,7 +82,4 @@ export const post: BlogPost = {
     <blockquote>"Don't compete for the volume everyone else sees. Compete for the intent that everyone else ignores. That is where the 0.1% of cases are won."</blockquote>
   `
 };
-te>
-  `
-};
 

@@ -80,6 +80,3 @@ export const post: BlogPost = {
     <blockquote>"Your performance in the courtroom wins the case. Your reputation in the digital sphere wins the client. Don't leave the most important evidence to chance."</blockquote>
   `
 };
-ockquote>
-  `
-};
