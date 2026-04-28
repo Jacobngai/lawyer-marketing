@@ -95,15 +95,13 @@ export function HomePage() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-accent/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <img 
-                  src={jacobHero640}
-                  srcSet={`${jacobHero640} 640w, ${jacobHero960} 960w`}
-                  sizes="(min-width: 1024px) 576px, 90vw"
-                  alt="Jacob - Law Firm Growth Strategist" 
-                  width={640}
-                  height={640}
+                  src="/images/hero-office-night.jpg"
+                  alt="Win Legal Marketing" 
+                  width={960}
+                  height={540}
                   fetchPriority="high"
                   loading="eager"
-                  className="relative w-full max-w-lg mx-auto lg:mx-0 object-contain h-[40vh] lg:h-[80vh] min-h-[40vh] lg:min-h-[80vh] drop-shadow-[0_0_50px_rgba(201,169,97,0.3)]"
+                  className="relative w-full rounded-sm shadow-2xl object-cover h-[40vh] lg:h-[60vh] min-h-[40vh] lg:min-h-[60vh] drop-shadow-[0_0_50px_rgba(201,169,97,0.3)] border border-white/5"
                 />
               </div>
             </motion.div>
@@ -117,7 +115,7 @@ export function HomePage() {
             >
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight leading-[1.1] text-white">
-                  Turn Your <span className="text-accent font-serif italic">Firm</span> Into The <span className="text-accent">Obvious Choice</span>
+                  Win <span className="text-accent font-serif italic">Legal Marketing</span>. Win the <span className="text-accent">Best Cases</span>.
                 </h1>
                 <p className="text-lg md:text-xl text-foreground/70 max-w-xl leading-relaxed italic">
                   In any legal battle, the smart money is on deep expertise, not a generalist. The same is true for search. Every practice area has its own competitive intensity, and if you want to win the best cases, a jack-of-all-trades marketing team will not get it done.
