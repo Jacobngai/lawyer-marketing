@@ -254,9 +254,9 @@ export function Nav({ onSearchClick, topOffset = "0px" }: { onSearchClick?: () =
               </div>
               <div className="h-1 w-full bg-accent shadow-[0_0_30px_rgba(201,169,97,0.5)]" />
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+            </div>
+          )}
+        </AnimatePresence>
+      </div>
   );
 }
