@@ -120,7 +120,7 @@ export function HomePage() {
                   Turn Your <span className="text-accent font-serif italic">Firm</span> Into The <span className="text-accent">Obvious Choice</span>
                 </h1>
                 <span className="inline-block px-4 py-1.5 bg-accent/10 border border-accent/20 text-accent text-[8px] md:text-[10px] font-black uppercase tracking-[0.4em] rounded-full">
-                  Exclusively for Malaysia's Founding Partner Program
+                  Free Growth Audit — Find Out What You're Missing
                 </span>
                 <p className="text-lg md:text-xl text-foreground/70 max-w-xl leading-relaxed italic">
                   Stop blending in with the generic "safe" lawyers who say nothing and mean less. We help you attract better cases, higher-value clients, and absolute authority using direct-response strategies that turn look-ups into high-fee appointments.
@@ -142,7 +142,7 @@ export function HomePage() {
                     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                     className="px-12 py-5 bg-accent text-accent-foreground font-black uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:text-black transition-all flex items-center gap-3 group"
                   >
-                    Claim Your Free Landing Page
+                    Request Your Free Growth Audit
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </motion.button>
                 </Link>
@@ -382,7 +382,7 @@ export function HomePage() {
             className="mb-8"
           >
              <span className="inline-block px-6 py-2 bg-accent text-accent-foreground text-[10px] font-black uppercase tracking-[0.4em] rounded-full shadow-[0_0_20px_rgba(201,169,97,0.4)] mb-8">
-               Exclusive Founding Partner Offer — For Lawyers Only
+               For Malaysian Law Firms Only — Strictly Limited Places
              </span>
           </motion.div>
 
@@ -391,8 +391,7 @@ export function HomePage() {
           </h2>
           
           <p className="text-xl md:text-2xl text-foreground/70 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-            Stop overpaying for generic design. We are waiving the <span className="text-white font-bold">RM 3,500 build fee</span> for Malaysia's next 5 high-authority firms. 
-            Claim your free landing page and dominate your market before the gates close.
+            Your next high-value case is already searching online. We will pinpoint exactly <span className="text-white font-bold">where you are losing them</span> and show you the precise steps to capture them. At zero cost to find out.
           </p>
 
           <div className="flex flex-col items-center gap-8">
@@ -412,10 +411,10 @@ export function HomePage() {
                 className="relative px-16 py-6 bg-accent text-accent-foreground rounded-sm flex flex-col items-center gap-1 group overflow-hidden"
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-lg md:text-xl font-black uppercase tracking-[0.2em]">Claim Your Free Landing Page</span>
+                  <span className="text-lg md:text-xl font-black uppercase tracking-[0.2em]">Request Your Free Growth Audit</span>
                   <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
                 </div>
-                <span className="text-[10px] font-black uppercase tracking-[0.3em] opacity-80 underline underline-offset-4">Value: RM 3,500.00 — Zero Build Cost</span>
+                <span className="text-[10px] font-black uppercase tracking-[0.3em] opacity-80 underline underline-offset-4">Audit Value: RM 3,500 — Zero Cost to You</span>
               </motion.button>
             </Link>
 
@@ -424,7 +423,7 @@ export function HomePage() {
               whileInView={{ opacity: 1 }}
               className="text-foreground/40 text-xs uppercase tracking-[0.2em] font-bold"
             >
-              You just pay for the hosting.
+              We'll contact you on WhatsApp after reviewing your details.
             </motion.div>
           </div>
         </div>

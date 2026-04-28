@@ -22,7 +22,7 @@ const CONTACT_API_URL = import.meta.env.VITE_CONTACT_API_URL || "/api/contact/su
 // Google Ads Conversion tracking constants
 const GOOGLE_ADS_ID = "AW-417408785";
 const CONVERSION_LABELS = {
-  "landing-page": "Mn09CNaN8KIcEJHOhMcB",
+  "landing-page": "gafgCNmN8KIcEJHOhMcB",
   "audit": "gafgCNmN8KIcEJHOhMcB"
 };
 
@@ -171,8 +171,8 @@ export const ContactPage: React.FC = () => {
   return (
     <main className="pt-24 min-h-screen bg-background relative overflow-hidden">
       <SEO
-        title="Apply for Founding Partner Program | Legal Marketing Consultation"
-        description="Connect with Malaysia's leading law firm marketing experts. Apply for our exclusive Founding Partner program and claim your RM 3,500 strategic growth audit."
+        title="Request a Free Growth Audit | Legal Marketing Consultation"
+        description="Request your free law firm growth audit. We analyse your digital presence and show you exactly where you are losing high-value cases online — with or without a current website."
       />
 
       <div className="absolute inset-0 z-0">
@@ -193,11 +193,11 @@ export const ContactPage: React.FC = () => {
             </div>
 
             <h1 className="text-5xl lg:text-7xl font-extralight leading-tight mb-8">
-              Apply for Your <span className="text-accent italic">Founding Partner</span> <br /> Landing Page
+              Request Your <span className="text-accent italic">Free Growth</span> <br /> Audit
             </h1>
 
             <p className="text-xl text-foreground/60 leading-relaxed mb-12 max-w-xl">
-              We are waiving the <span className="text-foreground">RM 3,500 build fee</span> for Malaysia's next 5 high-authority firms. You receive a custom, engineered landing page at <span className="text-foreground">ZERO BUILD COST</span>. You just pay for the hosting.
+              We analyse your firm's entire digital footprint and show you exactly where you are <span className="text-foreground">losing high-value cases online</span> — then we build the roadmap to capture them. Whether or not you have a website.
             </p>
 
             <div className="space-y-8">
@@ -242,11 +242,11 @@ export const ContactPage: React.FC = () => {
             <div className="mb-10">
               <h2 className="text-3xl font-light flex items-center gap-4 mb-4">
                 <MessageSquare className="w-8 h-8 text-accent" />
-                Application for Founding Partner Beta (Strictly for Lawyers Only)
+                Request a Free Growth Audit (Strictly for Lawyers Only)
               </h2>
               <div className="ml-12 border-l-2 border-accent/30 pl-6">
                 <div className="inline-block bg-accent text-accent-foreground px-4 py-1.5 font-black tracking-[0.2em] text-sm uppercase rounded-sm shadow-xl">
-                  Build Fee Waived: RM 3,500
+                  Audit Value: RM 3,500 — Free
                 </div>
                 <p className="text-xs text-foreground/40 mt-3 uppercase tracking-widest font-bold">
                   Share your WhatsApp number. We will text you after review.
@@ -266,7 +266,7 @@ export const ContactPage: React.FC = () => {
                   className={`p-4 border transition-all flex flex-col items-center text-center gap-2 ${formData.goal === "landing-page" ? "border-accent bg-accent/5" : "border-border hover:border-accent/50"}`}
                 >
                   <Sparkles className={`w-6 h-6 ${formData.goal === "landing-page" ? "text-accent" : "text-foreground/40"}`} />
-                  <span className="text-[9px] uppercase font-bold tracking-widest leading-tight">Free Landing Page<br />(I do not have a website)</span>
+                  <span className="text-[9px] uppercase font-bold tracking-widest leading-tight">Request Growth Audit<br />(I do not have a website)</span>
                 </motion.button>
 
                 <motion.button
@@ -420,7 +420,7 @@ export const ContactPage: React.FC = () => {
                 className="w-full py-5 font-bold uppercase tracking-[0.2em] transition-all disabled:opacity-50 group flex items-center justify-center gap-3 overflow-hidden relative bg-accent text-accent-foreground shadow-2xl shadow-accent/20"
               >
                 <span className="relative z-10 flex items-center gap-3">
-                  {status === "loading" ? "Submitting To Our Follow-Up Queue..." : formData.goal === "landing-page" ? "Claim Free Landing Page" : "Request Growth Audit"}
+                  {status === "loading" ? "Submitting To Our Follow-Up Queue..." : "Request Growth Audit"}
                   {status !== "loading" ? <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /> : null}
                 </span>
                 <motion.div

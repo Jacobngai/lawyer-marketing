@@ -370,12 +370,12 @@ export function ServicePage() {
               </p>
               <Link to="/contact">
                 <button className="px-12 py-5 bg-white text-black font-black uppercase tracking-[0.3em] text-[10px] hover:bg-accent hover:text-white transition-all transform hover:scale-105">
-                  Claim Your Free Landing Page
+                  Request Your Free Growth Audit
                   <ArrowRight className="inline-block ml-3 w-4 h-4" />
                 </button>
               </Link>
               <p className="text-[10px] text-foreground/40 mt-6 uppercase tracking-[0.2em] font-bold">
-                You just pay for the hosting.
+                We'll contact you on WhatsApp after reviewing your details.
               </p>
             </div>
             <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 blur-[100px] pointer-events-none" />
