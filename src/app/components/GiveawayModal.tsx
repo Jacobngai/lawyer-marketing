@@ -71,20 +71,20 @@ export const GiveawayModal: React.FC<GiveawayModalProps> = ({ isOpen, onClose })
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[110] flex items-center justify-center px-4 pointer-events-none">
+        <div className="fixed inset-0 z-[110] flex items-start md:items-center justify-center px-4 py-8 md:py-12 pointer-events-none overflow-y-auto custom-scrollbar">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="absolute inset-0 bg-black/80 backdrop-blur-md pointer-events-auto"
+            className="fixed inset-0 bg-black/80 backdrop-blur-md pointer-events-auto"
           />
 
           <motion.div
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            className="relative w-full max-w-lg bg-[#0a0a0a] border border-accent/20 rounded-none shadow-2xl shadow-accent/10 pointer-events-auto overflow-hidden"
+            className="relative w-full max-w-lg bg-[#0a0a0a] border border-accent/20 rounded-none shadow-2xl shadow-accent/10 pointer-events-auto"
           >
             {/* Scarcity Header */}
             <div className="bg-accent px-6 py-2 flex items-center justify-between">
