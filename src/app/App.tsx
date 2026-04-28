@@ -14,6 +14,7 @@ import { GiveawayModal } from "./components/GiveawayModal";
 import { AnnouncementBar } from "./components/AnnouncementBar";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -27,13 +28,28 @@ function ScrollToTop() {
 export default function App() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isGiveawayOpen, setIsGiveawayOpen] = useState(false);
+  const [isAnnouncementVisible, setIsAnnouncementVisible] = useState(true);
+
+  const headerOffset = isAnnouncementVisible ? "44px" : "0px";
 
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-background text-foreground flex flex-col font-inter pt-[44px] md:pt-[44px]">
-        <AnnouncementBar onOpenOffer={() => setIsGiveawayOpen(true)} />
-        <Nav onSearchClick={() => setIsSearchOpen(true)} topOffset="44px" />
+      <div 
+        className="min-h-screen bg-background text-foreground flex flex-col font-inter transition-all duration-300"
+        style={{ paddingTop: headerOffset }}
+      >
+        <AnimatePresence>
+          {isAnnouncementVisible && (
+            <AnnouncementBar 
+              onOpenOffer={() => setIsGiveawayOpen(true)} 
+              onDismiss={() => setIsAnnouncementVisible(false)}
+            />
+          )}
+        </AnimatePresence>
+        
+        <Nav onSearchClick={() => setIsSearchOpen(true)} topOffset={headerOffset} />
+        
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
