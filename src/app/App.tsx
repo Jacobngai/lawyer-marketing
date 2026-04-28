@@ -10,7 +10,8 @@ import { AuthorPage } from "./pages/AuthorPage";
 import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
 import { SearchModal } from "./components/SearchModal";
-import { GiveawayPopup } from "./components/GiveawayPopup";
+import { GiveawayModal } from "./components/GiveawayModal";
+import { AnnouncementBar } from "./components/AnnouncementBar";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -25,12 +26,14 @@ function ScrollToTop() {
 
 export default function App() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isGiveawayOpen, setIsGiveawayOpen] = useState(false);
 
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-background text-foreground flex flex-col font-inter">
-        <Nav onSearchClick={() => setIsSearchOpen(true)} />
+      <div className="min-h-screen bg-background text-foreground flex flex-col font-inter pt-[44px] md:pt-[44px]">
+        <AnnouncementBar onOpenOffer={() => setIsGiveawayOpen(true)} />
+        <Nav onSearchClick={() => setIsSearchOpen(true)} topOffset="44px" />
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -49,7 +52,10 @@ export default function App() {
         isOpen={isSearchOpen} 
         onClose={() => setIsSearchOpen(false)} 
       />
-      <GiveawayPopup />
+      <GiveawayModal 
+        isOpen={isGiveawayOpen} 
+        onClose={() => setIsGiveawayOpen(false)} 
+      />
     </Router>
   );
 }

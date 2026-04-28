@@ -44,7 +44,7 @@ function SubNav() {
   };
 
   return (
-    <div className="sticky top-[60px] md:top-[80px] z-40 bg-background/80 backdrop-blur-xl border-b border-white/5 py-2 md:py-3 overflow-x-auto no-scrollbar scroll-smooth scroll-px-6">
+    <div className="sticky top-[104px] md:top-[124px] z-40 bg-background/80 backdrop-blur-xl border-b border-white/5 py-2 md:py-3 overflow-x-auto no-scrollbar scroll-smooth scroll-px-6">
       <div className="container mx-auto px-6 md:px-10 whitespace-nowrap flex flex-nowrap items-center justify-start md:justify-center gap-8 md:gap-6 lg:gap-20 pr-32 md:pr-0">
         {services.map((s) => {
           const Icon = getServiceIcon(s.id);

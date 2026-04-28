@@ -20,7 +20,7 @@ const megaMenuStyles = `
   }
 `;
 
-export function Nav({ onSearchClick }: { onSearchClick?: () => void }) {
+export function Nav({ onSearchClick, topOffset = "0px" }: { onSearchClick?: () => void; topOffset?: string }) {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -41,7 +41,7 @@ export function Nav({ onSearchClick }: { onSearchClick?: () => void }) {
   ];
 
   return (
-    <div ref={navRef} className="fixed top-0 left-0 right-0 z-[100]">
+    <div ref={navRef} className="fixed left-0 right-0 z-[100]" style={{ top: topOffset }}>
       <style dangerouslySetInnerHTML={{ __html: megaMenuStyles }} />
       <motion.nav
         initial={{ y: -100 }}
