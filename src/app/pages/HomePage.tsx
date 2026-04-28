@@ -123,7 +123,7 @@ export function HomePage() {
                   Free Growth Audit — Find Out What You're Missing
                 </span>
                 <p className="text-lg md:text-xl text-foreground/70 max-w-xl leading-relaxed italic">
-                  Stop blending in with the generic "safe" lawyers who say nothing and mean less. We help you attract better cases, higher-value clients, and absolute authority using direct-response strategies that turn look-ups into high-fee appointments.
+                  In any legal battle, the smart money is on deep expertise, not a generalist. The same is true for search. Every practice area has its own competitive intensity, and if you want to win the best cases, a jack-of-all-trades marketing team will not get it done.
                 </p>
               </div>
 
